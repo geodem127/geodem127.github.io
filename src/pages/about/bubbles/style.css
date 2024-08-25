@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    font-family: monospace;
+}
+
+canvas {
+    color: hsl(210, 80%, 34%);
+    touch-action: none;
+    background: linear-gradient(135deg, rgba(174, 0, 255, 0.644) 5%, rgb(0, 204, 255));
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+
+
+#bubble {
+    display: none;
+}
+
+.score {
+    position: absolute;
+    width: 300px;
+    min-height: 100px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    top: 10%;
+    left: 5%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+.score>div {
+    font-size: 2rem;
+}
+
+.game-controls {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 30vw;
+    min-height: 20vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+.game-controls>h1 {
+    font-size: 3rem;
+}
+
+.game-controls>button {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 204, 255);
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 0 8px white;
+}
+
+.game-controls>button:is(:active, :focus-visible) {
+    scale: 0.94;
+}
+
+.game-controls>button:hover {
+    filter: brightness(0.92);
+}
+
+.game-controls>button.btn-info-popup {
+    align-self: flex-end;
+    padding: 0 10px;
+}
+
+@media screen and (width<660px) {
+    .game-controls>h1 {
+        font-size: 1.5rem;
+    }
+
+    .game-controls {
+        font-size: 1rem;
+    }
+}
