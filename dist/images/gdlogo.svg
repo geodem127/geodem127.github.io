@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-0.114 0.169 153 152" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="59.886" y1="0.169" x2="59.886" y2="120.169" id="gradient-0" gradientTransform="matrix(0.708199, 0.706012, -0.841667, 0.841667, 65.617007, -33.253506)">
+      <stop offset="0" style="stop-color: rgb(2, 133, 103);"/>
+      <stop offset="0.254" style="stop-color: rgb(2, 84, 66);"/>
+      <stop offset="0.69" style="stop-color: rgb(1, 48, 38);"/>
+      <stop offset="1" style="stop-color: rgb(1, 18, 14);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="85.886" y1="26.169" x2="85.886" y2="146.169" id="gradient-1" gradientTransform="matrix(0.749172, 0.662375, -0.783333, 0.891667, 94.041641, -45.053781)">
+      <stop offset="0" style="stop-color: rgb(1, 64, 107);"/>
+      <stop offset="0.267" style="stop-color: rgb(2, 56, 91);"/>
+      <stop offset="0.654" style="stop-color: rgb(3, 32, 51);"/>
+      <stop offset="1" style="stop-color: rgb(1, 22, 35);"/>
+    </linearGradient>
+  </defs>
+  <path style="stroke-width: 18px; fill: none;" d="M 51.886 61.169 L 110.886 61.169 L 110.886 96.169 L 96.886 111.169 L 23.886 111.169 L 8.886 96.169 L 8.886 24.169 L 23.886 9.169 L 119.886 9.169"/>
+  <path d="M 61.886 64.169 L 118.886 64.169 L 118.886 120.169 L 19.886 120.169 L -0.114 99.897 L -0.114 20.441 L 20.158 0.169 L 93.886 0.169 L 118.886 21.169 L 29.614 21.169 L 20.886 30.897 L 20.886 88.441 L 31.886 99.169 L 98.886 99.169 L 98.886 84.169 L 82.886 84.169 L 61.886 64.169 Z" style="fill: url('#gradient-0'); stroke: rgb(51, 54, 51); stroke-width: 3px;"/>
+  <path style="stroke-width: 18px; fill: none;" d="M 128.886 87.169 L 128.886 122.169 L 114.886 137.169 L 41.886 137.169 L 26.886 122.169 L 26.886 50.169 L 41.886 35.169 L 137.886 35.169" transform="matrix(-1, 0, 0, -1, 164.77200317382815, 172.33799743652347)"/>
+  <path d="M 152.886 110.169 L 152.886 151.169 L 53.158 152.169 L 32.886 131.897 L 32.886 52.441 L 53.158 32.169 L 129.886 32.169 L 151.886 53.169 L 63.614 53.169 L 53.886 62.897 L 53.886 121.441 L 63.614 131.169 L 132.886 131.169 L 132.886 93.169 L 152.886 110.169 Z" style="fill: url('#gradient-1'); stroke: rgb(62, 62, 60); stroke-width: 3px;" transform="matrix(-1, 0, 0, -1, 185.771973, 184.338013)"/>
+  <path d="M 25.886 77.169 H 97.886 V 96.344 H 25.886 V 77.169 Z" style="fill: none;"/>
+  <path d="M 98.386 76.669 L 98.386 96.844 L 25.386 96.844 L 25.386 76.669 Z M 26.386 95.844 L 97.386 95.844 L 97.386 77.669 L 26.386 77.669 Z" style="fill: none;"/>
+  <path d="M 98.886 97.344 L 24.886 97.344 L 24.886 76.169 L 98.886 76.169 Z M 26.886 95.344 L 96.886 95.344 L 96.886 78.169 L 26.886 78.169 Z" style="fill: none;"/>
+</svg>

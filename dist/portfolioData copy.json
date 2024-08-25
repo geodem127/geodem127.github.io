@@ -1,0 +1,332 @@
+{
+  "navigation": [
+    {
+      "title": "About",
+      "path": "/about",
+      "id": "about"
+    },
+    {
+      "title": "Experiences",
+      "path": "/experiences",
+      "id": "experiences"
+    },
+    {
+      "title": "Projects",
+      "path": "/projects",
+      "id": "projects"
+    }
+  ],
+  "personalInformation": {
+    "name": "George Demonteverde",
+    "firstName": "George",
+    "lastName": "Demonteverde",
+    "role": "Senior Full-stack Developer",
+    "socialLinks": [
+      {
+        "label": "Github",
+        "path": "https://github.com/geodem127",
+        "icon": "Github"
+      },
+      {
+        "label": "LinkedIn",
+        "path": "https://linkedin.com/in/george-demonteverde-jr",
+        "icon": "LinkedIn"
+      },
+      {
+        "label": "Codepen",
+        "path": "https://codepen.io/george-demonteverde",
+        "icon": "CodePen"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "id": 1,
+      "period": "Sep 2022 - Present",
+      "start": "Sep 2022",
+      "end": "Present",
+      "isPresent": true,
+      "role": "Senior Full-stack Developer",
+      "company": "Accenture",
+      "link": "https://www.accenture.com",
+      "jobDescription": "Focused on developing and optimizing UI and API components, with a strong emphasis on resolving application defects and bugs.\n• Delivered permanent solutions for complex business logic functions.\n• Created and refined critical business logic functions.\n• Addressed and resolved significant, revenue-impacting application issues.\n• Developed custom hooks/components vital for business logic.\nKey Achievement:\n• Established internal libraries for reusable components.",
+      "technologies": [
+        "React JS",
+        "Node.js",
+        "JavaScript",
+        "jQuery",
+        "CSS",
+        "PHP",
+        "HTML",
+        "express.js",
+        "AWS cloud services",
+        "Google Cloud Services"
+      ]
+    },
+    {
+      "id": 2,
+      "period": "May 2022 - Sep 2022",
+      "start": "May 2022",
+      "end": "Sep 2022",
+      "isPresent": false,
+      "role": "Application Development Team Lead",
+      "company": "Accenture",
+      "link": "https://www.accenture.com",
+      "jobDescription": "Led the UI development team, managing the application development process in adherence to agile and Scrum principles.\n• Developed robust UI solutions meeting client requirements.\n• Coordinated with backend teams for API architecture design.\n• Mentored junior co-developers.\n• Managed creation and assignment of user stories, tasks, and issues.\n• Key Achievement: Established internal libraries for reusable components.",
+      "technologies": [
+        "React JS",
+        "Node.js",
+        "JavaScript",
+        "jQuery",
+        "CSS",
+        "PHP",
+        "HTML",
+        "express.js",
+        "AWS cloud services",
+        "Google Cloud Services"
+      ]
+    },
+    {
+      "id": 3,
+      "period": "Nov 2021 - May 2022",
+      "start": "Nov 2021",
+      "end": "May 2022",
+      "isPresent": false,
+      "role": "UI/API Automation Tester",
+      "company": "Accenture",
+      "link": "https://www.accenture.com",
+      "jobDescription": "Spearheaded the design and execution of automated tests for API and UI components.\n• Initiated project-wide testing standards.\n• Led the creation of a standard Robot Framework and Selenium setup for UI/API automation testing.\n• Executed comprehensive unit/functional testing for UI/API test automation.\n• Key Achievement: Established internal libraries for reusable components.",
+      "technologies": [
+        "React JS",
+        "Node.js",
+        "JavaScript",
+        "jQuery",
+        "CSS",
+        "PHP",
+        "HTML",
+        "express.js",
+        "AWS cloud services",
+        "Google Cloud Services"
+      ]
+    },
+    {
+      "id": 4,
+      "period": "Jun 2021 - Nov 2022",
+      "start": "Jun 2021",
+      "end": "Nov 2022",
+      "role": "React JS Developer",
+      "company": "Accenture",
+      "link": "https://www.accenture.com",
+      "jobDescription": "Focused on developing components, pages, and functions tailored to client-defined business logic.\n• Applied best coding practices to build robust UI focused on business logic.\n• Key Achievement: Established internal libraries for reusable components and wireframed designs per project specifications.",
+      "technologies": [
+        "React JS",
+        "Node.js",
+        "JavaScript",
+        "jQuery",
+        "CSS",
+        "PHP",
+        "HTML",
+        "express.js",
+        "AWS cloud services",
+        "Google Cloud Services"
+      ]
+    },
+    {
+      "id": 5,
+      "period": "Sep 2020 - Nov 2020",
+      "start": "Sep 2020",
+      "end": "Nov 2020",
+      "isPresent": false,
+      "role": "Front End Developer",
+      "company": "LGU",
+      "link": "https://dumaguete.com",
+      "jobDescription": "Developed a responsive UI for the Local Transportation Registration Tracker for the LGU.\n• Built a front-end interface tailored to meet specific business needs.\n• Key Achievement: Developed internal libraries.",
+      "technologies": [
+        "React JS",
+        "Node.js",
+        "JavaScript",
+        "jQuery",
+        "CSS",
+        "PHP",
+        "HTML",
+        "express.js",
+        "AWS cloud services",
+        "Google Cloud Services"
+      ]
+    },
+    {
+      "id": 6,
+      "period": "Jan 2015 - Sep 2020",
+      "start": "Jan 2015",
+      "end": "Sep 2020",
+      "isPresent": false,
+      "role": "Front End Developer",
+      "company": "Freelance",
+      "link": "",
+      "jobDescription": "Provided comprehensive web development services, creating websites and tools based on client specifications.\n• Designed user interfaces and back-end services.\n• Ensured clean, efficient, and maintainable code across various platforms.\n• Managed database operations, enhancing data integrity and optimization.\n• Enhanced user experience through user-friendly interfaces.\n• Addressed and resolved technical software issues.\n• Maintained application security and industry-standard compliance.",
+      "technologies": [
+        "React JS",
+        "Node.js",
+        "JavaScript",
+        "jQuery",
+        "CSS",
+        "PHP",
+        "HTML",
+        "express.js",
+        "AWS cloud services",
+        "Google Cloud Services"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "img": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
+      "link": "https://geodem-dev.web.app",
+      "projectName": "Professional Association Website",
+      "projectDescription": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+      "technologies": [
+        "React JS",
+        "Node.js",
+        "Microservices",
+        "graphql",
+        "express.js"
+      ]
+    },
+    {
+      "id": 2,
+      "img": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
+      "link": "https://geodem-dev.web.app",
+      "projectName": "Supply Chain Application",
+      "projectDescription": "eCommerce platform with advanced custom blockchain integration.",
+      "technologies": ["React JS", "Blockchain", "AWS cloud services"]
+    },
+    {
+      "id": 3,
+      "img": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
+      "link": "https://geodem-dev.web.app",
+      "projectName": "Supply Chain Application",
+      "projectDescription": "Bespoke content management system and commerce engine for managing cataloged products, facilitate secure purchase registrations, and efficiently nurture user relationships with customers, affiliate retailers, and vendors.",
+      "technologies": [
+        "React JS",
+        "Blockchain",
+        "AWS cloud services",
+        "Selenium",
+        "Java",
+        "Python",
+        "Cucumber"
+      ]
+    },
+    {
+      "id": 4,
+      "img": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
+      "link": "https://geodem-dev.web.app",
+      "projectName": "Operations side-projects",
+      "projectDescription": "Various applications for operational KPI improvements such as agent productivity enhancement tools, improved schedule adherence, automated metrics compilation and reporting, scorecard cross-checking between declared and actual eLearning scores, and QA reports automation (that consolidated, extracted, and organized agent's scores from various client tools).",
+      "technologies": [
+        "React JS",
+        "Node.js",
+        "JavaScript",
+        "jQuery",
+        "CSS",
+        "PHP",
+        "HTML",
+        "express.js",
+        "AWS cloud services",
+        "Google Cloud Services"
+      ]
+    }
+  ],
+  "about": "I started my web development journey in 2015 and have had the privilege of working on diverse projects—from contributing to an advertising agency, startup, and design studio to my current role as a Senior Full-stack Developer at Accenture in Cebu City. \nI specialize in developing and optimizing UI and API components, addressing complex business logic challenges. Notable achievements include creating internal libraries for reusable components.\nAs a former Application Development Team Lead and Scrum Master, I led UI development teams, ensuring adherence to agile principles. I've also spearheaded automated tests as a UI/API Automation Tester, setting project-wide standards.",
+  "techStack": [
+    {
+      "id": "programingLanguages",
+      "label": "Programing Languages",
+      "iconClass": "icon-basic-webpage",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "Sass",
+        "Python",
+        "PHP",
+        "Java"
+      ]
+    },
+    {
+      "id": "librariesAndFrameworks",
+      "label": "Libraries and Frameworks",
+      "iconClass": ".icon-basic-pencil-ruler-pen",
+      "technologies": [
+        "RobotFramework",
+        "Material-UI",
+        "tailwind",
+        "bootstrap",
+        "jquery",
+        "eslint",
+        "graphql",
+        "webpack",
+        "typescript",
+        "Electron"
+      ]
+    },
+    {
+      "id": "toolsAndPlatforms",
+      "label": "Tools and Platforms",
+      "iconClass": "icon-basic-settings",
+      "technologies": [
+        "vscode",
+        "figma",
+        "jira",
+        "confluence",
+        "nginx",
+        "serverless",
+        "salesforce",
+        "contentful"
+      ]
+    },
+    {
+      "id": "frontEnd",
+      "label": "Front-end",
+      "iconClass": "icon-basic-webpage",
+      "technologies": [
+        "html",
+        "react.js",
+        "css",
+        "material-UI",
+        "tailwind",
+        "bootstrap",
+        "jquery",
+        "javascript"
+      ]
+    },
+    {
+      "id": "backEnd",
+      "label": "Back-end",
+      "iconClass": "icon-basic-share",
+      "technologies": ["node.js", "express", "php", "java", "python"]
+    },
+    {
+      "id": "devOps",
+      "label": "DevOps/CI/CD",
+      "iconClass": "./images/devOps.svg",
+      "technologies": [
+        "Azure-DevOps",
+        "Docker",
+        "Jenkins",
+        "Bitbucket",
+        "Git",
+        "Github",
+        "GCP",
+        "AWS"
+      ]
+    },
+    {
+      "id": "databases",
+      "label": "Databases",
+      "iconClass": "icon-basic-server2",
+      "technologies": ["mongodb", "sql", "firebase", "noSql"]
+    }
+  ]
+}
