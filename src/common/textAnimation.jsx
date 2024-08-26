@@ -32,7 +32,7 @@ const TextContainer = styled(Typography)(({ theme }) => ({
   animation: "text-animation linear 20s infinite 1s",
   "-webkit-background-clip": "text",
   "-webkit-text-fill-color": "transparent",
-  overflow: "visible",
+  // overflow: "visible",
   "&.inView": { width: "100%!important" },
 
   "& > span": {
@@ -46,7 +46,7 @@ const TextContainer = styled(Typography)(({ theme }) => ({
     padding: ".05rem .05rem",
     fontWeight: 800,
     overflow: "visible",
-    transition: "all 200ms linear 100ms",
+    // transition: "all 200ms linear 100ms",
 
     // "&:hover + span": {
     //   transform: "translateY(-10%)",

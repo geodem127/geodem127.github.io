@@ -1,9 +1,9 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Box, Typography, Divider, Toolbar } from "@mui/material";
-import AboutPage from "../../pages/about";
-import ExperiencesPage from "../../pages/experiences";
-import Projects from "../../pages/projects";
+// import AboutPage from "../../pages/about";
+// import ExperiencesPage from "../../pages/experiences";
+// import Projects from "../../pages/projects";
 import { useTheme } from "@mui/material/styles";
 import RootRoutes from "../../routes";
 const scrollPage = document.getElementById("root");
@@ -39,7 +39,7 @@ const Main = ({ width, data, screenSize, sx = {}, ...other }) => {
       <ExperiencesPage data={experiences} id="experiences" />
 
       <Projects data={experiences} id="projects" /> */}
-      {["sm", "md"].includes(screenSize) ? (
+      {/* {["sm", "md"].includes(screenSize) ? (
         <>
           <AboutPage data={about} id="about" />
 
@@ -49,7 +49,8 @@ const Main = ({ width, data, screenSize, sx = {}, ...other }) => {
         </>
       ) : (
         <RootRoutes />
-      )}
+      )} */}
+      <RootRoutes />
     </Box>
   );
 };

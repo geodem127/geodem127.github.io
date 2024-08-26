@@ -60,7 +60,7 @@ const AboutPage = () => {
                 color: theme.palette.primary.contrastText,
                 fontSize: "3rem",
                 lineHeight: 1,
-                padding: "0 .5rem",
+                // padding: "0 .5rem",
                 borderRadius: ".4rem",
                 fontWeight: 700,
                 margin: "0 .5rem 0 0",
