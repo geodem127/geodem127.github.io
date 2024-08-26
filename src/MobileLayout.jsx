@@ -1,7 +1,4 @@
 import React, { lazy } from "react";
-// import AboutPage from "./pages/about";
-// import ExperiencesPage from "./pages/experiences";
-// import ProjectsPage from "./pages/projects";
 import Layout from "./layout";
 import Loadable from "./common/loadable";
 const AboutPage = Loadable(lazy(() => import("./pages/about")));

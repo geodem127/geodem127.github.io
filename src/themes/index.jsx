@@ -31,79 +31,25 @@ const breakpoints = {
 const themeOptions = createTheme({
   breakpoints,
   direction: "ltr",
-  palette: palette?.dark,
+  palette: palette,
   typography,
   components,
   // ...overRidesStyles,
   gradients: {
-    primary: `linear-gradient(135deg, ${palette?.dark.primary.dark} 0%, ${palette?.dark.primary.main} 62%, ${palette?.dark.primary.light} 100%)`,
-    secondary: `linear-gradient(135deg, ${palette?.dark.secondary.dark} 0%, ${palette?.dark.secondary.main} 62%, ${palette?.dark.secondary.light} 100%)`,
-    combined: `linear-gradient(45deg, ${palette?.dark.primary.main} 0%, ${palette?.dark.secondary.main} 100%)`,
+    primary: `linear-gradient(135deg, ${palette.primary.dark} 0%, ${palette.primary.main} 62%, ${palette.primary.light} 100%)`,
+    secondary: `linear-gradient(135deg, ${palette.secondary.dark} 0%, ${palette.secondary.main} 62%, ${palette.secondary.light} 100%)`,
+    combined: `linear-gradient(45deg, ${palette.primary.main} 0%, ${palette.secondary.main} 100%)`,
   },
 });
 
 export const AppThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = React.useState(true);
-  // const [theme, setTheme] = React.useState();
+  // const [isDarkMode, setIsDarkMode] = React.useState(true);
 
-  const setThemeMode = (selectedMode) => {
+  // const setThemeMode = (selectedMode) => {
+  const setThemeMode = () => {
     // setIsDarkMode(selectedMode === "dark");
     return;
   };
-
-  // const themeOptions = createTheme({
-  //   breakpoints,
-  //   direction: "ltr",
-  //   palette: palette?.dark,
-  //   typography,
-  //   // typography: typography(paletteData),
-  //   // components: components(breakpoints),
-  //   // components: {
-  //   //   MuiPaper: {
-  //   //     styleOverrides: {
-  //   //       root: {
-  //   //         background: "transparent",
-  //   //       },
-  //   //     },
-  //   //   },
-  //   //   MuiChip: {
-  //   //     styleOverrides: {
-  //   //       root: {
-  //   //         height: "max-content",
-  //   //         paddingTop: "4px",
-  //   //         paddingBottom: "4px",
-  //   //       },
-  //   //     },
-  //   //   },
-  //   //   MuiCssBaseline: {
-  //   //     defaultProps: {
-  //   //       enableColorScheme: true,
-  //   //     },
-
-  //   //     styleOverrides: {
-  //   //       ...overRidesStyles,
-
-  //   //       [`@media  screen and  (max-width: ${breakpoints.values.md}px)`]: {
-  //   //         html: { fontSize: ".9rem" },
-  //   //       },
-  //   //       [`@media   screen and (min-width: ${breakpoints.values.md}px)`]: {
-  //   //         html: { fontSize: "1rem" },
-  //   //       },
-  //   //       [`@media  screen and  (max-width: ${breakpoints.values.sm}px)`]: {
-  //   //         html: { fontSize: ".8rem" },
-  //   //       },
-  //   //     },
-  //   //   },
-  //   // },
-  //   gradients: {
-  //     primary: `linear-gradient(90deg, ${palette?.dark.primary.dark} 0%, ${palette?.dark.primary.main} 40%, ${palette?.dark.primary.light} 100%)`,
-  //   },
-  // });
-  // console.log("themeOptions:", themeOptions);
-  // setTheme(responsiveFontSizes(themeOptions));
-  // setTheme(themeOptions);
-
-  // if (!theme) return "LOADING...";
 
   return (
     <AppThemeContext.Provider value={{ setThemeMode }}>

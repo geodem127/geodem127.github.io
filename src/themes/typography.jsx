@@ -1,5 +1,5 @@
 import { colors } from "@mui/material";
-import { palette } from "./palette";
+// import { palette } from "./palette";
 
 const typography = {
   // fontWeightLight: 400,
@@ -14,7 +14,7 @@ const typography = {
     fontSize: "3.25rem",
     fontWeight: 700,
     letterSpacing: "-1.84px",
-    color: palette.dark.primary.contrastText,
+    // color: palette.dark.primary.contrastText,
   },
   h2: {
     fontFamily: '"REM","Roboto", "Helvetica", "Arial", sans-serif',

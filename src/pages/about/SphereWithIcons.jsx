@@ -41,7 +41,7 @@ const IconPlane = ({ position, texture }) => {
 
   return (
     <mesh position={position} ref={meshRef}>
-      <planeGeometry args={[0.6, 0.6]} />
+      <planeGeometry args={[0.5, 0.5]} />
       <meshBasicMaterial
         map={textureMap}
         transparent={true}
@@ -92,7 +92,7 @@ const SphereWithIcons = ({ techStack = [] }) => {
   const techIconData = useMemo(
     () =>
       uniqueTech.map((tech, index) => ({
-        texture: `${baseUrl}images/${tech}.svg`,
+        texture: `${baseUrl}/images/${tech}.svg`,
         position: positions[index],
       })),
     [uniqueTech, positions]
