@@ -1,10 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-// import { styled } from "@mui/material/styles";
-// import { Card } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import { keyframes } from "@emotion/react";
 import {
-  Card,
   useTheme,
   useMediaQuery,
   styled,
@@ -12,10 +7,6 @@ import {
   Typography,
   Grid,
   Chip,
-  Zoom,
-  Grow,
-  Collapse,
-  Slide,
   Divider,
   Fade,
 } from "@mui/material";
@@ -23,7 +14,6 @@ import {
 import useDataParse from "../../hooks/useDataParse";
 
 import usePageScroll from "../../hooks/usePageScroll";
-import zIndex from "@mui/material/styles/zIndex";
 
 const SectionStyles = styled(Box)(({ theme }) => ({
   background: "transparent",
@@ -44,48 +34,29 @@ const SectionStyles = styled(Box)(({ theme }) => ({
     position: "relative",
     zIndex: "200",
     boxShadow: `0px 0px 50px 15px ${theme.palette.primary.main}`,
-    // "-webkit-box-shadow": `0px 0px 50px 15px ${theme.palette.primary.main}`,
-    // "-moz-box-shadow": `0px 0px 50px 15px ${theme.palette.primary.main}`,
     WebkitBoxShadow: `0px 0px 50px 15px ${theme.palette.primary.main}`,
     MozBoxShadow: `0px 0px 50px 15px ${theme.palette.primary.main}`,
   },
 
   "& .periodLine": {
-    width: "3px",
+    width: "2px",
     height: 0,
     position: "absolute",
-    // top: "5rem",
     left: "50%",
-    // transform: "translateX(-50%)",
     zIndex: "0",
-    // background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.main} 50%, ${theme?.palette.primary.light} 100%)`,
     background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.light} 100%)`,
     backgroundAttachment: "fixed",
     opacity: 0.5,
     overflow: "hidden",
     transition: "all 400ms linear",
-    // "&::before": {
-    //   content: '""',
-    //   position: "absolute",
-    //   left: "-.35rem",
-    //   top: "-1rem",
-    //   width: "1rem",
-    //   height: "0",
-    //   transition: "height 200ms linear",
-    //   background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.main} 50%, ${theme?.palette.primary.light} 100%)`,
-    //   clipPath:
-    //     "polygon(50% 100%, 100% 75%, 100% 25%, 50.75% 0%, 50% 19.37%, 82.95% 33.68%, 82.95% 66.48%, 50% 81.23%, 17.05% 66.48%, 17.37% 33.68%, 50% 19.37%, 50.75% 0%, 0% 25%, 0% 75%)",
-    // },
   },
 
   "&.inRange": {
     "& .periodLine": {
       overflow: "visible",
-      // height: "calc(100% - 3.5rem)",
+
       height: "100%",
-      // [theme.breakpoints.down("md")]: {
-      //   height: "calc(100% + 3rem)",
-      // },
+
       "&::before": {
         height: "1rem",
       },
@@ -189,73 +160,32 @@ const ExperienceSection = ({
 }) => {
   const theme = useTheme();
   const smScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const mdScreen = useMediaQuery(theme.breakpoints.down("md"));
   const slideContainerRef = useRef(null);
   const targetRef = useRef(undefined);
-  const { bottom, rects, top, width, height, viewportWidth, viewportHeight } =
-    usePageScroll(targetRef?.current);
-  const { parseText } = useDataParse();
+  const { bottom, top, height, viewportWidth, viewportHeight } = usePageScroll(
+    targetRef?.current
+  );
+
   const [inRange, setInRange] = useState(false);
-  // href={`https://hello.com/${item?.company}`}
-  const startYear = Number(data?.start?.replace(/\D/g, ""));
-  const endYear = Number(data?.end?.replace(/\D/g, ""));
-  // console.log(`[${data?.year}] rects:`, rects);
-
-  const startMonth = data?.start
-    ?.replace(/\d/g, "")
-    ?.trim()
-    .substring(0, 3)
-    ?.toUpperCase();
-  const endMonth = data?.end
-    ?.replace(/\d/g, "")
-    ?.trim()
-    .substring(0, 3)
-    ?.toUpperCase();
-
-  const startPeriod =
-    startYear === endYear ? startMonth : `${startMonth} ${startYear}`;
-  const endPeriod = data?.isPresent ? "PRESENT" : `${endMonth} ${endYear}`;
 
   const headerText = (
     data?.role + (!!data?.company ? ` @ ${data?.company}` : "")
   )?.trim();
 
-  const newLines = /\n/g;
-  const hasNewLines = newLines.test(data?.jobDescription);
-  const jobDescriptionData = !hasNewLines
-    ? data?.jobDescription
-    : parseText(data?.jobDescription);
-  const jobDescriptionIsArray = jobDescriptionData?.constructor === Array;
-
   useEffect(() => {
     setInRange(top < 80);
   }, [top]);
-  useEffect(() => {
-    // if (data?.year !== "2022") return;
-    const pointsTop = (viewportHeight * top) / 100;
-    const pointsBottom = viewportHeight - (viewportHeight * bottom) / 100;
-    console.log(`${data?.year}: `, {
-      height,
-      top,
-      bottom,
-      viewportWidth,
-      viewportHeight,
-      avgheight: (viewportHeight * top) / 100,
-      pointsTop: pointsTop,
-      pointsBottom: pointsBottom,
-      avg: pointsBottom - pointsTop,
-    });
-  }, [top]);
+
   return (
     <>
       <SectionStyles
         {...other}
-        // onClick={handleClick}
         my={smScreen ? "2rem" : "5rem"}
         className={`${!!inRange ? "inRange" : ""}${
           !!smScreen ? " isMobile" : ""
         }`}
         ref={targetRef}
-        // pl={!!smScreen ? "2rem" : "0"}
       >
         <Grid
           container
@@ -272,13 +202,10 @@ const ExperienceSection = ({
                 justifyContent={"flex-start"}
                 alignItems={"center"}
                 sx={{
-                  width: "100%",
+                  width: "80%",
                   height: "100%",
                   position: "relative",
-                  // display: "flex",
-                  // flexDirection: "column",
-                  // justifyContent: "flex-start",
-                  // alignItems: "center",
+
                   pt: "2rem",
                 }}
               >
@@ -318,6 +245,8 @@ const ExperienceSection = ({
                 p: smScreen ? "1rem 0" : "1rem",
 
                 overflow: "hidden",
+
+                mr: mdScreen ? "1rem" : "0",
               }}
             >
               {!!smScreen && (
@@ -358,22 +287,24 @@ const ExperienceSection = ({
                     mb: 1.5,
                   }}
                 >
-                  <Slide direction="down" in={inRange}>
-                    <Typography
-                      component={"p"}
-                      variant={"p"}
-                      color="text.primary"
-                      className="timelineDescriptionDetails"
-                    >
-                      {data?.jobDescription}
-                    </Typography>
-                  </Slide>
+                  <Typography
+                    component={"p"}
+                    variant={"p"}
+                    color="text.primary"
+                    className={`timelineDescriptionDetails ${
+                      inRange ? "animation-slideup" : ""
+                    }`}
+                    sx={{ opacity: 0, textAlign: "justify" }}
+                  >
+                    {data?.jobDescription}
+                  </Typography>
                 </Box>
                 <Box className="techStack">
                   <Divider sx={{ my: 1 }} />
                   {data?.technologies?.map((tech, index2) => (
                     <Fade
                       in={inRange}
+                      timeout={500}
                       style={{
                         transitionDelay: inRange
                           ? `${30 * index2 + 1}ms`

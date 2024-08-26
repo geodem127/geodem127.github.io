@@ -4,8 +4,8 @@
   left: 0;
   bottom: 0;
   right: 0;
-  /* border: 1px solid red; */
-  height: 100%;
+
+  height: 300%;
   /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
   overflow: hidden;
   /* background: #020812; */
@@ -15,6 +15,19 @@
   position: absolute;
   width: 30vh;
   height: 30vh;
+}
+
+/* GREEN */
+#cloud {
+  filter: blur(180px);
+  background-color: rgba(66, 175, 136, 0.75);
+  /* width: 500px;
+  height: 350px; */
+  position: fixed;
+  /* bottom: -25%;
+  right: -25%; */
+  opacity: 0.25;
+  /* animation: animCloud1 10s linear infinite; */
 }
 
 #stars {
@@ -507,6 +520,7 @@
   width: 3px;
   height: 3px;
   background: transparent;
+  outline: 1px solid red;
   box-shadow: 713px 10786px #fff, 822px 685px #fff, 533px 1546px #fff,
     1200px 1670px #fff, 145px 1620px #fff, 1725px 1257px #fff, 1851px 658px #fff,
     1017px 1695px #fff, 441px 1481px #fff, 926px 859px #fff, 325px 1478px #fff,
@@ -572,11 +586,30 @@
 
 @keyframes animStar {
   from {
-    /* transform: translateY(0px); */
-    transform: translateX(0px) translateY(0px);
+    transform: translateY(0);
+    /* transform: translateX(0px) translateY(0px); */
+    /* transform: rotateZ(0deg); */
   }
   to {
-    /* transform: translateY(-2000px); */
-    transform: translateX(-2000px) translateY(-2000px);
+    transform: translateY(-2000px);
+    /* transform: translateX(-2000px) translateY(-2000px); */
+    /* transform: rotateZ(360deg); */
+  }
+}
+
+@keyframes animClouds {
+  from {
+    transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(-45deg) rotateZ(45deg) skew(15deg, 15deg);
+  }
+  to {
+    transform: translate3d(50%, -15%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+
+@keyframes animCloud1 {
+  to {
+    right: 0%;
   }
 }

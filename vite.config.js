@@ -10,7 +10,9 @@ export default defineConfig({
   // base: '/',
   build: {
     outDir: "dist",
+
   },
+
   // root: 'dist/index.html',
   // assetsInclude: true,
 

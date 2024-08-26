@@ -1,30 +1,36 @@
 import React from "react";
 
-import { styled } from "@mui/material/styles";
-// import { Typography } from './componentElements';
-// border-bottom-color: ${theme.palette.primary.main};
+import { styled, useTheme } from "@mui/material/styles";
+
+const SIZE = {
+  sm: 0.85,
+  md: 1,
+  lg: 1.5,
+};
 const LoadingContainerStyles = styled("div")(
-  ({ theme }) => `
+  ({ theme, color, size = "sm" }) =>
+    `
   align-items: center;
   background: transparent;
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   margin: 0;
   overflow: hidden;
 
   & .kinetic {
-    height: 50px;
+    height: calc(50px * ${SIZE?.[size]});
+    width: calc(50px * ${SIZE?.[size]});
     position: relative;
-    width: 50px;
+    
   }
 
   & .kinetic::after,
   & .kinetic::before {
     animation: rotateA 2s linear infinite 0.5s;
-    border: 25px solid transparent;
- border-bottom-color: ${theme.palette.primary.main};
+    border: calc(25px * ${SIZE?.[size]}) solid transparent;
+    border-bottom-color: ${color};
  
     content: "";
     height: 0;
@@ -70,22 +76,21 @@ const LoadingContainerStyles = styled("div")(
 );
 
 const WrapperStyles = styled("div")`
-  // width: 130px;
-  // height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  //   border: 1px solid red;
   gap: 1rem;
 `;
 
-const LoadingPage = () => {
+const LoadingPage = ({ label = null, color = null, size = "md" }) => {
+  const theme = useTheme();
+  const renderColor = !!color ? color : theme?.palette?.primary?.main;
   return (
-    <LoadingContainerStyles>
+    <LoadingContainerStyles color={renderColor} size={size}>
       <WrapperStyles>
         <div className="kinetic"></div>
-        <p>Loading...</p>
+        {!!label && <p>{label}</p>}
       </WrapperStyles>
     </LoadingContainerStyles>
   );

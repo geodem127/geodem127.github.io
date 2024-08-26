@@ -181,7 +181,7 @@ export const CustomIcons = {
 
 const ButtonIcon = ({ icon, path, title, size, color }) => {
   const iconSize = ICON_SIZES?.[size] || "1rem";
-  console.log("ButtonIcon:: ", { icon, path, title });
+
   return (
     <div style={{ width: "25px", height: "25px" }}>
       <a

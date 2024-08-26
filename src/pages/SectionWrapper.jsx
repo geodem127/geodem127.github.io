@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Divider, Typography, styled } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
@@ -25,8 +25,8 @@ const SectionWrapper = ({ id, rowGap = 0, children, ...other }) => {
           justifyContent={"flex-start"}
           alignItems={"flex-start"}
           columnGap={1}
-          pt={8}
-          pb={4}
+          pt={5}
+          pb={10}
           sx={{
             position: "relative",
           }}
@@ -67,7 +67,8 @@ const SectionWrapper = ({ id, rowGap = 0, children, ...other }) => {
         </Box>
       )}
       <Box
-        // py={"1rem"}
+        // py={"4rem"}
+
         rowGap={rowGap}
         sx={{
           minHeight: "100%",

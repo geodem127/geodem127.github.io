@@ -7,9 +7,10 @@ export const palette = {
     contrastText: "#e2e8f0",
   },
   secondary: {
-    main: "#1041a3",
-    light: "#0d5bf5",
-    dark: "#07245e",
+    main: "#432cd8",
+    light: "#4f36f5",
+    dark: "#27178e",
+    contrastText: "#e2e8f0",
   },
   text: {
     primary: "#94a3b8",
@@ -19,6 +20,7 @@ export const palette = {
   },
   background: {
     default: "rgb(2, 9, 24)",
+    // default: "#100e0e",
     paper: "rgba(37, 44, 57, 0.926)",
   },
   action: {

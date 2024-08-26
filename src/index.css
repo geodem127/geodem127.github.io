@@ -28,3 +28,50 @@ body {
   box-sizing: border-box;
   animation-delay: var();
 }
+
+.animation-slideup {
+  opacity: 0;
+  animation: slide-up 500ms linear forwards;
+}
+
+.animation-scaleup {
+  opacity: 1;
+  transform: scale(1);
+  animation: scale-up 500ms linear forwards;
+}
+
+.animation-showup {
+  opacity: 0;
+  animation: show-up 600ms ease-in-out forwards 200ms;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes show-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

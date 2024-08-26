@@ -7,12 +7,6 @@ import { useAppThemeContext } from "../../themes";
 import Navigation from "./Navigation";
 import { CustomIcons } from "../../assets/CustomIcons";
 
-const Y_PADDING = {
-  sm: "0",
-  md: "0",
-  lg: "5rem",
-};
-
 const ANIMATION_TIMER = 2000;
 
 const HeaderStyles = styled(Box)(({ theme }) => ({
@@ -22,7 +16,6 @@ const HeaderStyles = styled(Box)(({ theme }) => ({
     overflow: "hidden",
     textTransform: "uppercase",
 
-    backgroundClip: "text",
     background: `linear-gradient(135deg, ${theme.palette.primary.main}  0%, ${theme.palette.primary.dark} 25%, ${theme.palette.primary.light} 50%,${theme.palette.primary.dark} 75%,  ${theme.palette.primary.main} 100%)`,
     color: "transparent",
     backgroundSize: "400%",
@@ -31,6 +24,7 @@ const HeaderStyles = styled(Box)(({ theme }) => ({
     animation: "text-gradient-animation linear 20s infinite 1s",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
   },
 
   "& .roleTextContainer": {
@@ -210,13 +204,14 @@ const Header = ({ width, data, screenSize, sx = {}, ...other }) => {
               >
                 <Typography
                   className="roleText"
-                  variant={"h3"}
-                  color={"text.secondary"}
+                  variant={"h4"}
+                  color={"text.primary"}
                   sx={{
                     animationName: "text-animation",
                     animationDuration: `${ANIMATION_TIMER}ms`,
                     animationTimingFunction: `steps(${skill?.length})`,
                     fontWeight: 500,
+                    // color: alpha(theme.palette.text.secondary, 0.7),
                   }}
                 >
                   {skill}

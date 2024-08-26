@@ -10,7 +10,7 @@ import { UserContext } from "../../context/userContext";
 const ProjectsPage = () => {
   const { projects, experiences, isLoading } = useContext(UserContext);
   const { parseText } = useDataParse();
-  console.log("projects:", projects);
+
   return (
     <SectionWrapper id="projects">
       {/* <Box component={"section"} mb={2} id={id}> */}
@@ -19,7 +19,7 @@ const ProjectsPage = () => {
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 1, md: 2, lg: 2 }}
       > */}
-      {experiences?.map((item, index) => {
+      {/* {experiences?.map((item, index) => {
         const startYear = Number(item?.start?.replace(/\D/g, ""));
         const endYear = Number(item?.end?.replace(/\D/g, ""));
 
@@ -130,7 +130,7 @@ const ProjectsPage = () => {
             </Grid>
           </Grid>
         );
-      })}
+      })} */}
       {/* </Grid> */}
       {/* </Box> */}
     </SectionWrapper>
