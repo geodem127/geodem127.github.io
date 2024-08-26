@@ -1,0 +1,115 @@
+/* .animation {
+  opacity: 0;
+  transition: all 400ms linear;
+} */
+[class*="ol-"] {
+}
+[data-animation*="_"] {
+  opacity: 0;
+  transition: all 400ms linear;
+}
+.animate {
+  opacity: 1;
+}
+
+/* SLIDE */
+[data-animation="_slideUp"] {
+  transform: translateY(20px);
+  &.in {
+    opacity: 1 !important;
+    transform: translateY(0);
+  }
+}
+
+[data-animation="_slideDown"] {
+  transform: translateY(-20px);
+  &.in {
+    opacity: 1 !important;
+    transform: translateY(0);
+  }
+}
+
+[data-animation="_slideLeft"] {
+  transform: translateX(20px);
+  &.in {
+    opacity: 1 !important;
+    transform: translateX(0);
+  }
+}
+
+[data-animation="_slideRight"] {
+  transform: translateX(-20px);
+  &.in {
+    opacity: 1 !important;
+    transform: translateX(0);
+  }
+}
+/* GROW */
+[data-animation="_grow"] {
+  transform: scale(0.2);
+  &.in {
+    opacity: 1 !important;
+    transform: scale(1);
+  }
+}
+
+/* FADE */
+[data-animation="_fadeIn"] {
+  opacity: 0;
+  &.in {
+    opacity: 1 !important;
+  }
+}
+
+/* ZOOM */
+[data-animation="_zoomIn"] {
+  opacity: 1 !important;
+  transform-origin: center;
+  transform: scale(0);
+  &.in {
+    transform: scale(1);
+  }
+}
+
+/* COLLAPSE */
+[data-animation="_collapseUp"] {
+  transform-origin: bottom center;
+}
+[data-animation="_collapseDown"] {
+  transform-origin: top center;
+}
+
+[data-animation="_collapseLeft"] {
+  transform-origin: right center;
+}
+[data-animation="_collapseRight"] {
+  transform-origin: left center;
+}
+
+[data-animation="_collapseUp"],
+[data-animation="_collapseDown"] {
+  transform: scaleY(0);
+}
+[data-animation="_collapseLeft"],
+[data-animation="_collapseRight"] {
+  transform: scaleX(0);
+}
+
+[data-animation*="_collapse"] {
+  overflow: hidden;
+}
+
+[data-animation="_collapseUp"],
+[data-animation="_collapseDown"] {
+  &.in {
+    opacity: 1 !important;
+    transform: scaleY(1);
+  }
+}
+[data-animation="_collapseLeft"],
+[data-animation="_collapseRight"] {
+  &.in {
+    opacity: 1 !important;
+    transform: scaleX(1);
+  }
+}

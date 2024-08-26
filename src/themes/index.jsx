@@ -8,7 +8,6 @@ import {
 import "./fonts/index.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import { palette } from "./palette";
-// import overRidesStyles from "./styleOverrides";
 
 import { typography } from "./typography";
 import components from "./components";
@@ -22,7 +21,6 @@ const breakpoints = {
     sm: 768,
     md: 1024,
     lg: 1256,
-    // lg: 1088,
     xl: 1500,
   },
   unit: "px",
@@ -32,9 +30,30 @@ const themeOptions = createTheme({
   breakpoints,
   direction: "ltr",
   palette: palette,
-  typography,
+  // typography,
+  typography: {
+    ...typography,
+    h1: {
+      ...typography.h1,
+      "@media (max-width:768px)": {
+        fontSize: "2.5rem",
+      },
+    },
+  },
   components,
-  // ...overRidesStyles,
+  // components: {
+  //   ...components,
+  //   MuiCssBaseline: {
+  //     styleOverrides: {
+  //       ...components.MuiCssBaseline.styleOverrides,
+  //       "#root": {
+  //         "@media (max-width:1024px)": {
+  //           overflow: "hidden",
+  //         },
+  //       },
+  //     },
+  //   },
+  // },
   gradients: {
     primary: `linear-gradient(135deg, ${palette.primary.dark} 0%, ${palette.primary.main} 62%, ${palette.primary.light} 100%)`,
     secondary: `linear-gradient(135deg, ${palette.secondary.dark} 0%, ${palette.secondary.main} 62%, ${palette.secondary.light} 100%)`,
@@ -45,7 +64,6 @@ const themeOptions = createTheme({
 export const AppThemeProvider = ({ children }) => {
   // const [isDarkMode, setIsDarkMode] = React.useState(true);
 
-  // const setThemeMode = (selectedMode) => {
   const setThemeMode = () => {
     // setIsDarkMode(selectedMode === "dark");
     return;

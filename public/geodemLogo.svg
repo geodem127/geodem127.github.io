@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 215 215" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="87.5" y1="0" x2="87.5" y2="170" id="gradient-2" gradientTransform="matrix(0.70713, 0.707083, -1, 1, 108.126109, -61.869765)">
+      <stop offset="0" style="stop-color: rgb(40, 186, 106);"/>
+      <stop offset="1" style="stop-color: rgb(0, 55, 13);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="138.45" y1="46.658" x2="138.45" y2="216.658" id="gradient-3" gradientTransform="matrix(0.68096, 0.73232, -1.058824, 1, 170.123691, -103.047758)">
+      <stop offset="0" style="stop-color: rgb(79, 51, 240);"/>
+      <stop offset="1" style="stop-color: rgb(23, 15, 70);"/>
+    </linearGradient>
+  </defs>
+  <path style="stroke-linejoin: round; fill: url('#gradient-2');" d="M 89.926 90.149 L 170 90 L 170 170 L 25 170 L 0 145 L 0 25 L 30 0 L 140 0 L 175 30 L 40 30 L 30 40 L 30 130 L 40 140 L 140 140 L 140 120 L 90 120 L 89.926 90.149 Z" transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)"/>
+  <path style="fill: url('#gradient-3');" d="M 44.613 119.782 L 45 45 L 190 45 L 215 70 L 215 190 L 185 215 L 65 215 L 35 185 L 175 185 L 185 175 L 185 85 L 175 75 L 75 75 L 75 120 L 44.613 119.782 Z" transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)"/>
+</svg>
+
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 215 215" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="87.5" y1="0" x2="87.5" y2="170" id="gradient-1" gradientTransform="matrix(0.70713, 0.707083, -1, 1, 108.125, -61.8702)">
+      <stop offset="0" style="stop-color: rgb(35, 165, 94);"/>
+      <stop offset="1" style="stop-color: rgb(0, 42, 10);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="138.45" y1="46.658" x2="138.45" y2="216.658" id="gradient-4" gradientTransform="matrix(0.68096, 0.73232, -1.05882, 1, 170.123, -103.048)">
+      <stop offset="0" style="stop-color: rgb(70, 45, 212);"/>
+      <stop offset="1" style="stop-color: rgb(15, 10, 46);"/>
+    </linearGradient>
+  </defs>
+  <g transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, -1.4210854715202004e-14)">
+    <path style="stroke-linejoin: round; fill: url('#gradient-1'); transform: matrix(1, 0, 0, 1, -300, 15);" d="M 89.926 90.149 L 170 90 L 170 170 L 25 170 L 0 145 L 0 25 L 30 0 L 140 0 L 175 30 L 40 30 L 30 40 L 30 130 L 40 140 L 140 140 L 140 120 L 90 120 L 89.926 90.149 Z"/>
+    <path style="fill: url('#gradient-4'); transform: matrix(1, 0, 0, 1, 292.157, -15);" d="M 45 120 L 45 45 L 190 45 L 215 70 L 215 190 L 185 215 L 65 215 L 35 185 L 175 185 L 185 175 L 185 85 L 175 75 L 75 75 L 75 120 L 45 120 Z"/>
+  </g>
+</svg>

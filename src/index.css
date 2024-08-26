@@ -5,7 +5,7 @@
 html,
 body,
 #root {
-  font-size: 14px;
+  /* font-size: 16px; */
   padding: 0;
   margin: 0;
 }
@@ -13,6 +13,20 @@ body,
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+  /* width: 100vw; */
+  /* overflow-clip-margin: border-box; */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    /* background: #020812; */
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #ffffff1a;
+    background-image: linear-gradient(to top, #94a3b8dd 0%, #ffffff1a 100%);
+  }
 }
 
 * {
@@ -20,11 +34,100 @@ body {
 }
 
 #root {
-  padding: 0;
-  margin: 0;
-  position: relative;
   width: 100%;
-  min-height: 100%;
+  max-width: 100%;
+  /* min-height: 100%; */
   box-sizing: border-box;
-  animation-delay: var();
+  /* overflow-y: scroll; */
+}
+
+@media (max-width: 1024px) {
+  #root {
+    overflow: hidden;
+  }
+}
+
+/* ANIMATION */
+
+.animation-slideup {
+  /* opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 500ms ease-in-out both; */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 500ms ease-in-out both;
+}
+.animation-slideup.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animation-slideleft {
+  opacity: 0;
+  animation: slide-left 500ms linear forwards;
+}
+.animation-slideright {
+  opacity: 0;
+  animation: slide-right 500ms linear forwards;
+}
+
+.animation-scaleup {
+  opacity: 1;
+  transform: scale(1);
+  animation: scale-up 500ms linear forwards;
+}
+
+.animation-showup {
+  opacity: 0;
+  animation: show-up 600ms ease-in-out forwards 200ms;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes scale-up {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes show-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

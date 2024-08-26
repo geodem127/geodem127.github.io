@@ -1,10 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-// import { styled } from "@mui/material/styles";
-// import { Card } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import { keyframes } from "@emotion/react";
 import {
-  Card,
   useTheme,
   useMediaQuery,
   styled,
@@ -12,18 +7,13 @@ import {
   Typography,
   Grid,
   Chip,
-  Zoom,
-  Grow,
-  Collapse,
-  Slide,
   Divider,
   Fade,
+  alpha,
 } from "@mui/material";
 
-import useDataParse from "../../hooks/useDataParse";
-
 import usePageScroll from "../../hooks/usePageScroll";
-import zIndex from "@mui/material/styles/zIndex";
+import Animation from "../../common/animation";
 
 const SectionStyles = styled(Box)(({ theme }) => ({
   background: "transparent",
@@ -43,49 +33,30 @@ const SectionStyles = styled(Box)(({ theme }) => ({
     alignItems: "center",
     position: "relative",
     zIndex: "200",
-    boxShadow: `0px 0px 50px 15px ${theme.palette.primary.main}`,
-    // "-webkit-box-shadow": `0px 0px 50px 15px ${theme.palette.primary.main}`,
-    // "-moz-box-shadow": `0px 0px 50px 15px ${theme.palette.primary.main}`,
-    WebkitBoxShadow: `0px 0px 50px 15px ${theme.palette.primary.main}`,
-    MozBoxShadow: `0px 0px 50px 15px ${theme.palette.primary.main}`,
+    boxShadow: `0px 0px 40px 15px ${theme.palette.primary.main}`,
+    WebkitBoxShadow: `0px 0px 40px 15px ${theme.palette.primary.main}`,
+    MozBoxShadow: `0px 0px 40px 15px ${theme.palette.primary.main}`,
   },
 
   "& .periodLine": {
-    width: "3px",
+    width: "2px",
     height: 0,
     position: "absolute",
-    // top: "5rem",
     left: "50%",
-    // transform: "translateX(-50%)",
     zIndex: "0",
-    // background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.main} 50%, ${theme?.palette.primary.light} 100%)`,
     background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.light} 100%)`,
     backgroundAttachment: "fixed",
     opacity: 0.5,
     overflow: "hidden",
     transition: "all 400ms linear",
-    // "&::before": {
-    //   content: '""',
-    //   position: "absolute",
-    //   left: "-.35rem",
-    //   top: "-1rem",
-    //   width: "1rem",
-    //   height: "0",
-    //   transition: "height 200ms linear",
-    //   background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.main} 50%, ${theme?.palette.primary.light} 100%)`,
-    //   clipPath:
-    //     "polygon(50% 100%, 100% 75%, 100% 25%, 50.75% 0%, 50% 19.37%, 82.95% 33.68%, 82.95% 66.48%, 50% 81.23%, 17.05% 66.48%, 17.37% 33.68%, 50% 19.37%, 50.75% 0%, 0% 25%, 0% 75%)",
-    // },
   },
 
   "&.inRange": {
     "& .periodLine": {
       overflow: "visible",
-      // height: "calc(100% - 3.5rem)",
+
       height: "100%",
-      // [theme.breakpoints.down("md")]: {
-      //   height: "calc(100% + 3rem)",
-      // },
+
       "&::before": {
         height: "1rem",
       },
@@ -102,7 +73,7 @@ const SectionStyles = styled(Box)(({ theme }) => ({
     },
   },
   "&.isMobile": {
-    paddingLeft: "2rem",
+    paddingLeft: "2.5rem",
     "&::before": {
       content: '""',
       position: "absolute",
@@ -120,7 +91,7 @@ const SectionStyles = styled(Box)(({ theme }) => ({
       position: "absolute",
       left: ".38rem",
       top: "2.25rem",
-      width: "3px",
+      width: "2px",
       height: "0",
       transition: "all 200ms linear",
       background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.light} 100%)`,
@@ -141,7 +112,7 @@ const SectionStyles = styled(Box)(({ theme }) => ({
   },
   "& .descriptionBoxWrapper": {
     position: "relative",
-    outlineOffset: "-1px",
+    // outlineOffset: "-1px",
     overflow: "visible",
     "&::before": {
       content: '""',
@@ -153,17 +124,18 @@ const SectionStyles = styled(Box)(({ theme }) => ({
       margin: "-.5rem",
 
       borderRadius: "4px",
-      backgroundColor: "rgba(30, 41, 59, 0.5)",
+      // backgroundColor: "rgba(30, 41, 59, 0.15)",
       border: "1px solid rgba(229, 231, 235,.08)",
-      zIndex: -1,
+      background: alpha(theme.palette.background.paper, 0.05),
+      zIndex: 0,
       opacity: 0,
       transition: "opacity 200ms ease-in",
     },
   },
-  "&:not(.isMobile) .descriptionBoxWrapper": {
+  "&:not(.isMobile, .isTablet) .descriptionBoxWrapper": {
     "&:hover": {
       "&::before": {
-        opacity: 1,
+        opacity: 0.8,
       },
     },
   },
@@ -189,73 +161,30 @@ const ExperienceSection = ({
 }) => {
   const theme = useTheme();
   const smScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const slideContainerRef = useRef(null);
+  const mdScreen = useMediaQuery(theme.breakpoints.down("md"));
+  // const slideContainerRef = useRef(null);
   const targetRef = useRef(undefined);
-  const { bottom, rects, top, width, height, viewportWidth, viewportHeight } =
-    usePageScroll(targetRef?.current);
-  const { parseText } = useDataParse();
+  const { top } = usePageScroll(targetRef?.current);
+
   const [inRange, setInRange] = useState(false);
-  // href={`https://hello.com/${item?.company}`}
-  const startYear = Number(data?.start?.replace(/\D/g, ""));
-  const endYear = Number(data?.end?.replace(/\D/g, ""));
-  // console.log(`[${data?.year}] rects:`, rects);
-
-  const startMonth = data?.start
-    ?.replace(/\d/g, "")
-    ?.trim()
-    .substring(0, 3)
-    ?.toUpperCase();
-  const endMonth = data?.end
-    ?.replace(/\d/g, "")
-    ?.trim()
-    .substring(0, 3)
-    ?.toUpperCase();
-
-  const startPeriod =
-    startYear === endYear ? startMonth : `${startMonth} ${startYear}`;
-  const endPeriod = data?.isPresent ? "PRESENT" : `${endMonth} ${endYear}`;
 
   const headerText = (
-    data?.role + (!!data?.company ? ` @ ${data?.company}` : "")
+    data?.role + (!!data?.company ? ` ⬩ ${data?.company}` : "")
   )?.trim();
-
-  const newLines = /\n/g;
-  const hasNewLines = newLines.test(data?.jobDescription);
-  const jobDescriptionData = !hasNewLines
-    ? data?.jobDescription
-    : parseText(data?.jobDescription);
-  const jobDescriptionIsArray = jobDescriptionData?.constructor === Array;
 
   useEffect(() => {
     setInRange(top < 80);
   }, [top]);
-  useEffect(() => {
-    // if (data?.year !== "2022") return;
-    const pointsTop = (viewportHeight * top) / 100;
-    const pointsBottom = viewportHeight - (viewportHeight * bottom) / 100;
-    console.log(`${data?.year}: `, {
-      height,
-      top,
-      bottom,
-      viewportWidth,
-      viewportHeight,
-      avgheight: (viewportHeight * top) / 100,
-      pointsTop: pointsTop,
-      pointsBottom: pointsBottom,
-      avg: pointsBottom - pointsTop,
-    });
-  }, [top]);
+
   return (
     <>
       <SectionStyles
         {...other}
-        // onClick={handleClick}
         my={smScreen ? "2rem" : "5rem"}
         className={`${!!inRange ? "inRange" : ""}${
-          !!smScreen ? " isMobile" : ""
+          !!smScreen ? " isMobile" : !!mdScreen ? " isTablet" : ""
         }`}
         ref={targetRef}
-        // pl={!!smScreen ? "2rem" : "0"}
       >
         <Grid
           container
@@ -272,13 +201,10 @@ const ExperienceSection = ({
                 justifyContent={"flex-start"}
                 alignItems={"center"}
                 sx={{
-                  width: "100%",
+                  width: "75%",
                   height: "100%",
                   position: "relative",
-                  // display: "flex",
-                  // flexDirection: "column",
-                  // justifyContent: "flex-start",
-                  // alignItems: "center",
+
                   pt: "2rem",
                 }}
               >
@@ -303,13 +229,14 @@ const ExperienceSection = ({
             sm={10}
             md={10}
             lg={10}
+            spacing={0}
+            gap={0}
             sx={{
               position: "relative",
             }}
           >
             <Box
               component={"div"}
-              ref={slideContainerRef}
               className="descriptionBoxWrapper"
               sx={{
                 boxSizing: "border-box",
@@ -318,6 +245,8 @@ const ExperienceSection = ({
                 p: smScreen ? "1rem 0" : "1rem",
 
                 overflow: "hidden",
+
+                // mr: mdScreen ? "1rem" : "0",
               }}
             >
               {!!smScreen && (
@@ -329,7 +258,7 @@ const ExperienceSection = ({
                   pb={1}
                   columnGap={1}
                 >
-                  <Typography variant="h5" component="h5">
+                  <Typography variant="subtitle1" component="subtitle1">
                     {data?.year}
                   </Typography>
                   <div
@@ -343,44 +272,51 @@ const ExperienceSection = ({
               )}
 
               <Typography
-                variant="h4"
+                variant="h5"
                 color="text.secondary"
                 className="timelineDescriptionHeader"
                 mb={1.5}
               >
-                {headerText}
+                {/* {headerText} */}
+                {/* {data?.role +
+                  (!!data?.company ? (<span>⬩</span>)` ${data?.company}` : "")} */}
+                {data?.role}
+                <span
+                  style={{ color: theme.palette.text.primary }}
+                >{` ⬩ `}</span>
+                {data?.company}
               </Typography>
 
-              <Box sx={{ overflow: "hidden" }}>
-                <Box
-                  sx={{
-                    overflow: "hidden",
-                    mb: 1.5,
-                  }}
-                >
-                  <Slide direction="down" in={inRange}>
+              <Animation start={90} animation="slideUp">
+                <Box sx={{ overflow: "hidden" }}>
+                  <Box
+                    sx={{
+                      overflow: "hidden",
+                      mb: 1.5,
+                    }}
+                  >
+                    {/* <Animation start={90} animation="slideUp"> */}
                     <Typography
                       component={"p"}
                       variant={"p"}
                       color="text.primary"
-                      className="timelineDescriptionDetails"
+                      // className={`timelineDescriptionDetails ${
+                      //   inRange ? "animation-slideup" : ""
+                      // }`}
+                      className={`timelineDescriptionDetails`}
+                      sx={{
+                        textAlign: "justify",
+                        whiteSpace: "pre-wrap",
+                        textWrap: "wrap",
+                      }}
                     >
                       {data?.jobDescription}
                     </Typography>
-                  </Slide>
-                </Box>
-                <Box className="techStack">
-                  <Divider sx={{ my: 1 }} />
-                  {data?.technologies?.map((tech, index2) => (
-                    <Fade
-                      in={inRange}
-                      style={{
-                        transitionDelay: inRange
-                          ? `${30 * index2 + 1}ms`
-                          : "0ms",
-                      }}
-                      key={index2}
-                    >
+                    {/* </Animation> */}
+                  </Box>
+                  <Box className="techStack">
+                    <Divider sx={{ my: 1 }} />
+                    {data?.technologies?.map((tech, index2) => (
                       <Chip
                         label={tech}
                         sx={{
@@ -389,10 +325,29 @@ const ExperienceSection = ({
                           color: "rgb(94, 234, 212)",
                         }}
                       />
-                    </Fade>
-                  ))}
+                    ))}
+                    {/* <Fade
+                        in={inRange}
+                        timeout={500}
+                        style={{
+                          transitionDelay: inRange
+                            ? `${30 * index2 + 1}ms`
+                            : "0ms",
+                        }}
+                        key={index2}
+                      >
+                        <Chip
+                          label={tech}
+                          sx={{
+                            margin: "3px",
+                            background: "rgba(45, 212, 191, 0.1)",
+                            color: "rgb(94, 234, 212)",
+                          }}
+                        />
+                      </Fade> */}
+                  </Box>
                 </Box>
-              </Box>
+              </Animation>
             </Box>
           </Grid>
         </Grid>

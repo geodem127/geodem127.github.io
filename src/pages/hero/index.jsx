@@ -1,96 +1,157 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Box, Typography, Toolbar, styled } from "@mui/material";
-import SectionWrapper from "../SectionWrapper";
+import { Box, styled } from "@mui/material";
 
-import "./heroStyles.css";
+const LogoSvgStyles = styled("svg")(({ theme }) => ({
+  "& .logoGradient": {
+    transform: "translate(-300px, 15px)",
+    animation: "logoGradient 1s linear infinite",
+  },
+  "& #g-gradient": {
+    animation: "logoGradient 1s linear infinite",
+  },
+  "& #d-gradient": {
+    animation: "logoGradient 1s linear infinite",
+  },
 
-const HeroPageStyles = styled(Box)`
-  /* background-color: #d2d2d2;
-  background-image: repeating-linear-gradient(
-      to right,
-      transparent 0 100px,
-      #25283b22 100px 101px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      transparent 0 100px,
-      #25283b22 100px 101px
-    ); */
-`;
+  "& #g-logo": {
+    animation: "gLogoTransition 1s ease-out forwards",
+  },
+  "& #d-logo": {
+    animation: "dLogoTransition 1s ease-out forwards",
+  },
+
+  "@keyframes gLogoTransition": {
+    "0%": {
+      transform: "translate(-300px, 15px)",
+    },
+    "75%": {
+      transform: "translate(0, 15px)",
+    },
+    "100%": {
+      transform: "translate(0, 0)",
+    },
+  },
+  "@keyframes dLogoTransition": {
+    "0%": {
+      transform: "translate(300px, -15px)",
+    },
+    "76.5%": {
+      transform: "translate(0, -15px)",
+    },
+    "100%": {
+      transform: "translate(0, 0)",
+    },
+  },
+  "@keyframes logoGradient": {
+    "0%": {
+      transform: "rotate(180deg)",
+      //   transform: "skewY(-180deg)",
+    },
+    "100%": {
+      transform: "rotate(360deg)",
+      //   transform: "skewY(180deg)",
+    },
+  },
+}));
+
 const HeroPage = () => {
   return (
-    <SectionWrapper id="hero">
+    <Box
+      sx={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Box
-        component={"div"}
         sx={{
-          // border: "2px solid green",
-          flexGrow: 1,
+          width: "100%",
+          height: "60px",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "stretch",
-          position: "relative",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <HeroPageStyles id="heroContainer" flexGrow={1}>
-          <div className="banner">
-            <div className="slider" style={{ "--quantity": 5 }}>
-              <div className="item" style={{ "--position": 1 }}>
-                <img src="images/heroImages/dragon_1.jpg" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 2 }}>
-                <img src="images/heroImages/dragon_2.jpg" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 3 }}>
-                <img src="images/heroImages/dragon_3.jpg" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 4 }}>
-                <img src="images/heroImages/dragon_4.jpg" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 5 }}>
-                <img src="images/heroImages/dragon_5.jpg" alt="" />
-              </div>
-              {/* <div className="item" style={{ "--position": 6 }}>
-                <img src="images/heroImages/dragon_6.jpg" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 7 }}>
-                <img src="images/heroImages/dragon_7.jpg" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 8 }}>
-                <img src="images/heroImages/dragon_8.jpg" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 9 }}>
-                <img src="images/heroImages/dragon_9.jpg" alt="" />
-              </div>
-              <div className="item" style={{ "--position": 10 }}>
-                <img src="images/heroImages/dragon_10.jpg" alt="" />
-              </div> */}
-            </div>
-            {/* <div className="content">
-              <h1 dataContent="CSS ONLY">CSS ONLY</h1>
-              <div className="author">
-                <h2>LUN DEV</h2>
-                <p>
-                  <b>Web Design</b>
-                </p>
-                <p>Subscribe to the channel to watch many interesting videos</p>
-              </div>
-              <div className="model"></div>
-            </div> */}
-          </div>
-        </HeroPageStyles>
+        <LogoSvgStyles
+          width={"100%"}
+          height={"100%"}
+          viewBox="0 0 215 215"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient
+              gradientUnits="userSpaceOnUse"
+              x1="87.5"
+              y1="0"
+              x2="87.5"
+              y2="170"
+              id="g-gradient"
+              className="logoGradient"
+              gradientTransform="matrix(0.70713, 0.707083, -1, 1, 108.125427, -61.870239)"
+            >
+              <stop offset="0" style={{ stopColor: "rgb(40, 186, 106)" }} />
+              <stop offset="1" style={{ stopColor: "rgb(0, 55, 13)" }} />
+              <animateTransform
+                className="logoGradient"
+                type="rotate"
+                additive="sum"
+                attributeName="gradientTransform"
+                values="1;360"
+                begin="1s"
+                dur="1s"
+                fill="freeze"
+                keyTimes="0; 1"
+                repeatCount="indefinite"
+                from="0 107.5 107.5"
+                to="360 107.5 107.5"
+              />
+            </linearGradient>
+            <linearGradient
+              gradientUnits="userSpaceOnUse"
+              x1="138.45"
+              y1="46.658"
+              x2="138.45"
+              y2="216.658"
+              id="d-gradient"
+              className="logoGradient"
+              gradientTransform="matrix(0.68096, 0.73232, -1.058824, 1, 170.123016, -103.048218)"
+            >
+              <stop offset="0" style={{ stopColor: "rgb(79, 51, 240)" }} />
+              <stop offset="1" style={{ stopColor: "rgb(23, 15, 70)" }} />
+              <animateTransform
+                className="logoGradient"
+                type="rotate"
+                additive="sum"
+                attributeName="gradientTransform"
+                values="0;360"
+                begin="1s"
+                dur="1s"
+                fill="freeze"
+                repeatCount="indefinite"
+                keyTimes="0; 1"
+                from="0 107.5 107.5"
+                to="360 107.5 107.5"
+              />
+            </linearGradient>
+          </defs>
+          <g transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, -1.4210854715202004e-14)">
+            <path
+              id="g-logo"
+              style={{ strokeLinejoin: "round", fill: 'url("#g-gradient")' }}
+              d="M 89.926 90.149 L 170 90 L 170 170 L 25 170 L 0 145 L 0 25 L 30 0 L 140 0 L 175 30 L 40 30 L 30 40 L 30 130 L 40 140 L 140 140 L 140 120 L 90 120 L 89.926 90.149 Z"
+            ></path>
+            <path
+              id="d-logo"
+              style={{ fill: 'url("#d-gradient")' }}
+              d="M 45 120 L 45 45 L 190 45 L 215 70 L 215 190 L 185 215 L 65 215 L 35 185 L 175 185 L 185 175 L 185 85 L 175 75 L 75 75 L 75 120 L 45 120 Z"
+            ></path>
+          </g>
+        </LogoSvgStyles>
       </Box>
-    </SectionWrapper>
+    </Box>
   );
 };
 
-HeroPage.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * Remove this when copying and pasting into your project.
-   */
-  // data: PropTypes.any,
-  // id: PropTypes.string,
-  // window: PropTypes.func,
-};
 export default HeroPage;

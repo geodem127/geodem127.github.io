@@ -1,30 +1,35 @@
 import React, { Suspense } from "react";
-
+// import { useTheme, alpha } from "@mui/material";
+// import LoadingPage from "./loadingPage";
 import ErrorBoundary from "./errorrBoundery";
-import { styled } from "@mui/material/styles";
-// styles
-const LoaderWrapper = styled("div")`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1301;
-  width: 100%;
-  height: 2px;
-  opacity: 0;
-`;
 
-// ==============================|| LOADER ||============================== //
-const Loader = () => <LoaderWrapper>LOADING</LoaderWrapper>;
-
-// ==============================|| LOADABLE - LAZY LOADING ||============================== //
-
-const Loadable = (Component) => (props) =>
-  (
+const Loadable = (Component) => (props) => {
+  // const theme = useTheme();
+  return (
     <ErrorBoundary>
-      <Suspense fallback={<Loader />}>
+      <Suspense
+        fallback={
+          // <LoadingPage
+          //   color={alpha(theme?.palette?.text.primary, 0.5)}
+          //   size="sm"
+          // />
+          <div
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              display: "grid",
+              placeContent: "center",
+            }}
+          >
+            Loading...
+          </div>
+        }
+      >
         <Component {...props} />
       </Suspense>
     </ErrorBoundary>
   );
+};
 
 export default Loadable;

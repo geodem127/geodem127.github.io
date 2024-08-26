@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const usePageScroll = (target) => {
   const [top, setTop] = useState(null);
@@ -58,6 +58,7 @@ const usePageScroll = (target) => {
     rects,
     viewportWidth,
     viewportHeight,
+    getTargetRect,
   };
 };
 

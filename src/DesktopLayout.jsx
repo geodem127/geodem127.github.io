@@ -1,17 +1,17 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Layout from "./layout";
 
-import RootRoutes from "./routes";
+import DesktopRoutes from "./desktopRoutes";
 
 const DesktopLayout = () => {
   return (
     <>
-      <BrowserRouter basename="/">
+      <HashRouter>
         <Layout>
-          <RootRoutes />
+          <DesktopRoutes />
         </Layout>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };

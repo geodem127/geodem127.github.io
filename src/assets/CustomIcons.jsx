@@ -106,6 +106,72 @@ export const PortfolioIcon = (
   </svg>
 );
 
+export const GeodemIcon = (
+  <svg viewBox="0 0 153 152" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient
+        gradientUnits="userSpaceOnUse"
+        x1="59.886"
+        y1="0.169"
+        x2="59.886"
+        y2="120.169"
+        id="gradient-0"
+        gradientTransform="matrix(0.708199, 0.706012, -0.841667, 0.841667, 65.730675, -33.422722)"
+      >
+        <stop offset="0" style={{ stopColor: "rgb(66, 175, 136)" }} />
+        <stop offset="1" style={{ stopColor: "rgb(20, 53, 41)" }} />
+      </linearGradient>
+      <linearGradient
+        gradientUnits="userSpaceOnUse"
+        x1="85.886"
+        y1="26.169"
+        x2="85.886"
+        y2="146.169"
+        id="gradient-1"
+        gradientTransform="matrix(0.749172, 0.662375, -0.783333, 0.891667, 94.155999, -45.222593)"
+      >
+        <stop offset="0" style={{ stopColor: "rgb(32, 21, 96)" }} />
+        <stop offset="1" style={{ stopColor: "rgb(81, 54, 246)" }} />
+      </linearGradient>
+    </defs>
+    <path
+      style={{ strokeWidth: "18px", fill: "none" }}
+      d="M 52 61 L 111 61 L 111 96 L 97 111 L 24 111 L 9 96 L 9 24 L 24 9 L 120 9"
+      transform="matrix(1, 0, 0, 1, -3.552713678800501e-15, 0)"
+    />
+    <path
+      d="M 60 66 L 120 66 L 120 120 L 20 120 L 0 99.728 L 0 20.272 L 20.272 0 L 96 0 L 120 21 L 29.728 21 L 21 30.728 L 21 88.272 L 32 99 L 99 99 L 99 84 L 60 84 L 60 66 Z"
+      style={{ fill: "url('#gradient-0')", strokeWidth: "3px" }}
+      transform="matrix(1, 0, 0, 1, -3.552713678800501e-15, 0)"
+    />
+    <path
+      style={{ strokeWidth: "18px", fill: "none" }}
+      d="M 129 87 L 129 122 L 115 137 L 42 137 L 27 122 L 27 50 L 42 35 L 138 35"
+      transform="matrix(-1, 0, 0, -1, 165.000015, 171.999985)"
+    />
+    <path
+      d="M 153 100 L 153 151 L 53.272 152 L 33 131.728 L 33 52.272 L 53.272 32 L 130 32 L 152 53 L 63.728 53 L 54 62.728 L 54 121 L 63 130 L 132 130 L 132 100 L 153 100 Z"
+      style={{ fill: "url('#gradient-1')", strokeWidth: "3px" }}
+      transform="matrix(-1, 0, 0, -1, 186, 184.00001525878906)"
+    />
+    <path
+      d="M 26 77 L 98 77 L 98 96.175 L 26 96.175 L 26 77 Z"
+      style={{ fill: "none" }}
+      transform="matrix(1, 0, 0, 1, -3.552713678800501e-15, 0)"
+    />
+    <path
+      d="M 98.5 76.5 L 98.5 96.675 L 25.5 96.675 L 25.5 76.5 L 98.5 76.5 Z M 26.5 95.675 L 97.5 95.675 L 97.5 77.5 L 26.5 77.5 L 26.5 95.675 Z"
+      style={{ fill: "none" }}
+      transform="matrix(1, 0, 0, 1, -3.552713678800501e-15, 0)"
+    />
+    <path
+      d="M 99 97.175 L 25 97.175 L 25 76 L 99 76 L 99 97.175 Z M 27 95.175 L 97 95.175 L 97 78 L 27 78 L 27 95.175 Z"
+      style={{ fill: "none" }}
+      transform="matrix(1, 0, 0, 1, -3.552713678800501e-15, 0)"
+    />
+  </svg>
+);
+
 export const GithubIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -156,6 +222,26 @@ export const CodePenIcon = (
   </svg>
 );
 
+export const EmailIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"></path>
+  </svg>
+);
+
+export const PhoneIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M22 3H2C.9 3 0 3.9 0 5v14c0 1.1.9 2 2 2h20c1.1 0 1.99-.9 1.99-2L24 5c0-1.1-.9-2-2-2m0 16H2V5h20zm-2.99-1.01L21 16l-1.51-2h-1.64c-.22-.63-.35-1.3-.35-2s.13-1.37.35-2h1.64L21 8l-1.99-1.99c-1.31.98-2.28 2.37-2.73 3.99-.18.64-.28 1.31-.28 2s.1 1.36.28 2c.45 1.61 1.42 3.01 2.73 3.99M9 12c1.65 0 3-1.35 3-3s-1.35-3-3-3-3 1.35-3 3 1.35 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1m6 8.59c0-2.5-3.97-3.58-6-3.58s-6 1.08-6 3.58V18h12zM5.48 16c.74-.5 2.22-1 3.52-1s2.77.49 3.52 1z"></path>
+  </svg>
+);
+
 export const OpenArrowIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -172,16 +258,32 @@ export const OpenArrowIcon = (
   </svg>
 );
 
+export const OpenNewWindowIcon = (
+  <svg
+    stroke="currentColor"
+    fill="currentColor"
+    strokeWidth="0"
+    viewBox="0 0 1024 1024"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M888.3 757.4h-53.8c-4.2 0-7.7 3.5-7.7 7.7v61.8H197.1V197.1h629.8v61.8c0 4.2 3.5 7.7 7.7 7.7h53.8c4.2 0 7.7-3.4 7.7-7.7V158.7c0-17-13.7-30.7-30.7-30.7H158.7c-17 0-30.7 13.7-30.7 30.7v706.6c0 17 13.7 30.7 30.7 30.7h706.6c17 0 30.7-13.7 30.7-30.7V765.1c0-4.3-3.5-7.7-7.7-7.7zm18.6-251.7L765 393.7c-5.3-4.2-13-.4-13 6.3v76H438c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 0 0 0-12.6z"></path>
+  </svg>
+);
+
 export const CustomIcons = {
+  GeodemIcon: GeodemIcon,
   Github: GithubIcon,
   LinkedIn: LinkedInIcon,
   CodePen: CodePenIcon,
   Portfolio: PortfolioIcon,
+  OpenNewWindowIcon: OpenNewWindowIcon,
+  EmailIcon: EmailIcon,
+  PhoneIcon: PhoneIcon,
 };
 
 const ButtonIcon = ({ icon, path, title, size, color }) => {
   const iconSize = ICON_SIZES?.[size] || "1rem";
-  console.log("ButtonIcon:: ", { icon, path, title });
+
   return (
     <div style={{ width: "25px", height: "25px" }}>
       <a
