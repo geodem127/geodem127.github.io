@@ -41,8 +41,8 @@ const Layout = () => {
 
   React.useEffect(() => {
     if (isLoading || pageLoaded) return;
-    console.log("isLoading:", isLoading);
-    console.log("userData:", userData);
+    // console.log("isLoading:", isLoading);
+    // console.log("userData:", userData);
     setPageLoaded(true);
   }, [isLoading, pageLoaded, setPageLoaded]);
 

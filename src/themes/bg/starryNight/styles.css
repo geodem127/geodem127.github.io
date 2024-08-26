@@ -10,6 +10,14 @@
   overflow: hidden;
 }
 
+#stars,
+#stars1,
+#stars2,
+#stars3,
+#stars4 {
+  background: red !important;
+}
+
 #stars {
   width: 1px;
   height: 1px;
@@ -565,16 +573,11 @@
 
 @keyframes animStar {
   from {
-    transform: translateY(0px);
+    /* transform: translateY(0px); */
+    transform: translateX(0px) translateY(0px);
   }
   to {
-    transform: translateY(-2000px);
+    /* transform: translateY(-2000px); */
+    transform: translateX(-2000px) translateY(-2000px);
   }
 }
-
-
-
-
-
-
-

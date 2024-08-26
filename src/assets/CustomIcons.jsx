@@ -129,8 +129,8 @@ export const LinkedInIcon = (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     fill="currentColor"
-    class="h-6 w-6"
-    ariaHidden="true"
+    className="h-6 w-6"
+    // ariaHidden="true"
   >
     <path
       fill="currentColor"
@@ -161,8 +161,8 @@ export const OpenArrowIcon = (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
     fill="currentColor"
-    class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-    ariaHidden="true"
+    className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+    // ariaHidden="true"
   >
     <path
       fillRule="evenodd"

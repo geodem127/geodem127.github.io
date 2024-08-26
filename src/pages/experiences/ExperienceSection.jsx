@@ -44,8 +44,10 @@ const SectionStyles = styled(Box)(({ theme }) => ({
     position: "relative",
     zIndex: "200",
     boxShadow: `0px 0px 50px 15px ${theme.palette.primary.main}`,
-    "-webkit-box-shadow": `0px 0px 50px 15px ${theme.palette.primary.main}`,
-    "-moz-box-shadow": `0px 0px 50px 15px ${theme.palette.primary.main}`,
+    // "-webkit-box-shadow": `0px 0px 50px 15px ${theme.palette.primary.main}`,
+    // "-moz-box-shadow": `0px 0px 50px 15px ${theme.palette.primary.main}`,
+    WebkitBoxShadow: `0px 0px 50px 15px ${theme.palette.primary.main}`,
+    MozBoxShadow: `0px 0px 50px 15px ${theme.palette.primary.main}`,
   },
 
   "& .periodLine": {

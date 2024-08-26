@@ -1,59 +1,44 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useMemo } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import { useTheme, styled } from "@mui/material";
-// import IconPlane from "./IconPlane"; // We'll create this component next
+import { styled } from "@mui/material";
+
 const sphereRadius = 2.5;
 
 const CanvasStyles = styled(Canvas)(({ theme }) => ({
-  // outline: "1px dashed red",
-  // outlineOffset: "-1px",
   width: "50%",
 }));
 
-const IconPlane = ({ position, texture, color }) => {
+const IconPlane = ({ position, texture }) => {
   const meshRef = useRef();
-
-  // Load the texture using useLoader for efficient loading
   const textureMap = useLoader(THREE.TextureLoader, texture);
 
   useEffect(() => {
     if (meshRef.current) {
-      // Calculate the direction vector from the center to the position
-      const [x, y, z] = position;
-      const direction = new THREE.Vector3(x, y, z).normalize();
-
-      // Create a quaternion that rotates the plane to face outward
+      const direction = new THREE.Vector3(...position).normalize();
       const quaternion = new THREE.Quaternion().setFromUnitVectors(
-        new THREE.Vector3(0, 0, 1), // Original orientation of the plane
-        direction // Desired orientation
+        new THREE.Vector3(0, 0, 1),
+        direction
       );
-
-      // Apply the rotation to the mesh
       meshRef.current.quaternion.copy(quaternion);
     }
-  }, [position]);
+  }, [position, textureMap]);
 
   return (
     <mesh position={position} ref={meshRef}>
-      {/* <planeGeometry args={[0.25 * sphereRadius, 0.25 * sphereRadius]} /> */}
       <planeGeometry args={[0.5, 0.5, 3, 3]} />
       <meshBasicMaterial
         map={textureMap}
         transparent={true}
         shadowSide={THREE.DoubleSide}
-        // color={color}
-        // refractionRatio={0.95}
-        side={THREE.DoubleSide} // Ensures visibility from both sides
-        // opacity={1}
+        side={THREE.DoubleSide}
       />
     </mesh>
   );
 };
 
 const SphereWithIcons = ({ techStack = [] }) => {
-  const theme = useTheme();
   const generateSpherePositions = (count, radius) => {
     const positions = [];
     const goldenRatio = (1 + Math.sqrt(5)) / 2;
@@ -72,23 +57,30 @@ const SphereWithIcons = ({ techStack = [] }) => {
     return positions;
   };
 
-  const uniqueTech = [];
-  techStack.forEach((techData) => {
-    techData?.technologies?.forEach((uTech) => {
-      const cleanString = uTech.replace(/[^a-zA-Z0-9]/g, "")?.toLowerCase();
-      if (!uniqueTech?.includes(cleanString)) {
-        uniqueTech.push(cleanString);
-      }
+  const uniqueTech = useMemo(() => {
+    const techSet = new Set();
+    techStack.forEach((techData) => {
+      techData?.technologies?.forEach((uTech) => {
+        const cleanString = uTech.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+        techSet.add(cleanString);
+      });
     });
-  });
+    return Array.from(techSet);
+  }, [techStack]);
 
-  const positions = generateSpherePositions(uniqueTech.length, sphereRadius);
-  const techIconData = uniqueTech?.map((tech, index) => {
-    return {
-      texture: `./images/${tech}.svg`,
-      position: positions[index],
-    };
-  });
+  const positions = useMemo(
+    () => generateSpherePositions(uniqueTech.length, sphereRadius),
+    [uniqueTech.length]
+  );
+
+  const techIconData = useMemo(
+    () =>
+      uniqueTech.map((tech, index) => ({
+        texture: `./images/${tech}.svg`,
+        position: positions[index],
+      })),
+    [uniqueTech, positions]
+  );
 
   return (
     <CanvasStyles>
@@ -96,27 +88,15 @@ const SphereWithIcons = ({ techStack = [] }) => {
       <pointLight position={[10, 10, 10]} />
 
       <mesh>
-        <sphereGeometry args={[sphereRadius]} />
-        <meshStandardMaterial
-          transparent
-          opacity={0.02}
-          side={THREE.DoubleSide}
-          wireframe
-        />
-      </mesh>
-      {techIconData.map((icon, index) => {
-        return (
+        {techIconData.map((icon, index) => (
           <IconPlane
             key={index}
-            // position={positions[index]}
             position={icon.position}
             texture={icon.texture}
-            color={theme.palette.primary.main}
           />
-        );
-      })}
+        ))}
+      </mesh>
 
-      {/* Controls */}
       <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
     </CanvasStyles>
   );
