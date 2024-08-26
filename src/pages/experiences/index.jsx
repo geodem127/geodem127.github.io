@@ -7,8 +7,7 @@ import { Box, Typography, Grid, Chip, Zoom, Slide } from "@mui/material";
 import useDataParse from "../../hooks/useDataParse";
 import SectionWrapper from "../SectionWrapper";
 import { UserContext } from "../../context/userContext";
-import ExperienceCard from "./ExperienceCard";
-import usePageScroll from "../../hooks/usePageScroll";
+
 import ExperienceSection from "./ExperienceSection";
 
 const ExperiencesPage = ({}) => {

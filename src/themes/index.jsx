@@ -96,7 +96,7 @@ export const AppThemeProvider = ({ children }) => {
   //     primary: `linear-gradient(90deg, ${palette?.dark.primary.dark} 0%, ${palette?.dark.primary.main} 40%, ${palette?.dark.primary.light} 100%)`,
   //   },
   // });
-  console.log("themeOptions:", themeOptions);
+  // console.log("themeOptions:", themeOptions);
   // setTheme(responsiveFontSizes(themeOptions));
   // setTheme(themeOptions);
 

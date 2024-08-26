@@ -1,25 +1,11 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import {
-  Box,
-  ButtonBase,
-  Button,
-  Toolbar,
-  Typography,
-  Switch,
-  Divider,
-  IconButton,
-  Link,
-  Slide,
-} from "@mui/material";
+import { Box, Typography, Divider, Slide } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useAppThemeContext } from "../../themes";
 import Navigation from "./Navigation";
-import ButtonIcon, { CustomIcons, GithubIcon } from "../../assets/CustomIcons";
-import TextFlip from "../../common/textAnimation";
-import NameAnimation from "./NameAnimation";
-import MyLogo from "../../common/MyLogo";
+import { CustomIcons } from "../../assets/CustomIcons";
 
 const Y_PADDING = {
   sm: "0",
@@ -30,7 +16,6 @@ const Y_PADDING = {
 const ANIMATION_TIMER = 3500;
 
 const HeaderStyles = styled(Box)(({ theme }) => ({
-  //   border: "solid 1px blue",
   "& .nameContainer > .MuiTypography-h1": {
     width: "100%",
     whiteSpace: "nowrap",
@@ -44,32 +29,20 @@ const HeaderStyles = styled(Box)(({ theme }) => ({
     padding: 0,
     margin: 0,
     animation: "text-gradient-animation linear 20s infinite 1s",
-    "-webkit-background-clip": "text",
-    "-webkit-text-fill-color": "transparent",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
   },
 
   "& .roleTextContainer": {
     position: "relative",
-    // outline: "1px dashed red",
-    // outlineOffset: "-1px",
-    "& .roleTextWrapper": {
-      //   outline: "1px solid yellow",
-      //   outlineOffset: "-1px",
-    },
+
+    "& .roleTextWrapper": {},
     "& .roleText": {
-      //   outline: "1px dashed green",
-      //   outlineOffset: "-3px",
       width: "0%",
-      //   transition: "all 500ms steps(10) forwards",
-      //   transitionBehavior: "normal",
-      //   transitionProperty: "width",
-      //   transitionDuration: "2000ms",
-      //   transitionTimingFunction: "steps(10)",
-      // transition-delay: 0s;
 
       overflow: "hidden",
       whiteSpace: "nowrap",
-      //   height: "2.4rem",
+
       "&::after": {
         content: "''",
         position: "absolute",
@@ -85,32 +58,18 @@ const HeaderStyles = styled(Box)(({ theme }) => ({
 
   "&.ready": {
     "& .roleTextContainer": {
-      //   height: "2.4rem",
       overflow: "hidden",
-      //   border: "solid 1px green",
+
       "& .roleTextWrapper": {
         animationName: "text-slide-animation",
         animationIterationCount: "infinite",
-        // animationDirection: "alternate",
 
         "& .roleText": {
-          // animation: "text-animation 2s steps(10) both infinite",
-          // animationName: "text-animation",
-          // animationDuration: "1500ms",
-          // animationTimingFunction: "steps(10)",
           animationIterationCount: "infinite",
           animationDirection: "alternate",
           position: "relative",
-          //   paddingRight: ".5rem",
-          // animationTimeout: "500ms",
+
           "&::after": {
-            // content: "''",
-            // position: "absolute",
-            // top: 0,
-            // right: 0,
-            // bottom: 0,
-            // width: "1px",
-            // background: "red",
             animationName: "cursor-blink-animation",
             animationIterationCount: "infinite",
             animationDirection: "alternate",
@@ -156,7 +115,6 @@ const Header = ({ width, data, screenSize, sx = {}, ...other }) => {
   const [ready, setReady] = React.useState(false);
 
   const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const mediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const { personalInformation, navigation } = data;
 
   const handleModeChage = () => {
@@ -173,7 +131,6 @@ const Header = ({ width, data, screenSize, sx = {}, ...other }) => {
   return (
     <HeaderStyles
       component={"header"}
-      //   py={Y_PADDING[screenSize]}
       className={!!ready ? "ready" : ""}
       display={"flex"}
       flexDirection={"column"}
@@ -185,7 +142,7 @@ const Header = ({ width, data, screenSize, sx = {}, ...other }) => {
         position: !["sm", "md"].includes(screenSize) ? "sticky" : "relative",
         height: !["sm", "md"].includes(screenSize) ? "100vh" : "auto",
         top: 0,
-        // border: "1px solid blue",
+
         ...sx,
       }}
       {...other}
@@ -226,10 +183,8 @@ const Header = ({ width, data, screenSize, sx = {}, ...other }) => {
         <Box
           className="roleTextContainer"
           sx={{
-            // outline: "1px solid purple",
-            // outlineOffset: "-1px",
             height: !!smallScreen ? "2.1rem" : "2.65rem",
-            // width: "max-content",
+
             mt: 1,
           }}
         >
@@ -243,13 +198,11 @@ const Header = ({ width, data, screenSize, sx = {}, ...other }) => {
               animationTimingFunction: `steps(${personalInformation?.skills?.length})`,
               animationName: "text-slide-animation",
               animationDeley: `${ANIMATION_TIMER}ms`,
-              //   animationDuration: `${1500}ms`,
-              //   animationTimingFunction: `steps(${skill?.length})`,
-              //   marginTop: "-2rem",
             }}
           >
             {personalInformation?.skills?.map((skill, index, arr) => (
               <Box
+                key={index}
                 py={0.25}
                 sx={{
                   width: "max-content",
@@ -258,11 +211,8 @@ const Header = ({ width, data, screenSize, sx = {}, ...other }) => {
                 <Typography
                   className="roleText"
                   variant={"h3"}
-                  // component={"h3"}
                   color={"text.secondary"}
-                  //   py={0.5}
                   sx={{
-                    //   transitionTimingFunction: `steps(${personalInformation?.role?.length})`,
                     animationName: "text-animation",
                     animationDuration: `${ANIMATION_TIMER}ms`,
                     animationTimingFunction: `steps(${skill?.length})`,
@@ -288,20 +238,11 @@ const Header = ({ width, data, screenSize, sx = {}, ...other }) => {
         gap={2}
         sx={{ display: "flex", flexDirection: "row" }}
       >
-        {/* <MyLogo
-          sx={{
-            margin: ".25rem",
-            width: "30px",
-            height: "30px",
-         
-          }}
-        /> */}
-        {personalInformation?.socialLinks?.map((link) => {
-          console.log("link?.path:::", link?.path);
+        {personalInformation?.socialLinks?.map((link, index) => {
           return (
             <Box
+              key={index}
               component={"a"}
-              // sx={{ color: theme.palette.text.secondary }}
               href={link?.path}
               target="_blank"
               title={link?.label}

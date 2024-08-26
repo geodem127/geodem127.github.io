@@ -12,7 +12,7 @@ const StarryNightBackground = () => {
   const mediumScreen = useMediaQuery(theme.breakpoints.between("sm", "lg"));
 
   const handleHover = (e) => {
-    //console.log('moved');
+ 
     const mouseX = e.clientX;
     const mouseY = e.clientY;
     //   canvas.setAttribute('style', `background: radial-gradient(600px at ${mouse.x}px ${mouse.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`)

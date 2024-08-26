@@ -21,6 +21,7 @@
     "firstName": "George",
     "lastName": "Demonteverde",
     "role": "Senior Full-stack Developer",
+    "driveLink": "https://drive.google.com/drive/folders/1-6ikD3UesqNYNs770cgIkiijqJ3TGfzO?usp=sharing",
     "skills": [
       "Full Stack Developer",
       "UI and API Optimization",
@@ -275,7 +276,7 @@
         "ESlint",
         "Material UI",
         "Serverless",
-        "Tailwind CSS",
+        "Tailwind",
         "Express",
         "Graphql",
         "Bootstrap",

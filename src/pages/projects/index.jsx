@@ -53,6 +53,7 @@ const Projects = () => {
 
         return (
           <Grid
+            key={item?.id}
             width={"100%"}
             container
             rowSpacing={1}
