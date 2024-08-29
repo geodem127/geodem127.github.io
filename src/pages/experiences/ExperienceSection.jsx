@@ -58,22 +58,24 @@ const SectionStyles = styled(Box)(({ theme }) => ({
     left: "50%",
     // transform: "translateX(-50%)",
     zIndex: "0",
-    background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.main} 50%, ${theme?.palette.primary.light} 100%)`,
+    // background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.main} 50%, ${theme?.palette.primary.light} 100%)`,
+    background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.light} 100%)`,
+    backgroundAttachment: "fixed",
     opacity: 0.5,
     overflow: "hidden",
-    transition: "height 400ms linear",
-    "&::before": {
-      content: '""',
-      position: "absolute",
-      left: "-.35rem",
-      top: "-1rem",
-      width: "1rem",
-      height: "0",
-      transition: "height 200ms linear",
-      background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.main} 50%, ${theme?.palette.primary.light} 100%)`,
-      clipPath:
-        "polygon(50% 100%, 100% 75%, 100% 25%, 50.75% 0%, 50% 19.37%, 82.95% 33.68%, 82.95% 66.48%, 50% 81.23%, 17.05% 66.48%, 17.37% 33.68%, 50% 19.37%, 50.75% 0%, 0% 25%, 0% 75%)",
-    },
+    transition: "all 400ms linear",
+    // "&::before": {
+    //   content: '""',
+    //   position: "absolute",
+    //   left: "-.35rem",
+    //   top: "-1rem",
+    //   width: "1rem",
+    //   height: "0",
+    //   transition: "height 200ms linear",
+    //   background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.main} 50%, ${theme?.palette.primary.light} 100%)`,
+    //   clipPath:
+    //     "polygon(50% 100%, 100% 75%, 100% 25%, 50.75% 0%, 50% 19.37%, 82.95% 33.68%, 82.95% 66.48%, 50% 81.23%, 17.05% 66.48%, 17.37% 33.68%, 50% 19.37%, 50.75% 0%, 0% 25%, 0% 75%)",
+    // },
   },
 
   "&.inRange": {
@@ -105,7 +107,7 @@ const SectionStyles = styled(Box)(({ theme }) => ({
       content: '""',
       position: "absolute",
       left: "0",
-      top: "1.15rem",
+      top: "1.25rem",
       width: "1rem",
       height: "1rem",
       transition: "height 200ms linear",
@@ -117,22 +119,23 @@ const SectionStyles = styled(Box)(({ theme }) => ({
       content: '""',
       position: "absolute",
       left: ".38rem",
-      top: "2.15rem",
+      top: "2.25rem",
       width: "3px",
       height: "0",
-      transition: "height 200ms linear",
-      background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.main} 50%, ${theme?.palette.primary.light} 100%)`,
+      transition: "all 200ms linear",
+      background: `linear-gradient(180deg, ${theme?.palette.primary.dark} 0%, ${theme?.palette.primary.light} 100%)`,
+      backgroundAttachment: "fixed",
     },
     "&.inRange": {
       "&::after": {
         height: "100%",
       },
-    },
-    "&:not(:has(+ .inRange))": {
-      "&::after": {
-        height: "calc(100% - 2.15rem)",
-        clipPath:
-          "polygon(400% -3rem, 100% 50%, 50% 100%, 0% 50%, -400% -3rem)",
+      "&:not(:has(+ .inRange))": {
+        "&::after": {
+          height: "calc(100% - 2.15rem)",
+          clipPath:
+            "polygon(400% -3rem, 100% 50%, 50% 100%, 0% 50%, -400% -3rem)",
+        },
       },
     },
   },
@@ -156,6 +159,8 @@ const SectionStyles = styled(Box)(({ theme }) => ({
       opacity: 0,
       transition: "opacity 200ms ease-in",
     },
+  },
+  "&:not(.isMobile) .descriptionBoxWrapper": {
     "&:hover": {
       "&::before": {
         opacity: 1,
@@ -222,8 +227,8 @@ const ExperienceSection = ({
   const jobDescriptionIsArray = jobDescriptionData?.constructor === Array;
 
   useEffect(() => {
-    setInRange(bottom > -10);
-  }, [bottom]);
+    setInRange(top < 80);
+  }, [top]);
   useEffect(() => {
     // if (data?.year !== "2022") return;
     const pointsTop = (viewportHeight * top) / 100;
@@ -284,7 +289,7 @@ const ExperienceSection = ({
                 <div
                   className="periodLine"
                   style={{
-                    top: smScreen ? "2rem" : "4.75rem",
+                    top: smScreen ? "2rem" : "4.5rem",
 
                     ...(smScreen && { transform: "translate(-50% -50%)" }),
                   }}

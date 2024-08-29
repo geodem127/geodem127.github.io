@@ -33,9 +33,12 @@ const themeOptions = createTheme({
   direction: "ltr",
   palette: palette?.dark,
   typography,
+  components,
   // ...overRidesStyles,
   gradients: {
     primary: `linear-gradient(135deg, ${palette?.dark.primary.dark} 0%, ${palette?.dark.primary.main} 62%, ${palette?.dark.primary.light} 100%)`,
+    secondary: `linear-gradient(135deg, ${palette?.dark.secondary.dark} 0%, ${palette?.dark.secondary.main} 62%, ${palette?.dark.secondary.light} 100%)`,
+    combined: `linear-gradient(45deg, ${palette?.dark.primary.main} 0%, ${palette?.dark.secondary.main} 100%)`,
   },
 });
 

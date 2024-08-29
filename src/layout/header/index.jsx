@@ -13,7 +13,7 @@ const Y_PADDING = {
   lg: "5rem",
 };
 
-const ANIMATION_TIMER = 3500;
+const ANIMATION_TIMER = 2000;
 
 const HeaderStyles = styled(Box)(({ theme }) => ({
   "& .nameContainer > .MuiTypography-h1": {

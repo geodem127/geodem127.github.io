@@ -5,10 +5,10 @@ import { Box, Typography, Divider, Toolbar } from "@mui/material";
 // import ExperiencesPage from "../../pages/experiences";
 // import Projects from "../../pages/projects";
 import { useTheme } from "@mui/material/styles";
-import RootRoutes from "../../routes";
+// import RootRoutes from "../../routes";
 const scrollPage = document.getElementById("root");
 
-const Main = ({ width, data, screenSize, sx = {}, ...other }) => {
+const Main = ({ width, data, screenSize, sx = {}, children, ...other }) => {
   const theme = useTheme();
   const { about, experiences, projects } = data;
   return (
@@ -30,27 +30,7 @@ const Main = ({ width, data, screenSize, sx = {}, ...other }) => {
       }}
       {...other}
     >
-      {/* {(screenSize === "lg" || screenSize === "md") && (
-        <Toolbar sx={{ display: { sm: "none", md: "block", lg: "block" } }} />
-      )} */}
-
-      {/* <AboutPage data={about} id="about" />
-
-      <ExperiencesPage data={experiences} id="experiences" />
-
-      <Projects data={experiences} id="projects" /> */}
-      {/* {["sm", "md"].includes(screenSize) ? (
-        <>
-          <AboutPage data={about} id="about" />
-
-          <ExperiencesPage data={experiences} id="experiences" />
-
-          <Projects data={experiences} id="projects" />
-        </>
-      ) : (
-        <RootRoutes />
-      )} */}
-      <RootRoutes />
+      {children}
     </Box>
   );
 };

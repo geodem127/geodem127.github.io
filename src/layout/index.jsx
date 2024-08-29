@@ -26,7 +26,7 @@ const Y_PADDING = {
   md: "4rem",
   lg: "6rem",
 };
-const Layout = () => {
+const Layout = ({ children }) => {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const mediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
@@ -96,7 +96,9 @@ const Layout = () => {
             data={{ about, project, experiences }}
             screenSize={screenSize}
             py={Y_PADDING[screenSize]}
-          />
+          >
+            {children}
+          </Main>
         </Box>
       </Container>
     </>

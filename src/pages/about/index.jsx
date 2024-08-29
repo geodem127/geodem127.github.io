@@ -49,14 +49,19 @@ const AboutPage = () => {
         </Typography>
 
         <Box
-          id={`techStackContainer`}
+          // id={`techStackContainer`}
           flexGrow={smallScreen ? 0 : 1}
           sx={{
+            boxSizing: "border-box",
             height: smallScreen ? "90vw" : "100%",
             margin: 0,
 
             display: "grid",
             placeItems: "center",
+
+            // outline: "2px dashed green",
+            // outlineOffset: "-2px",
+            // position: "relative",
           }}
         >
           <SphereWithIcons techStack={techStack} />

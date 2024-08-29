@@ -7,7 +7,7 @@ import SectionWrapper from "../SectionWrapper";
 import { useContext } from "react";
 import { UserContext } from "../../context/userContext";
 
-const Projects = () => {
+const ProjectsPage = () => {
   const { projects, experiences, isLoading } = useContext(UserContext);
   const { parseText } = useDataParse();
   console.log("projects:", projects);
@@ -137,7 +137,7 @@ const Projects = () => {
   );
 };
 
-Projects.propTypes = {
+ProjectsPage.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * Remove this when copying and pasting into your project.
@@ -146,4 +146,4 @@ Projects.propTypes = {
   id: PropTypes.string,
   window: PropTypes.func,
 };
-export default Projects;
+export default ProjectsPage;

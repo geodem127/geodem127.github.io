@@ -8,14 +8,19 @@ export const palette = {
       // main: "#00c6a3",
       // light: "#33d1b5",
       // dark: "#008a72",
-      main: "#01a98a",
-      light: "#04f2c6",
-      dark: "#014a3e",
+
+      // main: "#01a98a",
+      // light: "#04f2c6",
+      // dark: "#014a3e",
+      main: "#198780",
+      light: "#1cc0b5",
+      dark: "#08403c",
       contrastText: "#e2e8f0",
     },
     secondary: {
-      // main: "#f50057",
-      main: "#0c4369",
+      main: "#1041a3",
+      light: "#0d5bf5",
+      dark: "#07245e",
     },
     text: {
       primary: "#94a3b8",
@@ -24,7 +29,7 @@ export const palette = {
       hint: "rgb(94, 234, 212)",
     },
     background: {
-      default: "rgb(15, 23, 42)",
+      default: "rgb(2, 9, 24)",
       paper: "rgba(37, 44, 57, 0.926)",
     },
     action: {

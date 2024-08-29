@@ -22,7 +22,6 @@ const components = (breakpoints) => {
       },
       styleOverrides: {
         html: {
-          
           fontSynthesis: "none",
           textRendering: "optimizeLegibility",
           webkitFontSmoothing: "antialiased",
@@ -37,6 +36,7 @@ const components = (breakpoints) => {
             '"Google Sans", "Roboto", "Helvetica", "Arial", sans-serif',
           //   fontSize: "1rem",
           fontSize: "14px",
+          backgroundColor: "#0f1012",
         },
       },
     },

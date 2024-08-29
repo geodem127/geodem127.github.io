@@ -4,10 +4,24 @@ import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import { styled } from "@mui/material";
 
-const sphereRadius = 2.5;
+const sphereRadius = 2.35;
 
 const CanvasStyles = styled(Canvas)(({ theme }) => ({
-  width: "50%",
+  // width: "20%",
+  paddingRight: "10rem",
+  // outline: "1px dashed red",
+  // outlineOffset: "-2px",
+  "&::before": {
+    content: '"[ Technologies ]"',
+    position: "absolute",
+    left: "62%",
+    top: "20%",
+    borderTop: `2px dashed ${theme.palette.divider}`,
+    width: "33%",
+    textAlign: "right",
+    paddingTop: ".5rem",
+    textTransform: "uppercase",
+  },
 }));
 
 const IconPlane = ({ position, texture }) => {
@@ -27,7 +41,7 @@ const IconPlane = ({ position, texture }) => {
 
   return (
     <mesh position={position} ref={meshRef}>
-      <planeGeometry args={[0.5, 0.5, 3, 3]} />
+      <planeGeometry args={[0.6, 0.6]} />
       <meshBasicMaterial
         map={textureMap}
         transparent={true}
@@ -39,6 +53,8 @@ const IconPlane = ({ position, texture }) => {
 };
 
 const SphereWithIcons = ({ techStack = [] }) => {
+  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+
   const generateSpherePositions = (count, radius) => {
     const positions = [];
     const goldenRatio = (1 + Math.sqrt(5)) / 2;
@@ -76,29 +92,36 @@ const SphereWithIcons = ({ techStack = [] }) => {
   const techIconData = useMemo(
     () =>
       uniqueTech.map((tech, index) => ({
-        texture: `/geodem127.github.io/images/${tech}.svg`,
+        texture: `${baseUrl}images/${tech}.svg`,
         position: positions[index],
       })),
     [uniqueTech, positions]
   );
 
   return (
-    <CanvasStyles>
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} />
+    <>
+      <CanvasStyles resize={{ scroll: false }}>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
 
-      <mesh>
-        {techIconData.map((icon, index) => (
-          <IconPlane
-            key={index}
-            position={icon.position}
-            texture={icon.texture}
-          />
-        ))}
-      </mesh>
+        <mesh>
+          {techIconData.map((icon, index) => (
+            <IconPlane
+              key={index}
+              position={icon.position}
+              texture={icon.texture}
+            />
+          ))}
+        </mesh>
 
-      <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-    </CanvasStyles>
+        <OrbitControls
+          enableZoom={false}
+          autoRotate
+          autoRotateSpeed={0.5}
+          enablePan={false}
+        />
+      </CanvasStyles>
+    </>
   );
 };
 
