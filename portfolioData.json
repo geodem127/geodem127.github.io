@@ -198,60 +198,139 @@
   ],
   "projects": [
     {
-      "id": 1,
-      "img": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
-      "link": "https://geodem-dev.web.app",
-      "projectName": "Professional Association Website",
-      "projectDescription": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+      "id": "myPortfolio",
+      "name": "My Portfolio",
+      "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+      "previews": [
+        {
+          "view": "desktop",
+          "url": "myPortfolio_desktop.mp4"
+        },
+        {
+          "view": "mobile",
+          "url": "myPortfolio_mobile.mp4"
+        }
+      ],
+      "demoLink": {
+        "icon": "geodem",
+        "site": "Geodem",
+        "url": "https://geodem.xyz"
+      },
+      "sourceLink": {
+        "icon": "github",
+        "site": "Github",
+        "url": "https://github.com/geodem127/portfolio"
+      },
       "technologies": [
         "React JS",
-        "Node.js",
-        "Microservices",
-        "graphql",
-        "express.js"
+        "Material UI",
+        "Three.js",
+        "Vite",
+        "React Router",
+        "Github",
+        "GoDaddy"
       ]
     },
     {
-      "id": 2,
-      "img": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
-      "link": "https://geodem-dev.web.app",
-      "projectName": "Supply Chain Application",
-      "projectDescription": "eCommerce platform with advanced custom blockchain integration.",
-      "technologies": ["React JS", "Blockchain", "AWS cloud services"]
-    },
-    {
-      "id": 3,
-      "img": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
-      "link": "https://geodem-dev.web.app",
-      "projectName": "Supply Chain Application",
-      "projectDescription": "Bespoke content management system and commerce engine for managing cataloged products, facilitate secure purchase registrations, and efficiently nurture user relationships with customers, affiliate retailers, and vendors.",
+      "id": "myPortfolio2",
+      "name": "My Portfolio",
+      "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+      "previews": [
+        {
+          "view": "desktop",
+          "url": "myPortfolio_desktop.mp4"
+        },
+        {
+          "view": "mobile",
+          "url": "myPortfolio_mobile.mp4"
+        }
+      ],
+      "demoLink": {
+        "icon": "geodem",
+        "site": "Geodem",
+        "url": "https://geodem.xyz"
+      },
+      "sourceLink": {
+        "icon": "github",
+        "site": "Github",
+        "url": "https://github.com/geodem127/portfolio"
+      },
       "technologies": [
         "React JS",
-        "Blockchain",
-        "AWS cloud services",
-        "Selenium",
-        "Java",
-        "Python",
-        "Cucumber"
+        "Material UI",
+        "Three.js",
+        "Vite",
+        "React Router",
+        "Github",
+        "GoDaddy"
       ]
     },
     {
-      "id": 4,
-      "img": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
-      "link": "https://geodem-dev.web.app",
-      "projectName": "Operations side-projects",
-      "projectDescription": "Various applications for operational KPI improvements such as agent productivity enhancement tools, improved schedule adherence, automated metrics compilation and reporting, scorecard cross-checking between declared and actual eLearning scores, and QA reports automation (that consolidated, extracted, and organized agent's scores from various client tools).",
+      "id": "myPortfolio3",
+      "name": "My Portfolio",
+      "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+      "previews": [
+        {
+          "view": "desktop",
+          "url": "myPortfolio_desktop.mp4"
+        },
+        {
+          "view": "mobile",
+          "url": "myPortfolio_mobile.mp4"
+        }
+      ],
+      "demoLink": {
+        "icon": "geodem",
+        "site": "Geodem",
+        "url": "https://geodem.xyz"
+      },
+      "sourceLink": {
+        "icon": "github",
+        "site": "Github",
+        "url": "https://github.com/geodem127/portfolio"
+      },
       "technologies": [
         "React JS",
-        "Node.js",
-        "JavaScript",
-        "jQuery",
-        "CSS",
-        "PHP",
-        "HTML",
-        "express.js",
-        "AWS cloud services",
-        "Google Cloud Services"
+        "Material UI",
+        "Three.js",
+        "Vite",
+        "React Router",
+        "Github",
+        "GoDaddy"
+      ]
+    },
+    {
+      "id": "myPortfolio4",
+      "name": "My Portfolio",
+      "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+      "previews": [
+        {
+          "view": "desktop",
+          "url": "myPortfolio_desktop.mp4"
+        },
+        {
+          "view": "mobile",
+          "url": "myPortfolio_mobile.mp4"
+        }
+      ],
+      "demoLink": {
+        "icon": "geodem",
+        "site": "Geodem",
+        "url": "https://geodem.xyz"
+      },
+      "sourceLink": {
+        "icon": "github",
+        "site": "Github",
+        "url": "https://github.com/geodem127/portfolio"
+      },
+      "technologies": [
+        "React JS",
+        "Material UI",
+        "Three.js",
+        "Vite",
+        "React Router",
+        "Github",
+        "GoDaddy"
       ]
     }
   ],
@@ -290,7 +369,8 @@
         "Jest",
         "Lerna",
         "Cucumber",
-        "Redux"
+        "Redux",
+        "Selenium"
       ]
     },
     {
@@ -342,7 +422,8 @@
         "Wix",
         "Xampp",
         "Commercetools",
-        "Zuora"
+        "Zuora",
+        "GoDaddy"
       ]
     }
   ],
