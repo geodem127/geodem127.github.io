@@ -1,0 +1,1 @@
+import{r as t,U as s,j as e,P as r}from"./index-Cq1_EFA1.js";import{S as o}from"./SectionWrapper-CQF3KlXC.js";const a=()=>(t.useContext(s),e.jsx(o,{id:"projects"}));a.propTypes={data:r.array,id:r.string,window:r.func};export{a as default};
