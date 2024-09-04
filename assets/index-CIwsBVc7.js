@@ -1,1 +1,0 @@
-import{r as e,U as o,j as t,P as r}from"./index-CQplvhRA.js";import{S as p}from"./SectionWrapper-CtiLGHiF.js";const a=()=>{const{projects:s,experiences:n,isLoading:c}=e.useContext(o);return console.log("projects:",s),t.jsx(p,{id:"projects"})};a.propTypes={data:r.array,id:r.string,window:r.func};export{a as default};
