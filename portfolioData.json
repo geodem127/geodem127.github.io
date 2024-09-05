@@ -203,12 +203,30 @@
       "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
       "previews": [
         {
+          "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
           "view": "desktop",
-          "url": "myPortfolio_desktop.mp4"
+          "type": "video",
+          "format": "mp4",
+          "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
+          "fileName": "myPortfolio_desktop.mp4",
+          "styles": {
+            "bottom": "1rem",
+            "left": "1rem",
+            "width": "100%",
+            "height": "100%"
+          }
         },
         {
+          "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
           "view": "mobile",
-          "url": "myPortfolio_mobile.mp4"
+          "type": "video",
+          "format": "mp4",
+          "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
+          "fileName": "myPortfolio_mobile.mp4",
+          "styles": {
+            "top": "1rem",
+            "right": "1rem"
+          }
         }
       ],
       "demoLink": {
@@ -232,17 +250,33 @@
       ]
     },
     {
-      "id": "myPortfolio2",
-      "name": "My Portfolio",
+      "id": "VSCodeCommandRunner",
+      "name": "VSCode Command Runner",
       "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
       "previews": [
         {
+          "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
           "view": "desktop",
-          "url": "myPortfolio_desktop.mp4"
+          "type": "video",
+          "format": "mp4",
+          "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
+          "fileName": "myPortfolio_desktop.mp4",
+          "styles": {
+            "top": "2rem",
+            "left": "3rem"
+          }
         },
         {
+          "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
           "view": "mobile",
-          "url": "myPortfolio_mobile.mp4"
+          "type": "video",
+          "format": "mp4",
+          "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
+          "fileName": "myPortfolio_mobile.mp4",
+          "styles": {
+            "top": "1rem",
+            "right": "10rem"
+          }
         }
       ],
       "demoLink": {
@@ -266,51 +300,33 @@
       ]
     },
     {
-      "id": "myPortfolio3",
-      "name": "My Portfolio",
+      "id": "devTools",
+      "name": "Dev Tools",
       "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
       "previews": [
         {
+          "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
           "view": "desktop",
-          "url": "myPortfolio_desktop.mp4"
+          "type": "video",
+          "format": "mp4",
+          "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
+          "fileName": "myPortfolio_desktop.mp4",
+          "styles": {
+            "bottom": "1rem",
+            "right": "1rem"
+          }
         },
         {
+          "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
           "view": "mobile",
-          "url": "myPortfolio_mobile.mp4"
-        }
-      ],
-      "demoLink": {
-        "icon": "geodem",
-        "site": "Geodem",
-        "url": "https://geodem.xyz"
-      },
-      "sourceLink": {
-        "icon": "github",
-        "site": "Github",
-        "url": "https://github.com/geodem127/portfolio"
-      },
-      "technologies": [
-        "React JS",
-        "Material UI",
-        "Three.js",
-        "Vite",
-        "React Router",
-        "Github",
-        "GoDaddy"
-      ]
-    },
-    {
-      "id": "myPortfolio4",
-      "name": "My Portfolio",
-      "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
-      "previews": [
-        {
-          "view": "desktop",
-          "url": "myPortfolio_desktop.mp4"
-        },
-        {
-          "view": "mobile",
-          "url": "myPortfolio_mobile.mp4"
+          "type": "video",
+          "format": "mp4",
+          "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
+          "fileName": "myPortfolio_mobile.mp4",
+          "styles": {
+            "top": "1rem",
+            "left": "1rem"
+          }
         }
       ],
       "demoLink": {
