@@ -62,18 +62,21 @@
       "role": "Senior Full-stack Developer",
       "company": "Accenture",
       "link": "https://www.accenture.com",
-      "jobDescription": "Focused on developing and optimizing UI and API components, with a strong emphasis on resolving application defects and bugs.\n• Delivered permanent solutions for complex business logic functions.\n• Created and refined critical business logic functions.\n• Addressed and resolved significant, revenue-impacting application issues.\n• Developed custom hooks/components vital for business logic.\nKey Achievement:\n• Established internal libraries for reusable components.",
+      "jobDescription": "As a Senior Full-stack Developer, I focused on developing and optimizing UI and API components, resolving complex application defects, and delivering permanent solutions for critical business logic. I played a key role in addressing significant revenue-impacting issues and creating custom hooks and components essential for business logic. My achievements include establishing internal libraries for reusable components, enhancing development efficiency.",
       "technologies": [
         "React JS",
         "Node.js",
         "JavaScript",
         "jQuery",
         "CSS",
-        "PHP",
         "HTML",
         "express.js",
         "AWS cloud services",
-        "Google Cloud Services"
+        "Google Cloud Services",
+        "DevOps",
+        "UI Development",
+        "Agile",
+        "Scrum"
       ]
     },
     {
@@ -86,18 +89,24 @@
       "role": "Application Development Team Lead",
       "company": "Accenture",
       "link": "https://www.accenture.com",
-      "jobDescription": "Led the UI development team, managing the application development process in adherence to agile and Scrum principles.\n• Developed robust UI solutions meeting client requirements.\n• Coordinated with backend teams for API architecture design.\n• Mentored junior co-developers.\n• Managed creation and assignment of user stories, tasks, and issues.\n• Key Achievement: Established internal libraries for reusable components.",
+      "jobDescription": "As the Application Development Team Lead, I led the UI development team, overseeing the application development process while adhering to agile and Scrum methodologies. I developed robust UI solutions tailored to client needs, collaborated with backend teams on API architecture design, and mentored junior developers. In addition, I configured CI/CD pipelines, set up a collaboration platform in Azure DevOps, and integrated AWS cloud services, including authentication, S3 buckets, CloudFront, and IAM. I was also involved in blockchain planning and integration. My key achievement was establishing internal libraries for reusable components, enhancing team efficiency and scalability.",
       "technologies": [
         "React JS",
         "Node.js",
         "JavaScript",
         "jQuery",
         "CSS",
-        "PHP",
         "HTML",
         "express.js",
         "AWS cloud services",
-        "Google Cloud Services"
+        "Blockchain",
+        "DevOps",
+        "UI Development",
+        "Team Management",
+        "Project Management",
+        "Agile",
+        "Scrum",
+        "Scrum Master"
       ]
     },
     {
@@ -110,18 +119,18 @@
       "role": "UI/API Automation Tester",
       "company": "Accenture",
       "link": "https://www.accenture.com",
-      "jobDescription": "Spearheaded the design and execution of automated tests for API and UI components.\n• Initiated project-wide testing standards.\n• Led the creation of a standard Robot Framework and Selenium setup for UI/API automation testing.\n• Executed comprehensive unit/functional testing for UI/API test automation.\n• Key Achievement: Established internal libraries for reusable components.",
+      "jobDescription": "As a UI/API Automation Tester, I spearheaded the design and execution of automated tests for both API and UI components. I established project-wide testing standards and developed a standardized Robot Framework and Selenium setup for UI/API automation testing. I also led unit and functional testing efforts, ensuring comprehensive test coverage. My key achievement was creating the standard UI/API test automation setup for the entire project and developing internal libraries for automation using Robot Framework, Selenium, Gherkin, and BDD approaches with Python.",
       "technologies": [
         "React JS",
-        "Node.js",
-        "JavaScript",
-        "jQuery",
-        "CSS",
-        "PHP",
-        "HTML",
-        "express.js",
-        "AWS cloud services",
-        "Google Cloud Services"
+        "RobotFramework",
+        "Python",
+        "UI/API Test Automation",
+        "Gherkin",
+        "BDD approach",
+        "Selenium",
+        "Testing",
+        "Agile",
+        "Scrum"
       ]
     },
     {
@@ -133,18 +142,16 @@
       "role": "React JS Developer",
       "company": "Accenture",
       "link": "https://www.accenture.com",
-      "jobDescription": "Focused on developing components, pages, and functions tailored to client-defined business logic.\n• Applied best coding practices to build robust UI focused on business logic.\n• Key Achievement: Established internal libraries for reusable components and wireframed designs per project specifications.",
+      "jobDescription": "As a React JS Developer, I focused on developing components, pages, and functions aligned with client-specific business logic. I implemented best coding practices to create robust UI solutions centered on business needs. A key achievement was establishing internal libraries for reusable components and wireframing designs according to project specifications.",
       "technologies": [
         "React JS",
-        "Node.js",
         "JavaScript",
-        "jQuery",
         "CSS",
         "PHP",
         "HTML",
-        "express.js",
-        "AWS cloud services",
-        "Google Cloud Services"
+        "UI Development",
+        "Agile",
+        "Scrum"
       ]
     },
     {
@@ -157,18 +164,18 @@
       "role": "Front End Developer",
       "company": "LGU",
       "link": "https://dumaguete.com",
-      "jobDescription": "Developed a responsive UI for the Local Transportation Registration Tracker for the LGU.\n• Built a front-end interface tailored to meet specific business needs.\n• Key Achievement: Developed internal libraries.",
+      "jobDescription": "As a Front End Developer, I built a responsive UI for the Local Transportation Registration Tracker, tailored to meet specific business needs. The system allowed for member tracking, on-site registration, organization registration, complaint logging for operators, violation logging, and report generation. My key achievement was developing internal libraries to enhance functionality and efficiency.",
       "technologies": [
-        "React JS",
-        "Node.js",
         "JavaScript",
         "jQuery",
         "CSS",
         "PHP",
         "HTML",
         "express.js",
-        "AWS cloud services",
-        "Google Cloud Services"
+        "Google Cloud Services",
+        "Xampp",
+        "MySQL",
+        "SQL"
       ]
     },
     {
@@ -181,7 +188,7 @@
       "role": "Front End Developer",
       "company": "Freelance",
       "link": "",
-      "jobDescription": "Provided comprehensive web development services, creating websites and tools based on client specifications.\n• Designed user interfaces and back-end services.\n• Ensured clean, efficient, and maintainable code across various platforms.\n• Managed database operations, enhancing data integrity and optimization.\n• Enhanced user experience through user-friendly interfaces.\n• Addressed and resolved technical software issues.\n• Maintained application security and industry-standard compliance.",
+      "jobDescription": "As a Freelance Front End Developer, I provided comprehensive web development services, creating websites and tools tailored to client specifications. I designed user interfaces and back-end services, ensuring clean, maintainable code across various platforms. I also managed database operations, enhanced user experience through intuitive interfaces, resolved technical issues, and maintained application security and compliance with industry standards.",
       "technologies": [
         "React JS",
         "Node.js",
@@ -200,7 +207,7 @@
     {
       "id": "myPortfolio",
       "name": "My Portfolio",
-      "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+      "description": "This site showcases my extensive experience as a full-stack developer, featuring projects that highlight my skills in creating dynamic, interactive web applications. Built using React.js, the portfolio includes 3D animations powered by React Three Fiber, styled-components for custom design, and Material UI for a polished user interface. It leverages custom hooks, global context, and theming for efficient state management and design consistency. Fully responsive to any screen size, the app is optimized with Vite, version-controlled with Git, and deployed on GitHub Pages with a custom domain from GoDaddy.",
       "previews": [
         {
           "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
@@ -245,37 +252,45 @@
         "Three.js",
         "Vite",
         "React Router",
+        "Git",
         "Github",
-        "GoDaddy"
+        "GoDaddy",
+        "Styled Components",
+        "Custom Theming"
       ]
     },
     {
       "id": "VSCodeCommandRunner",
       "name": "VSCode Command Runner",
-      "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+      "description": "VSCode Command Runner is a Visual Studio Code extension that provides an intuitive user interface to manage and run commands or tasks within your workspace. With this extension, you can easily create, edit, and delete commands, and execute them directly in the integrated terminal. The extension supports running any type of command installed in your terminal. It also features a command list with action icons for quick management, and configuration options that can be customized in settings for a streamlined workflow.",
       "previews": [
         {
           "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
-          "view": "desktop",
+          "view": "app",
           "type": "video",
           "format": "mp4",
           "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
-          "fileName": "myPortfolio_desktop.mp4",
+          "fileName": "vscode_cmd_runner_ext_app.mp4",
           "styles": {
-            "top": "2rem",
-            "left": "3rem"
+            "top": "1rem",
+            "left": "1rem",
+            "width": "80%",
+            "height": "90%"
           }
         },
         {
           "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
-          "view": "mobile",
-          "type": "video",
-          "format": "mp4",
+          "view": "app",
+          "type": "image",
+          "format": "png",
           "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
-          "fileName": "myPortfolio_mobile.mp4",
+          "fileName": "vscode_cmd_runner_ext_app2.png",
           "styles": {
-            "top": "1rem",
-            "right": "10rem"
+            "bottom": "1rem",
+            "right": "1rem",
+            "width": "60%",
+            "height": "70%",
+            "zIndex": "10"
           }
         }
       ],
@@ -290,13 +305,12 @@
         "url": "https://github.com/geodem127/portfolio"
       },
       "technologies": [
-        "React JS",
-        "Material UI",
-        "Three.js",
-        "Vite",
-        "React Router",
-        "Github",
-        "GoDaddy"
+        "VScode",
+        "Node.js",
+        "JavaScript",
+        "NPM",
+        "Git",
+        "Github"
       ]
     },
     {
@@ -312,20 +326,23 @@
           "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
           "fileName": "myPortfolio_desktop.mp4",
           "styles": {
-            "bottom": "1rem",
-            "right": "1rem"
+            "top": "1rem",
+            "left": "1rem"
           }
         },
         {
           "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
-          "view": "mobile",
-          "type": "video",
-          "format": "mp4",
+          "view": "app",
+          "type": "image",
+          "format": "png",
           "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
-          "fileName": "myPortfolio_mobile.mp4",
+          "fileName": "vscode_cmd_runner_ext_app2.png",
           "styles": {
-            "top": "1rem",
-            "left": "1rem"
+            "bottom": "-3rem",
+            "right": "-1rem",
+            "width": "60%",
+            "height": "60%",
+            "zIndex": "10"
           }
         }
       ],
