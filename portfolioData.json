@@ -254,9 +254,7 @@
         "React Router",
         "Git",
         "Github",
-        "GoDaddy",
-        "Styled Components",
-        "Custom Theming"
+        "GoDaddy"
       ]
     },
     {
@@ -338,8 +336,8 @@
           "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
           "fileName": "vscode_cmd_runner_ext_app2.png",
           "styles": {
-            "bottom": "-3rem",
-            "right": "-1rem",
+            "bottom": "1rem",
+            "right": "1rem",
             "width": "60%",
             "height": "60%",
             "zIndex": "10"
