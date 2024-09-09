@@ -30,9 +30,9 @@
     ],
     "socialLinks": [
       {
-        "label": "Portfolio",
+        "label": "Geodem",
         "path": "/",
-        "icon": "Portfolio"
+        "icon": "GeodemIcon"
       },
       {
         "label": "Github",
@@ -459,6 +459,18 @@
     }
   ],
   "tmp": {
+    "contacts": [
+      {
+        "label": "Email",
+        "path": "mailto:gdemonteverde127@gmail.com",
+        "icon": "EmailIcon"
+      },
+      {
+        "label": "Phone",
+        "path": "/",
+        "icon": "PhoneIcon"
+      }
+    ],
     "technoligies": ["Jetbrains", "Next.js", "Shopify", "Sentry"]
   }
 }
