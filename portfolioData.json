@@ -62,7 +62,7 @@
       "role": "Senior Full-stack Developer",
       "company": "Accenture",
       "link": "https://www.accenture.com",
-      "jobDescription": "As a Senior Full-stack Developer, I focused on developing and optimizing UI and API components, resolving complex application defects, and delivering permanent solutions for critical business logic. I played a key role in addressing significant revenue-impacting issues and creating custom hooks and components essential for business logic. My achievements include establishing internal libraries for reusable components, enhancing development efficiency.",
+      "jobDescription": "As a Senior Full-stack Developer, I focused on developing and optimizing UI and API components, resolving complex application defects, and delivering permanent solutions for critical business logic.\n\nI played a key role in addressing significant revenue-impacting issues and creating custom hooks and components essential for business logic. My achievements include establishing internal libraries for reusable components, enhancing development efficiency.",
       "technologies": [
         "React JS",
         "Node.js",
@@ -89,7 +89,7 @@
       "role": "Application Development Team Lead",
       "company": "Accenture",
       "link": "https://www.accenture.com",
-      "jobDescription": "As the Application Development Team Lead, I led the UI development team, overseeing the application development process while adhering to agile and Scrum methodologies. I developed robust UI solutions tailored to client needs, collaborated with backend teams on API architecture design, and mentored junior developers. In addition, I configured CI/CD pipelines, set up a collaboration platform in Azure DevOps, and integrated AWS cloud services, including authentication, S3 buckets, CloudFront, and IAM. I was also involved in blockchain planning and integration. My key achievement was establishing internal libraries for reusable components, enhancing team efficiency and scalability.",
+      "jobDescription": "As the Application Development Team Lead, I led the UI development team, overseeing the application development process while adhering to agile and Scrum methodologies. I developed robust UI solutions tailored to client needs, collaborated with backend teams on API architecture design, and mentored junior developers.\n\nIn addition, I configured CI/CD pipelines, set up a collaboration platform in Azure DevOps, and integrated AWS cloud services, including authentication, S3 buckets, CloudFront, and IAM.\n\nI was also involved in blockchain planning and integration. My key achievement was establishing internal libraries for reusable components, enhancing team efficiency and scalability.",
       "technologies": [
         "React JS",
         "Node.js",
@@ -119,7 +119,7 @@
       "role": "UI/API Automation Tester",
       "company": "Accenture",
       "link": "https://www.accenture.com",
-      "jobDescription": "As a UI/API Automation Tester, I spearheaded the design and execution of automated tests for both API and UI components. I established project-wide testing standards and developed a standardized Robot Framework and Selenium setup for UI/API automation testing. I also led unit and functional testing efforts, ensuring comprehensive test coverage. My key achievement was creating the standard UI/API test automation setup for the entire project and developing internal libraries for automation using Robot Framework, Selenium, Gherkin, and BDD approaches with Python.",
+      "jobDescription": "As a UI/API Automation Tester, I spearheaded the design and execution of automated tests for both API and UI components. I established project-wide testing standards and developed a standardized Robot Framework and Selenium setup for UI/API automation testing. I also led unit and functional testing efforts, ensuring comprehensive test coverage.\n\nMy key achievement was creating the standard UI/API test automation setup for the entire project and developing internal libraries for automation using Robot Framework, Selenium, Gherkin, and BDD approaches with Python.",
       "technologies": [
         "React JS",
         "RobotFramework",
@@ -142,7 +142,7 @@
       "role": "React JS Developer",
       "company": "Accenture",
       "link": "https://www.accenture.com",
-      "jobDescription": "As a React JS Developer, I focused on developing components, pages, and functions aligned with client-specific business logic. I implemented best coding practices to create robust UI solutions centered on business needs. A key achievement was establishing internal libraries for reusable components and wireframing designs according to project specifications.",
+      "jobDescription": "As a React JS Developer, I focused on developing components, pages, and functions aligned with client-specific business logic. I implemented best coding practices to create robust UI solutions centered on business needs.\n\nA key achievement was establishing internal libraries for reusable components and wireframing designs according to project specifications.",
       "technologies": [
         "React JS",
         "JavaScript",
@@ -164,7 +164,7 @@
       "role": "Front End Developer",
       "company": "LGU",
       "link": "https://dumaguete.com",
-      "jobDescription": "As a Front End Developer, I built a responsive UI for the Local Transportation Registration Tracker, tailored to meet specific business needs. The system allowed for member tracking, on-site registration, organization registration, complaint logging for operators, violation logging, and report generation. My key achievement was developing internal libraries to enhance functionality and efficiency.",
+      "jobDescription": "As a Front End Developer, I built a responsive UI for the Local Transportation Registration Tracker, tailored to meet specific business needs. The system allowed for member tracking, on-site registration, organization registration, complaint logging for operators, violation logging, and report generation.\n\nMy key achievement was developing internal libraries to enhance functionality and efficiency.",
       "technologies": [
         "JavaScript",
         "jQuery",
@@ -188,7 +188,7 @@
       "role": "Front End Developer",
       "company": "Freelance",
       "link": "",
-      "jobDescription": "As a Freelance Front End Developer, I provided comprehensive web development services, creating websites and tools tailored to client specifications. I designed user interfaces and back-end services, ensuring clean, maintainable code across various platforms. I also managed database operations, enhanced user experience through intuitive interfaces, resolved technical issues, and maintained application security and compliance with industry standards.",
+      "jobDescription": "As a Freelance Front End Developer, I provided comprehensive web development services, creating websites and tools tailored to client specifications. I designed user interfaces and back-end services, ensuring clean, maintainable code across various platforms.\n\nI also managed database operations, enhanced user experience through intuitive interfaces, resolved technical issues, and maintained application security and compliance with industry standards.",
       "technologies": [
         "React JS",
         "Node.js",
@@ -221,7 +221,8 @@
             "left": "1rem",
             "width": "100%",
             "height": "100%"
-          }
+          },
+          "animation": "slideRight"
         },
         {
           "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
@@ -233,7 +234,8 @@
           "styles": {
             "top": "1rem",
             "right": "1rem"
-          }
+          },
+          "animation": "slideLeft"
         }
       ],
       "demoLink": {
@@ -274,7 +276,8 @@
             "left": "1rem",
             "width": "80%",
             "height": "90%"
-          }
+          },
+          "animation": "slideRight"
         },
         {
           "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
@@ -289,7 +292,8 @@
             "width": "60%",
             "height": "70%",
             "zIndex": "10"
-          }
+          },
+          "animation": "slideLeft"
         }
       ],
       "demoLink": {
@@ -326,7 +330,8 @@
           "styles": {
             "top": "1rem",
             "left": "1rem"
-          }
+          },
+          "animation": "slideRight"
         },
         {
           "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
@@ -341,7 +346,8 @@
             "width": "60%",
             "height": "60%",
             "zIndex": "10"
-          }
+          },
+          "animation": "slideLeft"
         }
       ],
       "demoLink": {
