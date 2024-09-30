@@ -1,10 +1,11 @@
-import { useRef, useEffect, useMemo, useState, useContext } from "react";
+import { useRef, useEffect, useMemo, useState } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import { UserContext } from "../../context/userContext";
 
-const sphereRadius = 2.85;
+import config from "../../config";
+
+const sphereRadius = 2.65;
 
 const generateSpherePositions = (count, radius) => {
   const positions = [];
@@ -43,8 +44,6 @@ const IconPlane = ({ position, texture }) => {
 
 const TechStack = ({ techStack = [] }) => {
   const [techIconData, setTechIconData] = useState([]);
-  const { appConfig } = useContext(UserContext);
-  const gitHubImagesPath = `${appConfig?.githubMediaPath}/images`;
 
   const uniqueTech = useMemo(() => {
     const techSet = new Set();
@@ -61,14 +60,21 @@ const TechStack = ({ techStack = [] }) => {
     setTechIconData(
       uniqueTech.map((tech, index) => ({
         // texture: `/geodem127.github.io/images/${tech}.svg`,
-        texture: `${gitHubImagesPath}/${tech}.svg`,
+        texture: `${config.API_ENDPOINT}/media/images/${tech}.svg`,
         position: positions[index],
       }))
     );
   }, [uniqueTech]);
 
   return (
-    <Canvas>
+    <Canvas
+      style={{
+        width: "70%",
+        aspectRatio: "1",
+        // height: "300px",
+        // height: "500px",
+      }}
+    >
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
 

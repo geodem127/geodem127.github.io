@@ -34,17 +34,19 @@ import {
   LaunchNewWindowIcon,
 } from "../../common/CustomSvgIcons";
 import zIndex from "@mui/material/styles/zIndex";
+import PreviewSlider from "./PreviewSlider";
 
 const drawerBleeding = 56;
 
 const DialogStyles = styled(Dialog)(({ theme }) => ({
   "& .MuiPaper-root": {
-    margin: 0,
-    maxHeight: "90vh",
-    overflow: "hidden",
-    position: "relative",
-    background:
-      "linear-gradient(52deg, rgba(19,19,19,1) 0%, rgba(38,38,38,1) 68%, rgba(63,64,63,1) 100%)",
+    width: "100%",
+    // margin: 0,
+    // maxHeight: "90vh",
+    // overflow: "hidden",
+    // position: "relative",
+    // background:
+    //   "linear-gradient(52deg, rgba(19,19,19,1) 0%, rgba(38,38,38,1) 68%, rgba(63,64,63,1) 100%)",
   },
 }));
 
@@ -71,8 +73,8 @@ const SwipeableDrawerStyles = styled(SwipeableDrawer)(({ theme }) => ({
     paddingTop: "30px",
     maxHeight: "calc(100vh - 1rem)",
     // backgroundColor: "background.paper",
-    background:
-      "linear-gradient(52deg, rgba(19,19,19,1) 0%, rgba(38,38,38,1) 68%, rgba(63,64,63,1) 100%)",
+    // background:
+    //   "linear-gradient(52deg, rgba(19,19,19,1) 0%, rgba(38,38,38,1) 68%, rgba(63,64,63,1) 100%)",
   },
 }));
 
@@ -172,7 +174,7 @@ const MobileModal = ({
         >
           <Button
             variant="contained"
-            color="inherit"
+            color="secondary"
             component={"a"}
             href={sourceLink}
             target="_blank"
@@ -205,7 +207,7 @@ const DesktopModal = ({
   children,
 }) => {
   return (
-    <DialogStyles fullWidth={true} open={open} keepMounted={true}>
+    <DialogStyles maxWidth="md" open={open} keepMounted={true}>
       <DialogTitle
         sx={{
           //   height: "2.5rem",
@@ -234,10 +236,11 @@ const DesktopModal = ({
       </DialogTitle>
 
       <DialogContentStyles dividers="paper">{children}</DialogContentStyles>
+
       <DialogActions sx={{ p: 2 }}>
         <Button
-          variant="contained"
-          color="inherit"
+          variant="text"
+          color="primary"
           component={"a"}
           href={sourceLink}
           target="_blank"
@@ -246,7 +249,7 @@ const DesktopModal = ({
         </Button>
 
         <Button
-          variant="contained"
+          variant="text"
           color="primary"
           component={"a"}
           target="_blank"
@@ -275,11 +278,12 @@ const ModalWindow = ({ open = false, data = null, onClose }) => {
     const contents = (
       <Box>
         <Box my={2}>
-          <PreviewBox
+          {/* <PreviewBox
             data={data?.previews}
             url={data?.demoLink?.url}
             in={true}
-          />
+          /> */}
+          <PreviewSlider />
         </Box>
         <Box my={2}>
           <Typography mb={1} variant="h6" component="h6" color="text.secondary">
@@ -314,16 +318,6 @@ const ModalWindow = ({ open = false, data = null, onClose }) => {
 
   return (
     <Fragment>
-      {/* <Dialog
-        fullWidth={fullWidth}
-        maxWidth={maxWidth}
-        open={open}
-        onClose={handleClose}
-      >
-        <DialogContent>
-          <Box>dasdassad</Box>
-        </DialogContent>
-      </Dialog> */}
       {smScreen ? (
         <MobileModal
           open={open}

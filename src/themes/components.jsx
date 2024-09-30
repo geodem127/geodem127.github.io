@@ -2,18 +2,19 @@ const components = {
   MuiPaper: {
     styleOverrides: {
       root: {
-        // background: "transparent",
-        backdropFilter: "blur(5px)",
-        // WebkitBackdropFilter: "blur(5px)",
-        // filter: "blur(5px)",
-        // backgroundColor: "rgba(255, 255, 255, .1)",
-        // border: "1px solid rgba(229, 231, 235,.18)",
-        // backgroundColor: "rgba(30, 41, 59, 0.5)",
+        borderRadius: ".5rem",
+        // backdropFilter: "blur(15px)",
+        // backgroundColor: "#ffffff19",
+        // border: "1px solid rgba(255, 255, 255, .15)",
 
-        border: "1px solid rgba(255,255,255,.15)",
-        // "1px solid rgba(229, 231, 235,.08)",
-        // boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-        borderRadius: ".75rem",
+        // backdropFilter: "blur(10px)",
+        // backgroundColor: "#020812cd",
+
+        backdropFilter: "blur(6px)",
+        backgroundSize: "100% 100%",
+        backgroundPosition: "0px 0px",
+        // backgroundImage:
+        //   "linear-gradient(50deg, #020812FC 1%, #020812D6 50%, #020812C7 79%, #020812A6 100%)",
       },
     },
   },
@@ -47,7 +48,7 @@ const components = {
       body: {
         // fontFamily:  '"Google Sans", "Roboto", "Helvetica", "Arial", sans-serif',
         fontSize: "16px",
-        backgroundColor: "#020812",
+        // backgroundColor: "#020812",
         //  "#020812",
 
         "&::before, &::after": {

@@ -7,18 +7,23 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { UserContext } from "../context/userContext";
 import Header from "./header";
 import Main from "./main";
-import Animation from "../common/animation";
 
 const X_PADDING = {
-  sm: "1.15rem",
-  md: "2rem",
+  // sm: "1.15rem",
+  // md: "2rem",
+  sm: 0,
+  md: 0,
+
   lg: "5rem",
 };
 
 const Y_PADDING = {
-  sm: "3rem",
-  md: "4rem",
-  lg: "5rem",
+  // sm: "3rem",
+  // md: "4rem",
+  // lg: "5rem",
+  sm: 6,
+  md: 8,
+  lg: 10,
 };
 const Layout = ({ children }) => {
   const theme = useTheme();
@@ -40,6 +45,16 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <span
+        style={{
+          position: "fixed",
+          top: 0,
+          right: "10px",
+          zIndex: 999999,
+        }}
+      >
+        {`mediaQuery: ${screenSize} | width: ${document.body.clientWidth}`}
+      </span>
       <Container
         maxWidth={"lg"}
         disableGutters
@@ -63,17 +78,6 @@ const Layout = ({ children }) => {
             minWidth: `${theme.breakpoints.values.xs}px`,
           }}
         >
-          {/* <span
-            style={{
-              position: "fixed",
-              top: 0,
-              right: "10px",
-              zIndex: 999999,
-            }}
-          >
-            {`mediaQuery: ${screenSize} | width: ${document.body.clientWidth}`}
-          </span> */}
-
           <Header
             width={smallScreen || mediumScreen ? "100%" : "40%"}
             data={{ navigation, personalInformation }}

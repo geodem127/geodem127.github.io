@@ -78,7 +78,7 @@ const Navigation = ({ data }) => {
             <Typography
               className="navLabel"
               variant={"body1"}
-              component={"body1"}
+              component={"div"}
               sx={{ textTransform: "uppercase", fontWeight: 600 }}
             >
               {item?.title}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="173.2651 104.8581 86 86" width="86" height="86" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="azure-devops_ba420277-700e-42cc-9de9-5388a5c16e54" x1="9" y1="16.97" x2="9" y2="1.03" gradientUnits="userSpaceOnUse" gradientTransform="matrix(5.375, 0, 0, 5.368291, 152.949478, 80.891944)">
+      <stop offset="0" stop-color="#0078d4"/>
+      <stop offset="0.16" stop-color="#1380da"/>
+      <stop offset="0.53" stop-color="#3c91e5"/>
+      <stop offset="0.82" stop-color="#559cec"/>
+      <stop offset="1" stop-color="#5ea0ef"/>
+    </linearGradient>
+  </defs>
+  <path d="M 244.324 102.364 L 244.324 154.651 L 222.824 172.259 L 189.499 160.127 L 189.499 172.152 L 170.633 147.511 L 225.619 151.806 L 225.619 104.726 L 244.324 102.364 Z M 225.995 104.994 L 195.143 86.259 L 195.143 98.552 L 166.816 106.873 L 158.324 117.771 L 158.324 142.519 L 170.471 147.887 L 170.471 116.16 L 225.995 104.994 Z" fill="url(#azure-devops_ba420277-700e-42cc-9de9-5388a5c16e54)" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 14.941105842590332, 18.59911346435547)"/>
+</svg>

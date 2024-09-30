@@ -17,7 +17,7 @@ const MobileLayout = () => {
   return (
     <Layout>
       <Box
-        rowGap={10}
+        // rowGap={10}
         sx={{
           display: "flex",
           flexDirection: "column",

@@ -85,42 +85,46 @@ const GridColumnsLeft = styled(Box)(({ theme }) => ({
     // zIndex: "0",
   },
 }));
-const GridColumnsRight = styled(Box)(({ theme, leftPadding }) => ({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "flex-start",
-  alignItems: "stretch",
-  height: "100%",
-  width: "100%",
-  // outline: "1px dashed red",
-  // outlineOffset: "-1px",
-  // paddingLeft: `${lineGridWidth}px`,
-  // border: "1px dashed purple",
-  // outline: "1px solid red",
-  // outlineOffset: "-1px",
-  "&::before": {
-    content: '""',
-    position: "absolute",
-    left: leftPadding,
-    top: "1rem",
-    right: 0,
-    bottom: "3rem",
-    margin: "-1rem",
+const GridColumnsRight = styled(Box)(({ theme, leftpadding }) => {
+  console.log(leftpadding);
+  return {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "stretch",
+    height: "100%",
+    width: "100%",
+    // outline: "1px dashed red",
+    // outlineOffset: "-1px",
+    // paddingLeft: `${lineGridWidth}px`,
+    // border: "1px dashed purple",
+    // outline: "1px solid red",
+    // outlineOffset: "-1px",
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      left: `"${leftpadding}"`,
+      top: "1rem",
+      right: 0,
+      bottom: "3rem",
+      margin: "-1rem",
 
-    borderRadius: "6px",
-    // backgroundColor: "rgba(30, 41, 59, 0.15)",
-    border: "1px solid rgba(229, 231, 235,.08)",
-    background: alpha(theme.palette.background.paper, 0.1),
-    zIndex: 0,
-    opacity: 0,
-    transition: "opacity 200ms ease-in",
-  },
-  "&.hasHover": {
-    "&:hover": {
-      "&::before": { opacity: 1 },
+      borderRadius: "6px",
+      // backgroundColor: "rgba(30, 41, 59, 0.15)",
+      border: "1px solid rgba(229, 231, 235,.08)",
+      background: "red",
+      //  alpha(theme.palette.background.paper, 0.1),
+      zIndex: 0,
+      opacity: 0,
+      transition: "opacity 200ms ease-in",
     },
-  },
-}));
+    "&.hasHover": {
+      "&:hover": {
+        "&::before": { opacity: 1 },
+      },
+    },
+  };
+});
 
 const ExperienceDetails = ({ data = {} }) => {
   const theme = useTheme();
@@ -149,12 +153,12 @@ const ExperienceDetails = ({ data = {} }) => {
         <GridColumnsRight
           sx={{ paddingLeft: `${colSpacer + 15}px` }}
           className={`${lgScreen ? "hasHover" : ""}`}
-          leftPadding={`${colSpacer + 15}px`}
+          leftpadding={`${colSpacer + 15}px`}
         >
           <Typography
-            variant="subtitle1"
+            variant="subtitle2"
             color="text.primary"
-            sx={{ padding: 0, lineHeight: 1.3 }}
+            sx={{ padding: 0, lineHeight: 1.3, textTransform: "uppercase" }}
           >
             {data?.period}
           </Typography>
@@ -163,16 +167,17 @@ const ExperienceDetails = ({ data = {} }) => {
               py={1}
               // className={`descriptionGroup ${lgScreen ? "hasHover" : ""}`}
             >
-              {
-                <Typography variant="h5" color="text.secondary">
-                  {data?.role}
-                  <span
-                    style={{ color: theme.palette.text.primary }}
-                  >{` ⬩ `}</span>
-                  {data?.company}
-                </Typography>
-              }
-
+              <Typography variant="h5" color="text.secondary">
+                {data?.role}
+                {/* <span
+                  style={{ color: theme.palette.text.primary }}
+                >{` ⬩ `}</span>
+                {data?.company} */}
+              </Typography>
+              <Typography variant="subtitle1" color="primary">
+                {data?.company}
+              </Typography>
+              <Divider sx={{ my: 1 }} />
               <Box
                 py={2}
                 sx={{
@@ -187,6 +192,7 @@ const ExperienceDetails = ({ data = {} }) => {
                 <Divider sx={{ my: 1 }} />
                 {data?.technologies?.map((tech, index2) => (
                   <Chip
+                    key={index2}
                     label={tech}
                     sx={{
                       margin: "3px",

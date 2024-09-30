@@ -96,10 +96,11 @@ const DetailsBox = ({ proj, openModal }) => {
             width: "100%",
           }}
         >
+          <ProjectTechStack techStack={proj?.technologies} />
           <Typography
             variant="p"
             component="p"
-            mb={2}
+            mt={2}
             sx={{
               overflow: "hidden",
 
@@ -128,7 +129,6 @@ const DetailsBox = ({ proj, openModal }) => {
             </Button> */}
           </Typography>
           {/* <Divider /> */}
-          <ProjectTechStack techStack={proj?.technologies} />
         </Box>
       </Animation>
 

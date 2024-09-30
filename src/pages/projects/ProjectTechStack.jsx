@@ -1,20 +1,25 @@
 import React from "react";
 import { Avatar, Box, styled, Tooltip } from "@mui/material";
+import config from "../../config";
+
+const ICON_SIZES = {
+  sm: 18,
+  md: 24,
+  lg: 30,
+};
 
 const TechStackStyles = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   justifyContent: "flex-start",
   alignItems: "center",
-  // opacity: 0,
-  // outline: "1px dashed yellow",
+  flexWrap: "wrap",
+  rowGap: ".5rem",
 }));
 
-const ProjectTechStack = ({ techStack = [], ...other }) => {
-  // const techIconsMap = techStack?.map((tech) =>
-  //   tech?.replace(/[^a-zA-Z0-9]/g, "").toLowerCase()
-  // );
-  // const techIcon = `/geodem127.github.io/images/${tech}.svg`;
+const ProjectTechStack = ({ techStack = [], size = "md", ...other }) => {
+  const iconSize = ICON_SIZES?.[size] || ICON_SIZES.md;
+
   return (
     <TechStackStyles columnGap={1.5} {...other}>
       {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
@@ -26,10 +31,15 @@ const ProjectTechStack = ({ techStack = [], ...other }) => {
         return (
           <Tooltip key={parsedIconName} title={icon} placement="top" arrow>
             <Avatar
-              sx={{ width: 24, height: 24 }}
+              sx={{
+                width: iconSize,
+                height: iconSize,
+                borderRadius: 0,
+              }}
               key={parsedIconName}
               alt={icon}
-              src={`/geodem127.github.io/images/${parsedIconName}.svg`}
+              // src={`${gitHubImagesPath}/${parsedIconName}.svg`}
+              src={`${config.API_ENDPOINT}/media/images/${parsedIconName}.svg`}
             />
           </Tooltip>
         );

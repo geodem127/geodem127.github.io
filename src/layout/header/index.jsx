@@ -162,6 +162,7 @@ const Header = ({ width, data, screenSize, sx = {}, ...other }) => {
       flexDirection={"column"}
       alignContent={"stretch"}
       justifyContent={"space-between"}
+      px={smallScreen ? "1.15rem" : 0}
       sx={{
         width: width,
         flexShrink: 0,

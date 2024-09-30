@@ -1,34 +1,59 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React from "react";
 import { styled, Paper, Box } from "@mui/material";
-import { UserContext } from "../../context/userContext";
-import usePageScroll from "../../hooks/usePageScroll";
+
 import Animation from "../../common/animation";
+import config from "../../config";
 // import { color } from "three/webgpu";
-const PlayerWrapper = styled(Box)(({ theme }) => ({
+const PlayerWrapper = styled(Paper)(({ theme }) => ({
   //   boxShadow: "1px 1px 20px 8px rgba(0, 0, 0, 0.377)",
+  overflow: "hidden",
+  borderRadius: ".45rem",
+  background: theme.palette.grey[800],
+  boxShadow: theme.shadows["a3"],
+
+  "& .wrapper": {
+    width: "100%",
+    height: "100%",
+    overflow: "hidden",
+    borderRadius: ".45rem",
+    background: theme.palette.background.default,
+    // border: "1px solid green",
+    boxSizing: "border-box",
+  },
   opacity: 0,
   "&.desktop": {
     position: "absolute",
     width: "85%",
     height: "80%",
-    // bottom: "1rem",
-    // left: "2rem",
     borderRadius: ".65rem",
-    borderTopWidth: "1.85rem",
-    borderLeftWidth: ".4rem",
-    borderRightWidth: ".4rem",
-    borderBottomWidth: ".4rem",
-    borderStyle: "solid",
-    borderColor: theme.palette.grey[800],
+    overflow: "hidden",
+    // borderTopWidth: "1.85rem",
+    // borderLeftWidth: ".4rem",
+    // borderRightWidth: ".4rem",
+    // borderBottomWidth: ".4rem",
+    // borderStyle: "solid",
+    border: "1px solid #2A2929",
+    "& .wrapper": {
+      borderRadius: ".45rem",
+      borderTopWidth: "1.85rem",
+      borderLeftWidth: ".4rem",
+      borderRightWidth: ".4rem",
+      borderBottomWidth: ".4rem",
+      borderStyle: "solid",
+      borderColor: "#2A2929",
+      overflow: "hidden",
+    },
 
     "&::before": {
       content: "'•••'",
       position: "absolute",
-      top: "-1.5rem",
-      left: ".25rem",
-      fontSize: "2.5rem",
+      top: "2px",
+      left: ".65rem",
+      fontSize: "3.25rem",
       lineHeight: ".5",
       opacity: 0.3,
+      color: theme.palette.grey[600],
+      letterSpacing: "1px",
     },
   },
   "&.mobile": {
@@ -38,36 +63,25 @@ const PlayerWrapper = styled(Box)(({ theme }) => ({
     height: "85%",
     objectFit: "cover",
     objectPosition: "center",
-    borderRadius: "1rem",
+    borderRadius: ".85rem",
 
     // borderWidth: "8px",
     // borderStyle: "solid",
     // borderColor: theme.palette.grey[700],
-    outline: `8px solid ${theme.palette.grey[700]}`,
-    outlineOffset: "-4px",
+    border: `6px solid ${theme.palette.grey[800]}`,
+    // outlineOffset: "-4px",
     overflow: "visible",
-    padding: "4px",
-    "&::before": {
-      content: "''",
-      position: "absolute",
-      //   top: "0",
-      left: "50%",
-      width: "55%",
-      height: "6px",
-      transform: "translateX(-50%)",
-      background: theme.palette.grey[700],
-      borderBottomLeftRadius: "4px",
-      borderBottomRightRadius: "4px",
-    },
+    padding: "0",
+
     "&::after": {
       content: "''",
       position: "absolute",
-      top: "50px",
+      top: "10%",
       left: "100%",
-      width: "6px",
-      height: "50px",
+      width: "7px",
+      height: "10%",
       transform: "translateX(2px)",
-      background: theme.palette.grey[700],
+      background: theme.palette.grey[800],
       borderTopRightRadius: "4px",
       borderBottomRightRadius: "4px",
     },
@@ -85,6 +99,10 @@ const PlayerWrapper = styled(Box)(({ theme }) => ({
     borderWidth: ".25rem",
     borderStyle: "solid",
     borderColor: theme.palette.grey[800],
+  },
+  "& video, img": {
+    borderRadius: 0,
+    // border: "1px solid red",
   },
 }));
 
@@ -128,26 +146,27 @@ const ImageViewer = ({ src, ...other }) => {
 };
 
 const WindowContainer = ({ preview, url, view, ...other }) => {
-  const { appConfig } = useContext(UserContext);
-  // const baseURL = appConfig?.baseURL;
-  // const githubMediaLink = `${baseURL}/videos/${preview?.fileName}`;
-  const gitHubVideosPath = `${appConfig?.githubMediaPath}/videos`;
-  const videoUrl = `${gitHubVideosPath}/${preview?.fileName}`;
   return (
     <Animation start={90} animation={preview?.animation}>
-      <PlayerWrapper elevation={5} {...other}>
-        {preview?.type === "video" ? (
-          <VideoPlayer
-            src={videoUrl}
-            type={`${preview?.type}`}
-            format={`${preview?.format}`}
-          />
-        ) : (
-          <ImageViewer src={videoUrl} />
-        )}
+      <PlayerWrapper {...other}>
+        <Box className="wrapper">
+          {preview?.type === "video" ? (
+            <VideoPlayer
+              src={`${config?.BASE_URL}/videos/${preview?.fileName}`}
+              type={`${preview?.type}`}
+              format={`${preview?.format}`}
+            />
+          ) : (
+            <ImageViewer
+              src={`${config?.BASE_URL}/videos/${preview?.fileName}`}
+            />
+          )}
+        </Box>
       </PlayerWrapper>
     </Animation>
   );
 };
 
 export default WindowContainer;
+
+export { PlayerWrapper };

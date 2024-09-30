@@ -86,8 +86,8 @@ const AboutPage = () => {
             flexGrow={smallScreen || mediumScreen ? 0 : 1}
             sx={{
               // height: smallScreen || mediumScreen ? "50vw" : "48vh",
-              minHeight: "250px",
-              maxHeight: "370px",
+              // minHeight: "250px",
+              // maxHeight: "370px",
               margin: 0,
               display: "grid",
               placeItems: "center",

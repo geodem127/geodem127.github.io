@@ -17,14 +17,17 @@ export const useAsyncFetch = ({ url, options = {} }) => {
     try {
       const res = await fetch(url, { ...DEFAULT_OPTIONS, ...options });
 
+      if (!res?.ok) return setError(true);
       const resJson = await res?.json();
 
-      setTimeout(() => {
-        setValue(resJson);
-        if (!res?.ok) return setError(true);
-        setError(false);
-        setLoading(false);
-      }, 3000);
+      // setTimeout(() => {
+      //   setValue(resJson);
+      //   setError(false);
+      //   setLoading(false);
+      // }, 5000);
+      setValue(resJson);
+      setError(false);
+      setLoading(false);
     } catch (error) {
       setValue(error);
       setError(true);
@@ -33,8 +36,9 @@ export const useAsyncFetch = ({ url, options = {} }) => {
   };
 
   useEffect(() => {
+    console.log("useAsyncFetch:", { url, options });
     fetchData();
   }, []);
 
-  return { loading, error, value };
+  return { loading, error, value, fetchData };
 };

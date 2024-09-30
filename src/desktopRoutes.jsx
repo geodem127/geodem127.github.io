@@ -6,6 +6,7 @@ const AboutPage = Loadable(lazy(() => import("./pages/about")));
 const ExperiencesPage = Loadable(lazy(() => import("./pages/experiences")));
 const ProjectsPage = Loadable(lazy(() => import("./pages/projects")));
 // const ContactsPage = Loadable(lazy(() => import("./pages/contacts")));
+const HeroPage = Loadable(lazy(() => import("./pages/hero")));
 const NotFoundPage = Loadable(lazy(() => import("./pages/notFound")));
 
 const DesktopRoutes = () => {
@@ -26,6 +27,7 @@ const DesktopRoutes = () => {
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="experiences" element={<ExperiencesPage />} />
         {/* <Route path="contacts" element={<ContactsPage />} /> */}
+        <Route path="hero" element={<HeroPage />} />
         <Route path="404" element={<NotFoundPage />} />
         <Route path="*" element={<Navigate to="404" replace />} />
       </Route>

@@ -1,14 +1,14 @@
 import React from "react";
 
-import { styled, useTheme } from "@mui/material/styles";
+import { styled, useTheme } from "@mui/material";
 
 const SIZE = {
-  sm: 0.85,
+  sm: 0.75,
   md: 1,
   lg: 1.5,
 };
 const LoadingContainerStyles = styled("div")(
-  ({ theme, color, size = "sm" }) =>
+  ({ theme, color, size }) =>
     `
   align-items: center;
   background: transparent;
@@ -83,6 +83,70 @@ const WrapperStyles = styled("div")`
   gap: 1rem;
 `;
 
+const LoadingAnimationStyles = styled("div")(({ theme, color, size }) => {
+  return `
+  transform-origin: 50% center;
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: grid;
+  place-content: center;
+  & #loadingWrapper {
+    width: fit-content;
+    height: 50px;
+    scale: ${SIZE?.[size] || 1};
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: .5rem;
+  }
+  & #dot1 {
+  }
+  & #dot2 {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+  }
+
+  & #dot3 {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+
+  & .dot {
+    width: 20px;
+    height: 20px;
+    
+    background-color: ${color || theme?.palette?.primary?.main};
+    float: left;
+    // margin-right: 20px;
+    // margin-top: 65px;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    transform-origin: 50% center;
+    opacity: 1;
+    -webkit-animation: aniScale 1.5s infinite;
+    animation: aniScale 1.5s infinite;
+  }
+  @keyframes aniScale {
+    /* from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    } */
+    75% {
+      transform: scale(0);
+    }
+  }
+`;
+});
+
 const LoadingPage = ({ label = null, color = null, size = "md" }) => {
   const theme = useTheme();
   const renderColor = !!color ? color : theme?.palette?.primary?.main;
@@ -96,4 +160,21 @@ const LoadingPage = ({ label = null, color = null, size = "md" }) => {
   );
 };
 
+const LoadingAnimation = ({ color = null, size = "md" }) => {
+  const theme = useTheme();
+
+  const _color = !color ? "currentColor" : color;
+  const _size = !size ? "md" : size;
+  return (
+    <LoadingAnimationStyles color={_color} size={_size}>
+      <div id="loadingWrapper">
+        <div className="dot" id="dot1"></div>
+        <div className="dot" id="dot2"></div>
+        <div className="dot" id="dot3"></div>
+      </div>
+    </LoadingAnimationStyles>
+  );
+};
+
 export default LoadingPage;
+export { LoadingAnimation };

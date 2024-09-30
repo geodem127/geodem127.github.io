@@ -63,6 +63,7 @@ const ContactsPage = () => {
             flexGrow={0}
             // mt={1}
             rowGap={2}
+            py={6}
             sx={{
               width: "100%",
               display: "flex",
