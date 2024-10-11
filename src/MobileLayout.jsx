@@ -14,27 +14,28 @@ import ContactsPage from "./pages/contacts";
 // const ProjectsPage = Loadable(lazy(() => import("./pages/projects")));
 
 const MobileLayout = () => {
-  return (
-    <Layout>
-      <Box
-        // rowGap={10}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          flexGrow: 1,
-          justifyContent: "space-between",
-          width: "100%",
-          flexShrink: 0,
-        }}
-      >
-        <AboutPage />
-        <ExperiencesPage />
-        <ProjectsPage />
-        <ContactsPage />
-        {/* <MobileRoutes /> */}
-      </Box>
-    </Layout>
-  );
+	return (
+		<Layout>
+			{/* <Box
+				id="mobile-layout-box"
+				rowGap={10}
+				sx={{
+					display: "flex",
+					flexDirection: "column",
+					flexGrow: 1,
+					justifyContent: "space-between",
+					width: "100%",
+					flexShrink: 0,
+				}}
+			> */}
+			<AboutPage />
+			<ExperiencesPage />
+			<ProjectsPage />
+			<ContactsPage />
+			{/* <MobileRoutes /> */}
+			{/* </Box> */}
+		</Layout>
+	);
 };
 
 export default MobileLayout;

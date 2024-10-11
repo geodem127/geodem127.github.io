@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -9,37 +9,31 @@ import { UserContext } from "../../context/userContext";
 import ExperienceSection from "./ExperienceSection";
 import ExperienceDetails from "./ExperienceDetails";
 import { Box } from "@mui/material";
+import PageContainer from "../PageContainer";
+import PageRow from "../PageRow";
 
 const ExperiencesPage = ({}) => {
-  const theme = useTheme();
-  const { experiences } = useContext(UserContext);
+	const theme = useTheme();
+	const { experiences } = useContext(UserContext);
 
-  const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const mediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
-  const largeScreen = useMediaQuery(theme.breakpoints.up("lg"));
+	const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+	const mediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
+	const largeScreen = useMediaQuery(theme.breakpoints.up("lg"));
 
-  return (
-    <SectionWrapper id="experiences">
-      {/* {experiences?.map((item, index) => (
-        <ExperienceSection
-          key={index}
-          end={index >= experiences?.length - 1}
-          index={index}
-          data={item}
-        ></ExperienceSection>
-      ))} */}
-      {/* <Box sx={{ display: "flex", flexDirection: "column", rowGap: "1rem" }}> */}
-      {experiences?.map((item, index) => (
-        <ExperienceDetails key={index} data={item} />
-      ))}
-      {/* </Box> */}
-    </SectionWrapper>
-  );
+	// }, [obTop, obBot, obHeight, ratio, top, bottom, height]);
+
+	return (
+		<PageContainer title="experiences" rowGap="1rem">
+			{experiences?.map((item, index) => (
+				<ExperienceDetails key={index} data={item} />
+			))}
+		</PageContainer>
+	);
 };
 
 ExperiencesPage.propTypes = {
-  data: PropTypes.array,
-  id: PropTypes.string,
-  window: PropTypes.func,
+	data: PropTypes.array,
+	id: PropTypes.string,
+	window: PropTypes.func,
 };
 export default ExperiencesPage;

@@ -1,150 +1,295 @@
 import React, { useContext, useEffect, useState, forwardRef } from "react";
 import {
-  Backdrop,
-  Box,
-  Dialog,
-  Modal,
-  Slide,
-  styled,
-  useMediaQuery,
-  useTheme,
-  SwipeableDrawer,
-  Typography,
-  Card,
-  CardMedia,
-  Divider,
-  Container,
-  IconButton,
-  alpha,
-  DialogTitle,
-  Button,
+	Backdrop,
+	Box,
+	Dialog,
+	Modal,
+	Slide,
+	styled,
+	useMediaQuery,
+	useTheme,
+	SwipeableDrawer,
+	Typography,
+	Card,
+	CardMedia,
+	Divider,
+	Container,
+	IconButton,
+	alpha,
+	DialogTitle,
+	Button,
+	Grow,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
 const ModalHeader = styled(DialogTitle)(({ theme }) => ({
-  position: "relative",
-  // border: "1px solid red",
-  padding: "1rem 10rem 1rem 1.5rem",
-  margin: 0,
-  "&::after": {
-    content: '""',
-    position: "absolute",
-    bottom: 0,
-    left: "1.5rem",
-    right: "1.5rem",
-    height: "1px",
-    background: theme.palette.divider,
-    opacity: 0.4,
-  },
+	...theme.typography.h3,
+	position: "relative",
+	// border: "1px solid red",
+	// padding: "1rem 10rem 1rem 1.5rem",
 
-  // background: "red",
+	margin: 0,
+	// border: "1px solid red",
+	"&::after": {
+		content: '""',
+		position: "absolute",
+		bottom: 0,
+		left: "1.5rem",
+		right: "1.5rem",
+		height: "1px",
+		background: theme.palette.divider,
+		opacity: 0.4,
+		display: "block",
+	},
+
+	[theme.breakpoints.down("sm")]: {
+		"&::after": {
+			display: "none",
+		},
+	},
+
+	// background: "red",
 }));
 const ModalContent = styled(Container)(({ theme }) => ({
-  //   height: "100%",
-  width: "100%",
-  //   border: "1px solid green",
-  maxHeight: "100%",
-  overflow: "auto",
-  position: "relative",
-  display: "block",
+	height: "100%",
+	width: "100%",
+	// border: "1px solid green",
+	maxHeight: "100%",
+	overflow: "auto",
+	position: "relative",
+	display: "block",
+	// paddingBottom: "2rem",
 }));
 const drawerProps = {
-  component: SwipeableDrawer,
-  anchor: "bottom",
-  PaperProps: {
-    sx: {
-      height: "calc(100vh - 1rem)",
-      width: "100vw",
-      paddingTop: "1rem",
-      borderRadius: "1rem 1rem 0 0!important",
-      paddingBottom: "1rem",
-      "&::before": {
-        content: "''",
-        position: "absolute",
-        height: "6px",
-        width: "40px",
-        borderRadius: "3px",
-        opacity: 0.5,
-        background: (theme) => theme.palette.grey[600],
-        left: "calc(50% - 20px)",
-        top: ".75rem",
-      },
-    },
-  },
+	disableSwipeToOpen: true,
+	disableDiscovery: true,
+	component: SwipeableDrawer,
+	anchor: "bottom",
+	PaperProps: {
+		sx: {
+			maxHeight: "calc(100dvh - 2rem)",
+			// height: "100%",
+			// border: "1px solid green",
+			width: "100dvw",
+			paddingTop: "2.5rem",
+			borderRadius: "1rem 1rem 0 0!important",
+			paddingBottom: "0",
+			"&::before": {
+				content: "''",
+				position: "absolute",
+				height: "6px",
+				width: "40px",
+				borderRadius: "3px",
+				opacity: 0.5,
+				background: (theme) => theme.palette.grey[600],
+				left: "calc(50% - 20px)",
+				top: ".75rem",
+				// border: "1px solid green",
+			},
+		},
+	},
 };
 
 const dialogProps = {
-  component: Dialog,
+	component: Dialog,
 
-  fullWidth: true,
-  // TransitionComponent: forwardRef(function Transition(props, ref) {
-  //   return <Slide direction="up" ref={ref} {...props} />;
-  // }),
-  PaperProps: {
-    sx: {
-      height: "calc(100vh - 4rem)",
-      maxHeight: "calc(100vh - 4rem)",
-      minHeight: "500px",
-      maxWidth: (theme) => theme.breakpoints.values.md,
-      padding: "0 0 2rem 0",
-      overflow: "visible",
-      background: (theme) => theme.palette.background.paper,
-      //   top: "2rem",
-      borderRadius: 6,
-      // boxShadow: (theme) => theme.shadows[24],
-    },
-  },
+	fullWidth: true,
+	TransitionComponent: forwardRef(function Transition(props, ref) {
+		// return <Slide direction="up" sx={{willUpdate: "true"}} ref={ref} {...props} />;
+		return (
+			<Slide
+				direction="up"
+				ref={ref}
+				style={{ transformOrigin: "center" }}
+				timeout={1000}
+				{...props}
+			/>
+		);
+	}),
+	PaperProps: {
+		sx: {
+			height: "calc(100vh - 4rem)",
+			maxHeight: "calc(100vh - 1rem)",
+			minHeight: "500px",
+			maxWidth: (theme) => theme.breakpoints.values.md,
+			// padding: "0 0 2rem 0",
+			overflow: "visible",
+			background: (theme) => theme.palette.background.paper,
+			//   top: "2rem",
+			borderRadius: 6,
+			// boxShadow: (theme) => theme.shadows[24],
+			borderBottom: "2rem solid transparent",
+			borderTop: "4rem solid transparent",
+			willUpdate: "true",
+		},
+	},
+};
+
+const drawerStyles = {
+	height: "calc(100vh - 1rem)",
+	width: "100vw",
+	borderRadius: "1rem 1rem 0 0!important",
+	"&::before": {
+		content: "''",
+		position: "absolute",
+		height: "6px",
+		width: "40px",
+		borderRadius: "3px",
+		opacity: 0.5,
+		background: (theme) => theme.palette.grey[600],
+		left: "calc(50% - 20px)",
+		top: ".75rem",
+	},
+};
+
+const DialogWrapper = ({ smScreen = false, children }) => {
+	return (
+		<Dialog
+			fullWidth={true}
+			fullScreen={smScreen}
+			maxWidth="lg"
+			// {...(smScreen ? drawerProps : dialogProps)}
+			PaperProps={{
+				sx: {
+					height: smScreen ? "100vh" : "calc(100vh - 4rem)",
+					maxHeight: smScreen ? "calc(100vh - 1rem)" : "calc(100vh - 4rem)",
+					width: smScreen ? "100vw" : "100%",
+					minHeight: "500px",
+					maxWidth: smScreen ? "100%" : theme.breakpoints.values.md,
+					// padding: "0 0 2rem 0",
+					overflow: "visible",
+					background: (theme) => theme.palette.background.paper,
+					borderRadius: 6,
+					borderTop: `${smScreen ? "2rem" : "4rem"} solid transparent`,
+					borderBottom: "2rem solid red",
+				},
+			}}
+		>
+			{children}
+		</Dialog>
+	);
+};
+
+const DrawerWrapper = ({
+	open = false,
+	smScreen = false,
+	onClose,
+	children,
+}) => {
+	return (
+		<SwipeableDrawer
+			open={open}
+			onClose={onClose}
+			anchor="bottom"
+			sx={{
+				willUpdate: "true",
+			}}
+			PaperProps={{
+				sx: {
+					height: "calc(100vh - 1rem)",
+					width: "100vw",
+					paddingTop: "1rem",
+					borderRadius: "1rem 1rem 0 0!important",
+					paddingBottom: "1rem",
+					"&::before": {
+						content: "''",
+						position: "absolute",
+						height: "6px",
+						width: "40px",
+						borderRadius: "3px",
+						opacity: 0.5,
+						background: (theme) => theme.palette.grey[600],
+						left: "calc(50% - 20px)",
+						top: ".75rem",
+					},
+				},
+			}}
+		>
+			{children}
+		</SwipeableDrawer>
+	);
 };
 
 const CustomModal = ({ open = false, title = "", onClose, children }) => {
-  const theme = useTheme();
-  const smScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const [isRendered, setIsRendered] = useState(false);
+	const theme = useTheme();
+	const smScreen = useMediaQuery(theme.breakpoints.down("sm"));
+	const [isRendered, setIsRendered] = useState(false);
 
-  useEffect(() => {
-    if (open) {
-      setIsRendered(true);
-    } else {
-      setIsRendered(false);
-    }
+	const ModalDialog = smScreen ? DrawerWrapper : DialogWrapper;
 
-    return () => {
-      setIsRendered(false);
-    };
-  }, [open]);
-  return (
-    <Box
-      open={open}
-      onClose={onClose}
-      mountOnEnter
-      unmountOnExit
-      {...(smScreen ? drawerProps : dialogProps)}
-    >
-      <Button
-        variant="text"
-        onClick={onClose}
-        endIcon={<CloseIcon />}
-        sx={{
-          position: "absolute",
-          top: ".75rem",
-          right: ".75rem",
-          zIndex: 100,
-          display: smScreen ? "none" : "flex",
-        }}
-      >
-        Close
-      </Button>
+	useEffect(() => {
+		if (open) {
+			setIsRendered(true);
+		} else {
+			setIsRendered(false);
+		}
 
-      <ModalHeader>
-        <Typography variant="h2" component="h2" color="primary">
-          {title}
-        </Typography>
-      </ModalHeader>
-      <ModalContent fullWidth disableGutters maxWidth="lg" sx={{ py: "1rem" }}>
-        {isRendered ? children : "Loading..."}
-      </ModalContent>
-    </Box>
-  );
+		return () => {
+			setIsRendered(false);
+		};
+	}, [open]);
+	return (
+		// <Dialog
+		// 	open={open}
+		// 	onClose={onClose}
+		// 	fullWidth={true}
+		// 	fullScreen={smScreen}
+		// 	maxWidth="lg"
+		// 	PaperProps={{
+		// 		sx: {
+		// 			height: smScreen ? "100vh" : "calc(100vh - 4rem)",
+		// 			maxHeight: smScreen ? "calc(100vh - 1rem)" : "calc(100vh - 4rem)",
+		// 			width: smScreen ? "100vw" : "100%",
+		// 			minHeight: "500px",
+		// 			maxWidth: smScreen ? "100%" : theme.breakpoints.values.md,
+		// 			overflow: "visible",
+		// 			background: (theme) => theme.palette.background.paper,
+		// 			borderRadius: 6,
+		// 			borderTop: `${smScreen ? "2rem" : "4rem"} solid transparent`,
+		// 			borderBottom: "2rem solid transparent",
+		// 		},
+		// 	}}
+		// >
+		<Box
+			open={open}
+			onClose={onClose}
+			{...(smScreen ? drawerProps : dialogProps)}
+			sx={{ willUpdate: "true" }}
+		>
+			<Button
+				variant="text"
+				onClick={onClose}
+				endIcon={<CloseIcon />}
+				sx={{
+					position: "absolute",
+					top: "-3.25rem",
+					right: ".35rem",
+					zIndex: 100,
+					// display: smScreen ? "none" : "flex",
+				}}
+			>
+				Close
+			</Button>
+
+			{/* <ModalHeader>
+				<Typography variant="h2" component="h2" color="primary">
+					{title}
+				</Typography>
+				{title}
+			</ModalHeader> */}
+			<ModalContent fullWidth disableGutters maxWidth="lg">
+				<ModalHeader
+					variant="h2"
+					component="h2"
+					color="primary"
+					sx={{ padding: `.25rem ${smScreen ? "1rem" : "2rem"} ` }}
+				>
+					{title}
+				</ModalHeader>
+				{isRendered ? children : "Loading..."}
+			</ModalContent>
+		</Box>
+	);
 };
 
 export default CustomModal;

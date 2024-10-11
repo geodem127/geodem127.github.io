@@ -1,165 +1,156 @@
 [
-  {
-    "id": "myPortfolio",
-    "name": "My Portfolio",
-    "description": "This site showcases my extensive experience as a full-stack developer, featuring projects that highlight my skills in creating dynamic, interactive web applications. Built using React.js, the portfolio includes 3D animations powered by React Three Fiber, styled-components for custom design, and Material UI for a polished user interface. It leverages custom hooks, global context, and theming for efficient state management and design consistency. Fully responsive to any screen size, the app is optimized with Vite, version-controlled with Git, and deployed on GitHub Pages with a custom domain from GoDaddy.",
-    "logo": "/geodem127.github.io/images/geodem.svg",
-    "previews": [
-      {
-        "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
-        "view": "desktop",
-        "type": "video",
-        "format": "mp4",
-        "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
-        "fileName": "myPortfolio_desktop.mp4",
-        "styles": {
-          "bottom": "1rem",
-          "left": "1rem",
-          "width": "100%",
-          "height": "100%"
-        },
-        "animation": "slideRight"
-      },
-      {
-        "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
-        "view": "mobile",
-        "type": "video",
-        "format": "mp4",
-        "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
-        "fileName": "myPortfolio_mobile.mp4",
-        "styles": {
-          "top": "1rem",
-          "right": "1rem"
-        },
-        "animation": "slideLeft"
-      }
-    ],
-    "demoLink": {
-      "icon": "geodem",
-      "site": "Geodem",
-      "url": "https://geodem.xyz"
-    },
-    "sourceLink": {
-      "icon": "github",
-      "site": "Github",
-      "url": "https://github.com/geodem127/portfolio"
-    },
-    "technologies": [
-      "React JS",
-      "Material UI",
-      "Three.js",
-      "Vite",
-      "React Router",
-      "Git",
-      "Github",
-      "GoDaddy",
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ]
-  },
-  {
-    "id": "VSCodeCommandRunner",
-    "name": "VSCode Command Runner",
-    "description": "VSCode Command Runner is a Visual Studio Code extension that provides an intuitive user interface to manage and run commands or tasks within your workspace. With this extension, you can easily create, edit, and delete commands, and execute them directly in the integrated terminal. The extension supports running any type of command installed in your terminal. It also features a command list with action icons for quick management, and configuration options that can be customized in settings for a streamlined workflow.",
-    "previews": [
-      {
-        "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
-        "view": "app",
-        "type": "video",
-        "format": "mp4",
-        "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
-        "fileName": "vscode_cmd_runner_ext_app.mp4",
-        "styles": {
-          "top": "1rem",
-          "left": "1rem",
-          "width": "80%",
-          "height": "90%"
-        },
-        "animation": "slideRight"
-      },
-      {
-        "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
-        "view": "app",
-        "type": "image",
-        "format": "png",
-        "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
-        "fileName": "vscode_cmd_runner_ext_app2.png",
-        "styles": {
-          "bottom": "1rem",
-          "right": "1rem",
-          "width": "60%",
-          "height": "70%",
-          "zIndex": "10"
-        },
-        "animation": "slideLeft"
-      }
-    ],
-    "demoLink": {
-      "icon": "geodem",
-      "site": "Geodem",
-      "url": "https://geodem.xyz"
-    },
-    "sourceLink": {
-      "icon": "github",
-      "site": "Github",
-      "url": "https://github.com/geodem127/portfolio"
-    },
-    "technologies": ["VScode", "Node.js", "JavaScript", "NPM", "Git", "Github"]
-  },
-  {
-    "id": "devTools",
-    "name": "Dev Tools",
-    "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
-    "previews": [
-      {
-        "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
-        "view": "desktop",
-        "type": "video",
-        "format": "mp4",
-        "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
-        "fileName": "myPortfolio_desktop.mp4",
-        "styles": {
-          "top": "1rem",
-          "left": "1rem"
-        },
-        "animation": "slideRight"
-      },
-      {
-        "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
-        "view": "app",
-        "type": "image",
-        "format": "png",
-        "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
-        "fileName": "vscode_cmd_runner_ext_app2.png",
-        "styles": {
-          "bottom": "1rem",
-          "right": "1rem",
-          "width": "60%",
-          "height": "60%",
-          "zIndex": "10"
-        },
-        "animation": "slideLeft"
-      }
-    ],
-    "demoLink": {
-      "icon": "geodem",
-      "site": "Geodem",
-      "url": "https://geodem.xyz"
-    },
-    "sourceLink": {
-      "icon": "github",
-      "site": "Github",
-      "url": "https://github.com/geodem127/portfolio"
-    },
-    "technologies": [
-      "React JS",
-      "Material UI",
-      "Three.js",
-      "Vite",
-      "React Router",
-      "Github",
-      "GoDaddy"
-    ]
-  }
+	{
+		"id": "myPortfolio",
+		"name": "My Portfolio",
+		"description": "This site showcases my extensive experience as a full-stack developer, featuring projects that highlight my skills in creating dynamic, interactive web applications. Built using React.js, the portfolio includes 3D animations powered by React Three Fiber, styled-components for custom design, and Material UI for a polished user interface. It leverages custom hooks, global context, and theming for efficient state management and design consistency. Fully responsive to any screen size, the app is optimized with Vite, version-controlled with Git, and deployed on GitHub Pages with a custom domain from GoDaddy.",
+		"logo": "/geodem127.github.io/images/geodem.svg",
+		"previews": [
+			{
+				"id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
+				"view": "desktop",
+				"type": "video",
+				"format": "mp4",
+				"url": "https://geodem.xyz/files/media/videos/myPortfolio_desktop.mp4",
+				"fileName": "myPortfolio_desktop.mp4",
+
+				"styles": {
+					"bottom": "2rem",
+					"left": "1rem"
+				},
+				"animation": "slideUp"
+			},
+			{
+				"id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
+				"view": "mobile",
+				"type": "video",
+				"format": "mp4",
+				"url": "https://geodem.xyz/files/media/videos/myPortfolio_mobile.mp4",
+				"fileName": "myPortfolio_mobile.mp4",
+				"styles": {
+					"top": "1rem",
+					"right": "1rem"
+				},
+				"animation": "slideLeft"
+			}
+		],
+		"demoLink": {
+			"icon": "geodem",
+			"site": "Geodem",
+			"url": "https://geodem.xyz"
+		},
+		"sourceLink": {
+			"icon": "github",
+			"site": "Github",
+			"url": "https://github.com/geodem127/portfolio"
+		},
+		"technologies": [
+			"React JS",
+			"Material UI",
+			"Three.js",
+			"Vite",
+			"React Router",
+			"Git",
+			"Github",
+			"GoDaddy",
+			"HTML",
+			"CSS",
+			"JavaScript"
+		]
+	},
+	{
+		"id": "VSCodeCommandRunner",
+		"name": "VSCode Command Runner",
+		"description": "VSCode Command Runner is a Visual Studio Code extension that provides an intuitive user interface to manage and run commands or tasks within your workspace. With this extension, you can easily create, edit, and delete commands, and execute them directly in the integrated terminal. The extension supports running any type of command installed in your terminal. It also features a command list with action icons for quick management, and configuration options that can be customized in settings for a streamlined workflow.",
+		"previews": [
+			{
+				"id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
+				"view": "desktop",
+				"type": "video",
+				"format": "mp4",
+				"url": "https://geodem.xyz/files/media/videos/vscode_cmd_runner_ext_app.mp4",
+				"fileName": "vscode_cmd_runner_ext_app.mp4",
+				"styles": {
+					"bottom": "1rem",
+					"left": "1rem"
+				},
+				"animation": "slideDown"
+			},
+			{
+				"id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
+				"view": "widget",
+				"type": "image",
+				"format": "png",
+				"url": "https://geodem.xyz/files/media/videos/vscode_cmd_runner_ext_app2.png",
+				"fileName": "vscode_cmd_runner_ext_app2.png",
+				"styles": {
+					"bottom": "1rem",
+					"right": "1rem"
+				},
+				"animation": "slideLeft"
+			}
+		],
+		"demoLink": {
+			"icon": "geodem",
+			"site": "Geodem",
+			"url": "https://geodem.xyz"
+		},
+		"sourceLink": {
+			"icon": "github",
+			"site": "Github",
+			"url": "https://github.com/geodem127/portfolio"
+		},
+		"technologies": ["VScode", "Node.js", "JavaScript", "NPM", "Git", "Github"]
+	},
+	{
+		"id": "devTools",
+		"name": "Dev Tools",
+		"description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+		"previews": [
+			{
+				"id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
+				"view": "desktop",
+				"type": "video",
+				"format": "mp4",
+				"url": "https://geodem.xyz/files/media/videos/myPortfolio_desktop.mp4",
+				"fileName": "myPortfolio_desktop.mp4",
+				"styles": {
+					"bottom": "1rem",
+					"right": "1rem"
+				},
+				"animation": "slideLeft"
+			},
+			{
+				"id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
+				"view": "widget",
+				"type": "image",
+				"format": "png",
+				"url": "https://geodem.xyz/files/media/videos/vscode_cmd_runner_ext_app2.png",
+				"fileName": "vscode_cmd_runner_ext_app2.png",
+				"styles": {
+					"bottom": "0",
+					"left": "1rem"
+				},
+				"animation": "slideRight"
+			}
+		],
+		"demoLink": {
+			"icon": "geodem",
+			"site": "Geodem",
+			"url": "https://geodem.xyz"
+		},
+		"sourceLink": {
+			"icon": "github",
+			"site": "Github",
+			"url": "https://github.com/geodem127/portfolio"
+		},
+		"technologies": [
+			"React JS",
+			"Material UI",
+			"Three.js",
+			"Vite",
+			"React Router",
+			"Github",
+			"GoDaddy"
+		]
+	}
 ]

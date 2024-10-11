@@ -1,0 +1,75 @@
+.scroll-animation {
+	opacity: 0;
+	/* outline: 2px dashed red; */
+	transition: all 500ms ease-out 300ms;
+}
+
+[class*="_sanimation-"] {
+	opacity: 0;
+
+	transition: all 500ms ease-out 300ms;
+}
+/* [class*="_sanimation-"].in {
+	opacity: 1;
+} */
+
+._sanimation-slideUp {
+	transform: translateY(20%);
+	&.in {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+._sanimation-slideDown {
+	transform: translateY(-20%);
+	&.in {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+._sanimation-slideLeft {
+	transform: translateX(20%);
+	&.in {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+._sanimation-slideRight {
+	transform: translateX(-20%);
+	&.in {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+/* COLLAPSE */
+._sanimation-collapseUp {
+	transform-origin: bottom center;
+}
+._sanimation-collapseDown {
+	transform-origin: top center;
+}
+
+._sanimation-collapseUp,
+._sanimation-collapseDown {
+	transform: scaleY(0);
+	&.in {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
+._sanimation-collapseLeft {
+	transform-origin: right center;
+}
+._sanimation-collapseRight {
+	transform-origin: left center;
+}
+._sanimation-collapseLeft,
+._sanimation-collapseRight {
+	transform: scaleX(0);
+	&.in {
+		transform: scaleX(1);
+		opacity: 1;
+	}
+}

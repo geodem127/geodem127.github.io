@@ -1,0 +1,46 @@
+.ol-r {
+	outline: 1px dashed red;
+	outline-offset: -1px;
+}
+
+.ol-g {
+	outline: 1px dashed green;
+	outline-offset: -1px;
+}
+.ol-b {
+	outline: 1px dashed blue;
+	outline-offset: -1px;
+}
+
+.ol-c {
+	outline: 1px dashed cyan;
+	outline-offset: -1px;
+}
+
+.ol-a {
+	outline: 1px dashed aqua;
+	outline-offset: -1px;
+}
+.ol-o {
+	outline: 1px dashed orange;
+	outline-offset: -1px;
+}
+
+[data-ol] {
+	outline: 1px dotted rgb(1, 94, 65);
+	outline-offset: -1px;
+	/* position: relative; */
+}
+[data-ol]::before {
+	content: attr(data-ol);
+	position: absolute;
+	top: -1.35rem;
+	right: 1rem;
+	height: 1.35rem;
+	z-index: 9999;
+	background: rgb(1, 94, 65);
+	padding: 2px 4px;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	border-radius: 4px 4px 0 0;
+}

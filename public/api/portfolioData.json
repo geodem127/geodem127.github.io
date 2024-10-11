@@ -1,487 +1,487 @@
 {
-  "navigation": [
-    {
-      "title": "About",
-      "path": "/about",
-      "id": "about"
-    },
-    {
-      "title": "Experiences",
-      "path": "/experiences",
-      "id": "experiences"
-    },
-    {
-      "title": "Projects",
-      "path": "/projects",
-      "id": "projects"
-    },
-    {
-      "title": "Hero",
-      "path": "/hero",
-      "id": "hero"
-    }
-  ],
-  "personalInformation": {
-    "name": "George Demonteverde",
-    "firstName": "George",
-    "lastName": "Demonteverde",
-    "role": "Senior Full-stack Developer",
-    "driveLink": "https://drive.google.com/drive/folders/1-6ikD3UesqNYNs770cgIkiijqJ3TGfzO?usp=sharing",
-    "skills": [
-      "Full Stack Developer",
-      "UI and API Optimization",
-      "Web Solutions",
-      "UI/API Test Automation"
-    ],
-    "socialLinks": [
-      {
-        "label": "Geodem",
-        "path": "/",
-        "icon": "GeodemIcon"
-      },
-      {
-        "label": "Github",
-        "path": "https://github.com/geodem127",
-        "icon": "Github"
-      },
-      {
-        "label": "LinkedIn",
-        "path": "https://linkedin.com/in/george-demonteverde-jr",
-        "icon": "LinkedIn"
-      },
-      {
-        "label": "Codepen",
-        "path": "https://codepen.io/george-demonteverde",
-        "icon": "CodePen"
-      }
-    ]
-  },
-  "experiences": [
-    {
-      "id": 1,
-      "period": "Sep 2022 - Present",
-      "start": "Sep 2022",
-      "end": "Present",
-      "year": "Present",
-      "isPresent": true,
-      "role": "Senior Full-stack Developer",
-      "company": "Accenture",
-      "link": "https://www.accenture.com",
-      "jobDescription": "As a Senior Full-stack Developer, I focused on developing and optimizing UI and API components, resolving complex application defects, and delivering permanent solutions for critical business logic.\n\nI played a key role in addressing significant revenue-impacting issues and creating custom hooks and components essential for business logic. My achievements include establishing internal libraries for reusable components, enhancing development efficiency.",
-      "technologies": [
-        "React JS",
-        "Node.js",
-        "JavaScript",
-        "jQuery",
-        "CSS",
-        "HTML",
-        "express.js",
-        "AWS cloud services",
-        "Google Cloud Services",
-        "DevOps",
-        "UI Development",
-        "Agile",
-        "Scrum"
-      ]
-    },
-    {
-      "id": 2,
-      "period": "May 2022 - Sep 2022",
-      "start": "May 2022",
-      "end": "Sep 2022",
-      "year": "2023",
-      "isPresent": false,
-      "role": "Application Development Team Lead",
-      "company": "Accenture",
-      "link": "https://www.accenture.com",
-      "jobDescription": "As the Application Development Team Lead, I led the UI development team, overseeing the application development process while adhering to agile and Scrum methodologies. I developed robust UI solutions tailored to client needs, collaborated with backend teams on API architecture design, and mentored junior developers.\n\nIn addition, I configured CI/CD pipelines, set up a collaboration platform in Azure DevOps, and integrated AWS cloud services, including authentication, S3 buckets, CloudFront, and IAM.\n\nI was also involved in blockchain planning and integration. My key achievement was establishing internal libraries for reusable components, enhancing team efficiency and scalability.",
-      "technologies": [
-        "React JS",
-        "Node.js",
-        "JavaScript",
-        "jQuery",
-        "CSS",
-        "HTML",
-        "express.js",
-        "AWS cloud services",
-        "Blockchain",
-        "DevOps",
-        "UI Development",
-        "Team Management",
-        "Project Management",
-        "Agile",
-        "Scrum",
-        "Scrum Master"
-      ]
-    },
-    {
-      "id": 3,
-      "period": "Nov 2021 - May 2022",
-      "start": "Nov 2021",
-      "end": "May 2022",
-      "year": "2022",
-      "isPresent": false,
-      "role": "UI/API Automation Tester",
-      "company": "Accenture",
-      "link": "https://www.accenture.com",
-      "jobDescription": "As a UI/API Automation Tester, I spearheaded the design and execution of automated tests for both API and UI components. I established project-wide testing standards and developed a standardized Robot Framework and Selenium setup for UI/API automation testing. I also led unit and functional testing efforts, ensuring comprehensive test coverage.\n\nMy key achievement was creating the standard UI/API test automation setup for the entire project and developing internal libraries for automation using Robot Framework, Selenium, Gherkin, and BDD approaches with Python.",
-      "technologies": [
-        "React JS",
-        "RobotFramework",
-        "Python",
-        "UI/API Test Automation",
-        "Gherkin",
-        "BDD approach",
-        "Selenium",
-        "Testing",
-        "Agile",
-        "Scrum"
-      ]
-    },
-    {
-      "id": 4,
-      "period": "Jun 2021 - Nov 2022",
-      "start": "Jun 2021",
-      "end": "Nov 2022",
-      "year": "2021",
-      "role": "React JS Developer",
-      "company": "Accenture",
-      "link": "https://www.accenture.com",
-      "jobDescription": "As a React JS Developer, I focused on developing components, pages, and functions aligned with client-specific business logic. I implemented best coding practices to create robust UI solutions centered on business needs.\n\nA key achievement was establishing internal libraries for reusable components and wireframing designs according to project specifications.",
-      "technologies": [
-        "React JS",
-        "JavaScript",
-        "CSS",
-        "PHP",
-        "HTML",
-        "UI Development",
-        "Agile",
-        "Scrum"
-      ]
-    },
-    {
-      "id": 5,
-      "period": "Sep 2020 - Nov 2020",
-      "start": "Sep 2020",
-      "end": "Nov 2020",
-      "year": "2020",
-      "isPresent": false,
-      "role": "Front End Developer",
-      "company": "LGU",
-      "link": "https://dumaguete.com",
-      "jobDescription": "As a Front End Developer, I built a responsive UI for the Local Transportation Registration Tracker, tailored to meet specific business needs. The system allowed for member tracking, on-site registration, organization registration, complaint logging for operators, violation logging, and report generation.\n\nMy key achievement was developing internal libraries to enhance functionality and efficiency.",
-      "technologies": [
-        "JavaScript",
-        "jQuery",
-        "CSS",
-        "PHP",
-        "HTML",
-        "express.js",
-        "Google Cloud Services",
-        "Xampp",
-        "MySQL",
-        "SQL"
-      ]
-    },
-    {
-      "id": 6,
-      "period": "Jan 2015 - Sep 2020",
-      "start": "Jan 2015",
-      "end": "Sep 2020",
-      "year": "2015",
-      "isPresent": false,
-      "role": "Front End Developer",
-      "company": "Freelance",
-      "link": "",
-      "jobDescription": "As a Freelance Front End Developer, I provided comprehensive web development services, creating websites and tools tailored to client specifications. I designed user interfaces and back-end services, ensuring clean, maintainable code across various platforms.\n\nI also managed database operations, enhanced user experience through intuitive interfaces, resolved technical issues, and maintained application security and compliance with industry standards.",
-      "technologies": [
-        "React JS",
-        "Node.js",
-        "JavaScript",
-        "jQuery",
-        "CSS",
-        "PHP",
-        "HTML",
-        "express.js",
-        "AWS cloud services",
-        "Google Cloud Services"
-      ]
-    }
-  ],
-  "projects": [
-    {
-      "id": "myPortfolio",
-      "name": "My Portfolio",
-      "description": "This site showcases my extensive experience as a full-stack developer, featuring projects that highlight my skills in creating dynamic, interactive web applications. Built using React.js, the portfolio includes 3D animations powered by React Three Fiber, styled-components for custom design, and Material UI for a polished user interface. It leverages custom hooks, global context, and theming for efficient state management and design consistency. Fully responsive to any screen size, the app is optimized with Vite, version-controlled with Git, and deployed on GitHub Pages with a custom domain from GoDaddy.",
-      "previews": [
-        {
-          "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
-          "view": "desktop",
-          "type": "video",
-          "format": "mp4",
-          "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
-          "fileName": "myPortfolio_desktop.mp4",
-          "styles": {
-            "bottom": "1rem",
-            "left": "1rem",
-            "width": "100%",
-            "height": "100%"
-          },
-          "animation": "slideRight"
-        },
-        {
-          "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
-          "view": "mobile",
-          "type": "video",
-          "format": "mp4",
-          "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
-          "fileName": "myPortfolio_mobile.mp4",
-          "styles": {
-            "top": "1rem",
-            "right": "1rem"
-          },
-          "animation": "slideLeft"
-        }
-      ],
-      "demoLink": {
-        "icon": "geodem",
-        "site": "Geodem",
-        "url": "https://geodem.xyz"
-      },
-      "sourceLink": {
-        "icon": "github",
-        "site": "Github",
-        "url": "https://github.com/geodem127/portfolio"
-      },
-      "technologies": [
-        "React JS",
-        "Material UI",
-        "Three.js",
-        "Vite",
-        "React Router",
-        "Git",
-        "Github",
-        "GoDaddy"
-      ]
-    },
-    {
-      "id": "VSCodeCommandRunner",
-      "name": "VSCode Command Runner",
-      "description": "VSCode Command Runner is a Visual Studio Code extension that provides an intuitive user interface to manage and run commands or tasks within your workspace. With this extension, you can easily create, edit, and delete commands, and execute them directly in the integrated terminal. The extension supports running any type of command installed in your terminal. It also features a command list with action icons for quick management, and configuration options that can be customized in settings for a streamlined workflow.",
-      "previews": [
-        {
-          "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
-          "view": "app",
-          "type": "video",
-          "format": "mp4",
-          "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
-          "fileName": "vscode_cmd_runner_ext_app.mp4",
-          "styles": {
-            "top": "1rem",
-            "left": "1rem",
-            "width": "80%",
-            "height": "90%"
-          },
-          "animation": "slideRight"
-        },
-        {
-          "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
-          "view": "app",
-          "type": "image",
-          "format": "png",
-          "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
-          "fileName": "vscode_cmd_runner_ext_app2.png",
-          "styles": {
-            "bottom": "1rem",
-            "right": "1rem",
-            "width": "60%",
-            "height": "70%",
-            "zIndex": "10"
-          },
-          "animation": "slideLeft"
-        }
-      ],
-      "demoLink": {
-        "icon": "geodem",
-        "site": "Geodem",
-        "url": "https://geodem.xyz"
-      },
-      "sourceLink": {
-        "icon": "github",
-        "site": "Github",
-        "url": "https://github.com/geodem127/portfolio"
-      },
-      "technologies": [
-        "VScode",
-        "Node.js",
-        "JavaScript",
-        "NPM",
-        "Git",
-        "Github"
-      ]
-    },
-    {
-      "id": "devTools",
-      "name": "Dev Tools",
-      "description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
-      "previews": [
-        {
-          "id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
-          "view": "desktop",
-          "type": "video",
-          "format": "mp4",
-          "url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
-          "fileName": "myPortfolio_desktop.mp4",
-          "styles": {
-            "top": "1rem",
-            "left": "1rem"
-          },
-          "animation": "slideRight"
-        },
-        {
-          "id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
-          "view": "app",
-          "type": "image",
-          "format": "png",
-          "url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
-          "fileName": "vscode_cmd_runner_ext_app2.png",
-          "styles": {
-            "bottom": "1rem",
-            "right": "1rem",
-            "width": "60%",
-            "height": "60%",
-            "zIndex": "10"
-          },
-          "animation": "slideLeft"
-        }
-      ],
-      "demoLink": {
-        "icon": "geodem",
-        "site": "Geodem",
-        "url": "https://geodem.xyz"
-      },
-      "sourceLink": {
-        "icon": "github",
-        "site": "Github",
-        "url": "https://github.com/geodem127/portfolio"
-      },
-      "technologies": [
-        "React JS",
-        "Material UI",
-        "Three.js",
-        "Vite",
-        "React Router",
-        "Github",
-        "GoDaddy"
-      ]
-    }
-  ],
-  "about2": "I started my web development journey in 2015 and have had the privilege of working on diverse projects—from contributing to an advertising agency, startup, and design studio to my current role as a Senior Full-stack Developer at Accenture in Cebu City. \nI specialize in developing and optimizing UI and API components, addressing complex business logic challenges. Notable achievements include creating internal libraries for reusable components.\nAs a former Application Development Team Lead and Scrum Master, I led UI development teams, ensuring adherence to agile principles. I've also spearheaded automated tests as a UI/API Automation Tester, setting project-wide standards.",
-  "about": "Hi there! I'm a Web Developer with over 10 years of experience in application development. As a Full Stack Developer, I've tackled large-scale applications and have a strong focus on developing and optimizing UI and API components. I thrive on solving complex business logic challenges and ensuring everything works seamlessly.\n\nI also have solid experience in test automation for UI and API, making sure that the solutions I build are not only functional but reliable and robust. Whether it's refining user interfaces or enhancing backend systems, I'm dedicated to delivering high-quality digital experiences.",
-  "techStack": [
-    {
-      "id": "programingLanguages",
-      "label": "Programing Languages",
-      "iconClass": "icon-basic-webpage",
-      "icon": "./images/programing.svg",
-      "technologies": ["Java", "JavaScript", "TypeScript", "PHP", "Python"]
-    },
-    {
-      "id": "librariesAndFrameworks",
-      "label": "Libraries and Frameworks",
-      "iconClass": ".icon-basic-pencil-ruler-pen",
-      "icon": "./images/programing.svg",
-      "technologies": [
-        "React.js",
-        "Robot Framework",
-        "ESlint",
-        "Material UI",
-        "Serverless",
-        "Tailwind",
-        "Express",
-        "Graphql",
-        "Bootstrap",
-        "JQuery",
-        "Vue",
-        "Angular",
-        "nodewebkit",
-        "Sass",
-        "Electron",
-        "Three.js",
-        "Jest",
-        "Lerna",
-        "Cucumber",
-        "Redux",
-        "Selenium"
-      ]
-    },
-    {
-      "id": "toolsAndPlatforms",
-      "label": "Tools and Platforms",
-      "iconClass": "icon-basic-settings",
-      "icon": "./images/programing.svg",
-      "technologies": [
-        "AWS",
-        "HTML",
-        "Azure DevOps",
-        "Bitbucket",
-        "CSS",
-        "Salesforce",
-        "Docker",
-        "MongoDB",
-        "MySQL",
-        "Figma",
-        "Nginx",
-        "SQL",
-        "AEM",
-        "Firebase",
-        "Node.js",
-        "GCP",
-        "NPM",
-        "Git",
-        "VScode",
-        "Github",
-        "Prettier",
-        "Webpack",
-        "Jira",
-        "Confluence",
-        "Jenkins",
-        "Sonarqube",
-        "Maven",
-        "linux",
-        "Blender",
-        "Contentful",
-        "Kubernetes",
-        "Eclipse",
-        "Vite",
-        "Sonarqube",
-        "Emmet",
-        "Slack",
-        "Postman",
-        "Pycharm",
-        "Squarespace",
-        "Wordpress",
-        "Wix",
-        "Xampp",
-        "Commercetools",
-        "Zuora",
-        "GoDaddy"
-      ]
-    }
-  ],
-  "tmp": {
-    "contacts": [
-      {
-        "label": "Email",
-        "path": "mailto:gdemonteverde127@gmail.com",
-        "icon": "EmailIcon"
-      },
-      {
-        "label": "Phone",
-        "path": "/",
-        "icon": "PhoneIcon"
-      }
-    ],
-    "technoligies": ["Jetbrains", "Next.js", "Shopify", "Sentry"]
-  }
+	"navigation": [
+		{
+			"title": "About",
+			"path": "/about",
+			"id": "about"
+		},
+		{
+			"title": "Experiences",
+			"path": "/experiences",
+			"id": "experiences"
+		},
+		{
+			"title": "Projects",
+			"path": "/projects",
+			"id": "projects"
+		},
+		{
+			"title": "Hero",
+			"path": "/hero",
+			"id": "hero"
+		}
+	],
+	"personalInformation": {
+		"name": "George Demonteverde",
+		"firstName": "George",
+		"lastName": "Demonteverde",
+		"role": "Senior Full-stack Developer",
+		"driveLink": "https://drive.google.com/drive/folders/1-6ikD3UesqNYNs770cgIkiijqJ3TGfzO?usp=sharing",
+		"skills": [
+			"Full Stack Developer",
+			"UI and API Optimization",
+			"Web Solutions",
+			"UI/API Test Automation"
+		],
+		"socialLinks": [
+			{
+				"label": "Geodem",
+				"path": "/",
+				"icon": "GeodemIcon"
+			},
+			{
+				"label": "Github",
+				"path": "https://github.com/geodem127",
+				"icon": "Github"
+			},
+			{
+				"label": "LinkedIn",
+				"path": "https://linkedin.com/in/george-demonteverde-jr",
+				"icon": "LinkedIn"
+			},
+			{
+				"label": "Codepen",
+				"path": "https://codepen.io/george-demonteverde",
+				"icon": "CodePen"
+			}
+		]
+	},
+	"experiences": [
+		{
+			"id": 1,
+			"period": "Sep 2022 - Present",
+			"start": "Sep 2022",
+			"end": "Present",
+			"year": "Present",
+			"isPresent": true,
+			"role": "Senior Full-stack Developer",
+			"company": "Accenture",
+			"link": "https://www.accenture.com",
+			"jobDescription": "As a Senior Full-stack Developer, I focused on developing and optimizing UI and API components, resolving complex application defects, and delivering permanent solutions for critical business logic.\n\nI played a key role in addressing significant revenue-impacting issues and creating custom hooks and components essential for business logic. My achievements include establishing internal libraries for reusable components, enhancing development efficiency.",
+			"technologies": [
+				"React JS",
+				"Node.js",
+				"JavaScript",
+				"jQuery",
+				"CSS",
+				"HTML",
+				"express.js",
+				"AWS cloud services",
+				"Google Cloud Services",
+				"DevOps",
+				"UI Development",
+				"Agile",
+				"Scrum"
+			]
+		},
+		{
+			"id": 2,
+			"period": "May 2022 - Sep 2022",
+			"start": "May 2022",
+			"end": "Sep 2022",
+			"year": "2023",
+			"isPresent": false,
+			"role": "Application Development Team Lead",
+			"company": "Accenture",
+			"link": "https://www.accenture.com",
+			"jobDescription": "As the Application Development Team Lead, I led the UI development team, overseeing the application development process while adhering to agile and Scrum methodologies. I developed robust UI solutions tailored to client needs, collaborated with backend teams on API architecture design, and mentored junior developers.\n\nIn addition, I configured CI/CD pipelines, set up a collaboration platform in Azure DevOps, and integrated AWS cloud services, including authentication, S3 buckets, CloudFront, and IAM.\n\nI was also involved in blockchain planning and integration. My key achievement was establishing internal libraries for reusable components, enhancing team efficiency and scalability.",
+			"technologies": [
+				"React JS",
+				"Node.js",
+				"JavaScript",
+				"jQuery",
+				"CSS",
+				"HTML",
+				"express.js",
+				"AWS cloud services",
+				"Blockchain",
+				"DevOps",
+				"UI Development",
+				"Team Management",
+				"Project Management",
+				"Agile",
+				"Scrum",
+				"Scrum Master"
+			]
+		},
+		{
+			"id": 3,
+			"period": "Nov 2021 - May 2022",
+			"start": "Nov 2021",
+			"end": "May 2022",
+			"year": "2022",
+			"isPresent": false,
+			"role": "UI/API Automation Tester",
+			"company": "Accenture",
+			"link": "https://www.accenture.com",
+			"jobDescription": "As a UI/API Automation Tester, I spearheaded the design and execution of automated tests for both API and UI components. I established project-wide testing standards and developed a standardized Robot Framework and Selenium setup for UI/API automation testing. I also led unit and functional testing efforts, ensuring comprehensive test coverage.\n\nMy key achievement was creating the standard UI/API test automation setup for the entire project and developing internal libraries for automation using Robot Framework, Selenium, Gherkin, and BDD approaches with Python.",
+			"technologies": [
+				"React JS",
+				"RobotFramework",
+				"Python",
+				"UI/API Test Automation",
+				"Gherkin",
+				"BDD approach",
+				"Selenium",
+				"Testing",
+				"Agile",
+				"Scrum"
+			]
+		},
+		{
+			"id": 4,
+			"period": "Jun 2021 - Nov 2021",
+			"start": "Jun 2021",
+			"end": "Nov 2022",
+			"year": "2021",
+			"role": "React JS Developer",
+			"company": "Accenture",
+			"link": "https://www.accenture.com",
+			"jobDescription": "As a React JS Developer, I focused on developing components, pages, and functions aligned with client-specific business logic. I implemented best coding practices to create robust UI solutions centered on business needs.\n\nA key achievement was establishing internal libraries for reusable components and wireframing designs according to project specifications.",
+			"technologies": [
+				"React JS",
+				"JavaScript",
+				"CSS",
+				"PHP",
+				"HTML",
+				"UI Development",
+				"Agile",
+				"Scrum"
+			]
+		},
+		{
+			"id": 5,
+			"period": "Sep 2020 - Nov 2020",
+			"start": "Sep 2020",
+			"end": "Nov 2020",
+			"year": "2020",
+			"isPresent": false,
+			"role": "Front End Developer",
+			"company": "Local Government Unit of Dumaguete",
+			"link": "https://dumaguete.com",
+			"jobDescription": "As a Front End Developer, I built a responsive UI for the Local Transportation Registration Tracker, tailored to meet specific business needs. The system allowed for member tracking, on-site registration, organization registration, complaint logging for operators, violation logging, and report generation.\n\nMy key achievement was developing internal libraries to enhance functionality and efficiency.",
+			"technologies": [
+				"JavaScript",
+				"jQuery",
+				"CSS",
+				"PHP",
+				"HTML",
+				"express.js",
+				"Google Cloud Services",
+				"Xampp",
+				"MySQL",
+				"SQL"
+			]
+		},
+		{
+			"id": 6,
+			"period": "Jan 2015 - Sep 2020",
+			"start": "Jan 2015",
+			"end": "Sep 2020",
+			"year": "2015",
+			"isPresent": false,
+			"role": "Front End Developer",
+			"company": "Freelance",
+			"link": "",
+			"jobDescription": "As a Freelance Front End Developer, I provided comprehensive web development services, creating websites and tools tailored to client specifications. I designed user interfaces and back-end services, ensuring clean, maintainable code across various platforms.\n\nI also managed database operations, enhanced user experience through intuitive interfaces, resolved technical issues, and maintained application security and compliance with industry standards.",
+			"technologies": [
+				"React JS",
+				"Node.js",
+				"JavaScript",
+				"jQuery",
+				"CSS",
+				"PHP",
+				"HTML",
+				"express.js",
+				"AWS cloud services",
+				"Google Cloud Services"
+			]
+		}
+	],
+	"projects": [
+		{
+			"id": "myPortfolio",
+			"name": "My Portfolio",
+			"description": "This site showcases my extensive experience as a full-stack developer, featuring projects that highlight my skills in creating dynamic, interactive web applications. Built using React.js, the portfolio includes 3D animations powered by React Three Fiber, styled-components for custom design, and Material UI for a polished user interface. It leverages custom hooks, global context, and theming for efficient state management and design consistency. Fully responsive to any screen size, the app is optimized with Vite, version-controlled with Git, and deployed on GitHub Pages with a custom domain from GoDaddy.",
+			"previews": [
+				{
+					"id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
+					"view": "desktop",
+					"type": "video",
+					"format": "mp4",
+					"url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
+					"fileName": "myPortfolio_desktop.mp4",
+					"styles": {
+						"bottom": "1rem",
+						"left": "1rem",
+						"width": "100%",
+						"height": "100%"
+					},
+					"animation": "slideRight"
+				},
+				{
+					"id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
+					"view": "mobile",
+					"type": "video",
+					"format": "mp4",
+					"url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
+					"fileName": "myPortfolio_mobile.mp4",
+					"styles": {
+						"top": "1rem",
+						"right": "1rem"
+					},
+					"animation": "slideLeft"
+				}
+			],
+			"demoLink": {
+				"icon": "geodem",
+				"site": "Geodem",
+				"url": "https://geodem.xyz"
+			},
+			"sourceLink": {
+				"icon": "github",
+				"site": "Github",
+				"url": "https://github.com/geodem127/portfolio"
+			},
+			"technologies": [
+				"React JS",
+				"Material UI",
+				"Three.js",
+				"Vite",
+				"React Router",
+				"Git",
+				"Github",
+				"GoDaddy"
+			]
+		},
+		{
+			"id": "VSCodeCommandRunner",
+			"name": "VSCode Command Runner",
+			"description": "VSCode Command Runner is a Visual Studio Code extension that provides an intuitive user interface to manage and run commands or tasks within your workspace. With this extension, you can easily create, edit, and delete commands, and execute them directly in the integrated terminal. The extension supports running any type of command installed in your terminal. It also features a command list with action icons for quick management, and configuration options that can be customized in settings for a streamlined workflow.",
+			"previews": [
+				{
+					"id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
+					"view": "app",
+					"type": "video",
+					"format": "mp4",
+					"url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
+					"fileName": "vscode_cmd_runner_ext_app.mp4",
+					"styles": {
+						"top": "1rem",
+						"left": "1rem",
+						"width": "80%",
+						"height": "90%"
+					},
+					"animation": "slideRight"
+				},
+				{
+					"id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
+					"view": "app",
+					"type": "image",
+					"format": "png",
+					"url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
+					"fileName": "vscode_cmd_runner_ext_app2.png",
+					"styles": {
+						"bottom": "1rem",
+						"right": "1rem",
+						"width": "60%",
+						"height": "70%",
+						"zIndex": "10"
+					},
+					"animation": "slideLeft"
+				}
+			],
+			"demoLink": {
+				"icon": "geodem",
+				"site": "Geodem",
+				"url": "https://geodem.xyz"
+			},
+			"sourceLink": {
+				"icon": "github",
+				"site": "Github",
+				"url": "https://github.com/geodem127/portfolio"
+			},
+			"technologies": [
+				"VScode",
+				"Node.js",
+				"JavaScript",
+				"NPM",
+				"Git",
+				"Github"
+			]
+		},
+		{
+			"id": "devTools",
+			"name": "Dev Tools",
+			"description": "The website serves a professional body representing accountants, highlighting its role in providing professional development, standards, certification, and networking opportunities.",
+			"previews": [
+				{
+					"id": "12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY",
+					"view": "desktop",
+					"type": "video",
+					"format": "mp4",
+					"url": "https://www.googleapis.com/drive/v3/files/12MZkU0m3GDfQHcmx6Fu7CQZ4InPyyDfY?alt=media&key=",
+					"fileName": "myPortfolio_desktop.mp4",
+					"styles": {
+						"top": "1rem",
+						"left": "1rem"
+					},
+					"animation": "slideRight"
+				},
+				{
+					"id": "12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF",
+					"view": "app",
+					"type": "image",
+					"format": "png",
+					"url": "https://www.googleapis.com/drive/v3/files/12Kw76B4_dbCFR7UwVN0fPOEgQv8pETXF?alt=media&key=",
+					"fileName": "vscode_cmd_runner_ext_app2.png",
+					"styles": {
+						"bottom": "1rem",
+						"right": "1rem",
+						"width": "60%",
+						"height": "60%",
+						"zIndex": "10"
+					},
+					"animation": "slideLeft"
+				}
+			],
+			"demoLink": {
+				"icon": "geodem",
+				"site": "Geodem",
+				"url": "https://geodem.xyz"
+			},
+			"sourceLink": {
+				"icon": "github",
+				"site": "Github",
+				"url": "https://github.com/geodem127/portfolio"
+			},
+			"technologies": [
+				"React JS",
+				"Material UI",
+				"Three.js",
+				"Vite",
+				"React Router",
+				"Github",
+				"GoDaddy"
+			]
+		}
+	],
+	"about2": "I started my web development journey in 2015 and have had the privilege of working on diverse projects—from contributing to an advertising agency, startup, and design studio to my current role as a Senior Full-stack Developer at Accenture in Cebu City. \nI specialize in developing and optimizing UI and API components, addressing complex business logic challenges. Notable achievements include creating internal libraries for reusable components.\nAs a former Application Development Team Lead and Scrum Master, I led UI development teams, ensuring adherence to agile principles. I've also spearheaded automated tests as a UI/API Automation Tester, setting project-wide standards.",
+	"about": "Hi there! I'm a Web Developer with **{over 10 years of experience}** in application development. As a Full Stack Developer, I've tackled large-scale applications and have a strong focus on **{developing and optimizing UI and API components}**. I thrive on solving complex business logic challenges and ensuring everything works seamlessly.\n\nI also have solid experience in **{test automation for UI and API}**, making sure that the solutions I build are not only functional but reliable and robust. Whether it's refining user interfaces or enhancing backend systems, I'm dedicated to delivering **{high-quality digital experiences}**.",
+	"techStack": [
+		{
+			"id": "programingLanguages",
+			"label": "Programing Languages",
+			"iconClass": "icon-basic-webpage",
+			"icon": "./images/programing.svg",
+			"technologies": ["Java", "JavaScript", "TypeScript", "PHP", "Python"]
+		},
+		{
+			"id": "librariesAndFrameworks",
+			"label": "Libraries and Frameworks",
+			"iconClass": ".icon-basic-pencil-ruler-pen",
+			"icon": "./images/programing.svg",
+			"technologies": [
+				"React.js",
+				"Robot Framework",
+				"ESlint",
+				"Material UI",
+				"Serverless",
+				"Tailwind",
+				"Express",
+				"Graphql",
+				"Bootstrap",
+				"JQuery",
+				"Vue",
+				"Angular",
+				"nodewebkit",
+				"Sass",
+				"Electron",
+				"Three.js",
+				"Jest",
+				"Lerna",
+				"Cucumber",
+				"Redux",
+				"Selenium"
+			]
+		},
+		{
+			"id": "toolsAndPlatforms",
+			"label": "Tools and Platforms",
+			"iconClass": "icon-basic-settings",
+			"icon": "./images/programing.svg",
+			"technologies": [
+				"AWS",
+				"HTML",
+				"Azure DevOps",
+				"Bitbucket",
+				"CSS",
+				"Salesforce",
+				"Docker",
+				"MongoDB",
+				"MySQL",
+				"Figma",
+				"Nginx",
+				"SQL",
+				"AEM",
+				"Firebase",
+				"Node.js",
+				"GCP",
+				"NPM",
+				"Git",
+				"VScode",
+				"Github",
+				"Prettier",
+				"Webpack",
+				"Jira",
+				"Confluence",
+				"Jenkins",
+				"Sonarqube",
+				"Maven",
+				"linux",
+				"Blender",
+				"Contentful",
+				"Kubernetes",
+				"Eclipse",
+				"Vite",
+				"Sonarqube",
+				"Emmet",
+				"Slack",
+				"Postman",
+				"Pycharm",
+				"Squarespace",
+				"Wordpress",
+				"Wix",
+				"Xampp",
+				"Commercetools",
+				"Zuora",
+				"GoDaddy"
+			]
+		}
+	],
+	"tmp": {
+		"contacts": [
+			{
+				"label": "Email",
+				"path": "mailto:gdemonteverde127@gmail.com",
+				"icon": "EmailIcon"
+			},
+			{
+				"label": "Phone",
+				"path": "/",
+				"icon": "PhoneIcon"
+			}
+		],
+		"technoligies": ["Jetbrains", "Next.js", "Shopify", "Sentry"]
+	}
 }
