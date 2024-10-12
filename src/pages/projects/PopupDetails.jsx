@@ -21,7 +21,7 @@ import {
 import CustomModal from "../../common/CustomModal";
 import ProjectTechStack from "./ProjectTechStack";
 import ViewSlider from "../../common/ViewSlider";
-import CustomSlider from "../../common/CustomSlider";
+// import CustomSlider from "../../common/CustomSlider";
 import ImageSwiper from "../../common/ImageSwiper";
 import CustomCarousel from "../../common/CustomCarousel";
 import config from "../../config";

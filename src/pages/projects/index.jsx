@@ -15,22 +15,6 @@ import PageContainer from "../PageContainer";
 import PageRow from "../PageRow";
 // import PreviewBox from "./preview/PreviewBox";
 
-const ProjectContainerStyles = styled(Box)(({ theme }) => ({
-	width: "100%",
-	display: "flex",
-	flexDirection: "column",
-	justifyContent: "flex-start",
-	alignItems: "stretch",
-	position: "relative",
-	marginTop: "6rem",
-	"&:first-of-type": {
-		marginTop: "0",
-	},
-	"&:last-of-type": {
-		marginBottom: "0",
-	},
-}));
-
 const ProjectsPage = () => {
 	const theme = useTheme();
 	const smScreen = useMediaQuery(theme.breakpoints.down("md"));

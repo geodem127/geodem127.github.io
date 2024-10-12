@@ -34,6 +34,24 @@ const PageContainerStyles = styled("section")(({ theme }) => ({
 	"&:last-of-type": {
 		marginBottom: "0",
 	},
+	willChange: "auto",
+	animationName: "pageTransition",
+	animationDuration: "1000ms",
+	animationFillMode: "forwards",
+	animationTimingFunction: "ease-in",
+	transformOrigin: "center",
+	// border: "1px solid red",
+	transitionBehavior: "smooth",
+	transformStyle: "preserve-3d",
+	"@keyframes pageTransition": {
+		"0%": {
+			opacity: 0,
+		},
+
+		"100%": {
+			opacity: 1,
+		},
+	},
 }));
 
 const PageContainer = ({ title = "", rowGap = 0, children, ...otherProps }) => {
