@@ -76,7 +76,7 @@ const SphereWithIcons = ({ techStack = [] }) => {
   const techIconData = useMemo(
     () =>
       uniqueTech.map((tech, index) => ({
-        texture: `/geodem127.github.io/images/${tech}.svg`,
+        texture: `/images/${tech}.svg`,
         position: positions[index],
       })),
     [uniqueTech, positions]
